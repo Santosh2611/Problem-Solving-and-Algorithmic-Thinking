@@ -1,2 +1,1 @@
-# Problem-Solving-and-Algorithmic-Thinking
-Demonstration of the mini-lab component activities conducted for the course of Problem Solving and Algorithmic Thinking (19CSE100).
+Demonstration of the mini-lab component activities conducted for the course of Problem Solving and Algorithmic Thinking (19CSE100). It provides the foundations of computational problem solving and focuses on principles and methods thereby providing transferable skills to any other domain. It also provides foundation for developing computational perspectives of one's own discipline.
