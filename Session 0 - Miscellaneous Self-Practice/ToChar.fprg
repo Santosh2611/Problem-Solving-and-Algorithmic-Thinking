@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Selvi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-22 12:24:26 PM"/>
+        <attribute name="created" value="U2Vsdmk7REVTS1RPUC1WM08xNjlFOzIwMjEtMDEtMjI7MDg6Mzk6MDYgQU07MjgwOA=="/>
+        <attribute name="edited" value="U2Vsdmk7REVTS1RPUC1WM08xNjlFOzIwMjEtMDEtMjI7MTI6MjQ6MjYgUE07MzsyOTI0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="S" type="String" array="False" size=""/>
+            <declare name="I" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter a number&quot;" newline="True"/>
+            <input variable="I"/>
+            <assign variable="S" expression="ToChar(I)"/>
+            <output expression="S" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

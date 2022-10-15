@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="dhany"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-27 12:30:59 PM"/>
+        <attribute name="created" value="ZGhhbnk7IFRSWUFNQkFLQU07IDIwMjEtMDEtMjc7IDExOjExOjA4IEFNOyAyNjI5"/>
+        <attribute name="edited" value="ZGhhbnk7IFRSWUFNQkFLQU07IDIwMjEtMDEtMjc7IDEyOjMwOjU5IFBNOyAyNjUy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="reply" type="String" array="False" size=""/>
+            <declare name="userRoll, compRoll" type="Integer" array="False" size=""/>
+            <output expression="&quot;Do you want to play (Y/N):&quot;"/>
+            <input variable="reply"/>
+            <while expression="reply=&quot;Y&quot; || reply=&quot;y&quot;">
+                <assign variable="userRoll" expression="Random(6)+1"/>
+                <assign variable="compRoll" expression="Random(6)+1"/>
+                <output expression="&quot;You got a &quot;&amp;userRoll&amp;&quot;, I got a &quot;&amp;compRoll"/>
+                <output expression="getMessage(userRoll,compRoll)"/>
+                <output expression="&quot;Do you want to play (Y/N):&quot;"/>
+                <input variable="reply"/>
+            </while>
+        </body>
+    </function>
+    <function name="getMessage" type="String" variable="msg">
+        <parameters>
+            <parameter name="uRoll" type="Integer" array="False"/>
+            <parameter name="cRoll" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="msg" type="String" array="False" size=""/>
+            <if expression="uRoll&gt;cRoll">
+                <then>
+                    <assign variable="msg" expression="&quot;You won&quot;"/>
+                </then>
+                <else>
+                    <if expression="cRoll&gt;uRoll">
+                        <then>
+                            <assign variable="msg" expression="&quot;I won&quot;"/>
+                        </then>
+                        <else>
+                            <assign variable="msg" expression="&quot;It is a tie&quot;"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

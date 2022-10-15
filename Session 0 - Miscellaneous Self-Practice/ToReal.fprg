@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="dhany"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-27 12:20:22 PM"/>
+        <attribute name="created" value="ZGhhbnk7IFRSWUFNQkFLQU07IDIwMjEtMDEtMjc7IDExOjAyOjAzIEFNOyAyNjI0"/>
+        <attribute name="edited" value="ZGhhbnk7IFRSWUFNQkFLQU07IDIwMjEtMDEtMjc7IDEyOjIwOjIyIFBNOyAyNjQx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="subtotal" type="Real" array="False" size=""/>
+            <assign variable="subtotal" expression="captureInput()"/>
+            <output expression="&quot;2 X &quot;&amp;subtotal&amp;&quot; = &quot; &amp; subtotal*2"/>
+        </body>
+    </function>
+    <function name="captureInput" type="Real" variable="numberInput">
+        <parameters/>
+        <body>
+            <declare name="data" type="String" array="False" size=""/>
+            <declare name="numberInput" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter a number&quot;"/>
+            <input variable="data"/>
+            <assign variable="numberInput" expression="ToReal(data)"/>
+        </body>
+    </function>
+</flowgorithm>

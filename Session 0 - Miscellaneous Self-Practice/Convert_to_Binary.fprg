@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="gayat"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-22 09:28:24 AM"/>
+        <attribute name="created" value="Z2F5YXQ7TEFQVE9QLUM0OE9TVTlUOzIwMjEtMDEtMjI7MDk6MTg6NTQgQU07Mjg3Mg=="/>
+        <attribute name="edited" value="Z2F5YXQ7TEFQVE9QLUM0OE9TVTlUOzIwMjEtMDEtMjI7MDk6Mjg6MjQgQU07MTsyOTc4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ino, bno" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the decimal number&quot;" newline="True"/>
+            <input variable="ino"/>
+            <output expression="&quot;The corresponding binary value is &quot;&amp;convertToBin(ino)" newline="True"/>
+        </body>
+    </function>
+    <function name="convertToBin" type="Integer" variable="bin">
+        <parameters>
+            <parameter name="ino" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="bin, rem, temp" type="Integer" array="False" size=""/>
+            <assign variable="bin" expression="0"/>
+            <assign variable="temp" expression="1"/>
+            <while expression="ino!=0">
+                <assign variable="rem" expression="ino%2"/>
+                <assign variable="bin" expression="bin+rem*temp"/>
+                <assign variable="temp" expression="temp*10"/>
+                <assign variable="ino" expression="ino/2"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

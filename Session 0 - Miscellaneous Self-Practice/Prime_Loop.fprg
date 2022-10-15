@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="gayat"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-12-15 12:40:15 PM"/>
+        <attribute name="created" value="Z2F5YXQ7TEFQVE9QLUM0OE9TVTlUOzIwMjAtMTItMTU7MTI6MzA6NDcgUE07Mjg4MA=="/>
+        <attribute name="edited" value="Z2F5YXQ7TEFQVE9QLUM0OE9TVTlUOzIwMjAtMTItMTU7MTI6NDA6MTUgUE07MTsyOTg0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, flag" type="Integer" array="False" size=""/>
+            <assign variable="flag" expression="0"/>
+            <output expression="&quot;enter the number to be checked&quot;" newline="True"/>
+            <input variable="n"/>
+            <for variable="i" start="2" end="n/2" direction="inc" step="1">
+                <if expression="n%i==0">
+                    <then>
+                        <assign variable="flag" expression="1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="flag==0">
+                <then>
+                    <output expression="n&amp; &quot; is a prime number&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="n&amp; &quot; is not a prime number&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

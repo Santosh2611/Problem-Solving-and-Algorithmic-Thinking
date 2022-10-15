@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Selvi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-22 09:09:00 AM"/>
+        <attribute name="created" value="U2Vsdmk7REVTS1RPUC1WM08xNjlFOzIwMjEtMDEtMjI7MDg6MjU6MDQgQU07MjgwMQ=="/>
+        <attribute name="edited" value="U2Vsdmk7REVTS1RPUC1WM08xNjlFOzIwMjEtMDEtMjI7MDk6MDk6MDAgQU07NDsyOTEx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="value" type="String" array="False" size=""/>
+            <declare name="number" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter real number&quot;" newline="True"/>
+            <input variable="number"/>
+            <assign variable="value" expression="ToFixed(number,2)"/>
+            <output expression="value" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

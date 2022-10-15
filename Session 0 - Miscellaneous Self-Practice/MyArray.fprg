@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-22 09:34:34 AM"/>
+        <attribute name="created" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjI7MDE6MTc6NDYgQU07MjEyMw=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjI7MDE6MjE6MDYgQU07MTtEZUxMO1NBTlRPU0g7MjAyMS0wMS0yMTsxMDo0OToyNyBQTTtEZXRlcm1pbmUgbWluaW11bSBzZXF1ZW5jZSBvZiBhZGphY2VudCB2YWx1ZXMgaW4gdGhlIGlucHV0IHBhcmFtZXRlciBhcnJheS5mcHJnOzEyMTE5"/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjI7MDE6MzA6MTEgQU07MTtEZUxMO0RFU0tUT1AtSkxLQlQ5UDsyMDIwLTEyLTIxOzEwOjI2OjA2IEFNO1ByaW50IGFsbCBVbmlxdWUgTnVtYmVycyBpbiBhbiBBcnJheS5mcHJnOzg4MDk="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjI7MDE6NDI6NDIgQU07MjtEZUxMO0RFU0tUT1AtSkxLQlQ5UDsyMDIwLTEyLTE4OzAzOjUxOjE2IEFNO0NoZWNraW5nIGJhc2VkIG9uIElucHV0LmZwcmc7NzY1MA=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjI7MDk6MzQ6MzQgQU07MzsyMjM3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Q. Implement a menu driven Flowgorithm to perform the following operations, [Design a sentinel Control Loop]&#13;&#10;1. Read unique elements in the input array &#8220;MyArray&#8221; of size &#8220;n&#8221; and separate Armstrong and non-Armstrong array elements into separate arrays.&#13;&#10;Note: Number of digits in an array element is from 1 to m. Eg. {1,34,567,8902,563423}&#13;&#10;2. Read the input array &#8220;MyArray&#8221; of size &#8220;n&#8221; and Find the Third largest element in an array.&#13;&#10;3. Read the input array &#8220;MyArray&#8221; of size &#8220;n&#8221; and Find the minority element of an array. (Hint: A minority element in an array MyArray[] of size n is an element that appears less than n/2 times (and hence there is at most one such element))&quot;" newline="True"/>
+            <declare name="continue" type="String" array="False" size=""/>
+            <do expression="((continue==&quot;Y&quot;)||(continue==&quot;y&quot;))">
+                <declare name="choice" type="Integer" array="False" size=""/>
+                <output expression="&quot;MENU:&#13;&#10;1. Read unique elements in the input array &#8220;MyArray&#8221; of size &#8220;n&#8221; and separate Armstrong and non-Armstrong array elements into separate arrays.&#13;&#10;Note: Number of digits in an array element is from 1 to m. Eg. {1,34,567,8902,563423}&#13;&#10;2. Read the input array &#8220;MyArray&#8221; of size &#8220;n&#8221; and Find the Third largest element in an array.&#13;&#10;3. Read the input array &#8220;MyArray&#8221; of size &#8220;n&#8221; and Find the minority element of an array. (Hint: A minority element in an array MyArray[] of size n is an element that appears less than n/2 times (and hence there is at most one such element)).&#13;&#10;Kindly enter the number corresponding to the menu in order to execute a particular functionality of your choice.&quot;" newline="True"/>
+                <input variable="choice"/>
+                <if expression="(choice==1)">
+                    <then>
+                        <declare name="i, j, k, m, n, count, temp, rem, result, power" type="Integer" array="False" size=""/>
+                        <assign variable="count" expression="0"/>
+                        <assign variable="result" expression="0"/>
+                        <assign variable="power" expression="0"/>
+                        <output expression="&quot;Enter the size of MyArray:&quot;" newline="True"/>
+                        <input variable="n"/>
+                        <assign variable="m" expression="n"/>
+                        <declare name="MyArray" type="Integer" array="True" size="n"/>
+                        <declare name="Armstrong" type="Integer" array="True" size="m"/>
+                        <for variable="i" start="0" end="m-1" direction="inc" step="1">
+                            <assign variable="Armstrong[i]" expression="-1"/>
+                        </for>
+                        <declare name="NonArmstrong" type="Integer" array="True" size="m"/>
+                        <for variable="i" start="0" end="m-1" direction="inc" step="1">
+                            <assign variable="NonArmstrong[i]" expression="-1"/>
+                        </for>
+                        <output expression="&quot;Enter the elements of the array one-by-one:&quot;" newline="True"/>
+                        <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                            <input variable="MyArray[i]"/>
+                        </for>
+                        <output expression="&quot;MyArray is listed as follows: &quot;" newline="False"/>
+                        <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                            <output expression="&quot;&quot; &amp;MyArray[i]&amp; &quot; &quot;" newline="False"/>
+                        </for>
+                        <output expression="&quot;&quot;" newline="True"/>
+                        <output expression="&quot;Unique Elements in MyArray is/are listed as follows: &quot;" newline="False"/>
+                        <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                            <assign variable="count" expression="0"/>
+                            <for variable="j" start="0" end="n-1" direction="inc" step="1">
+                                <if expression="i!=j">
+                                    <then>
+                                        <if expression="MyArray[i]==MyArray[j]">
+                                            <then>
+                                                <assign variable="count" expression="count+1"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </for>
+                            <if expression="count==0">
+                                <then>
+                                    <output expression="&quot;&quot; &amp;MyArray[i]&amp; &quot; &quot;" newline="False"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </for>
+                        <output expression="&quot;&quot;" newline="True"/>
+                        <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                            <assign variable="temp" expression="MyArray[i]"/>
+                            <while expression="(temp!=0)">
+                                <assign variable="temp" expression="(temp/10)"/>
+                                <assign variable="power" expression="(power+1)"/>
+                            </while>
+                            <while expression="(temp!=0)">
+                                <assign variable="rem" expression="(temp%10)"/>
+                                <assign variable="temp" expression="(temp/10)"/>
+                                <assign variable="result" expression="(result+(pow(rem,power)))"/>
+                            </while>
+                            <if expression="(MyArray[i]==result)">
+                                <then>
+                                    <assign variable="k" expression="0"/>
+                                    <assign variable="Armstrong[k]" expression="MyArray[i]"/>
+                                    <assign variable="k" expression="(k+1)"/>
+                                </then>
+                                <else>
+                                    <assign variable="j" expression="0"/>
+                                    <assign variable="Armstrong[j]" expression="MyArray[i]"/>
+                                    <assign variable="j" expression="(j+1)"/>
+                                </else>
+                            </if>
+                        </for>
+                        <output expression="&quot;The elements in the Armstrong Array is as follows: &quot;" newline="False"/>
+                        <for variable="i" start="0" end="m-1" direction="inc" step="1">
+                            <output expression="&quot;&quot; &amp;Armstrong[i]&amp; &quot; &quot;" newline="False"/>
+                        </for>
+                        <output expression="&quot;&quot;" newline="True"/>
+                        <output expression="&quot;The elements in the non-Armstrong Array is as follows: &quot;" newline="False"/>
+                        <for variable="i" start="0" end="m-1" direction="inc" step="1">
+                            <output expression="&quot;&quot; &amp;NonArmstrong[i]&amp; &quot; &quot;" newline="False"/>
+                        </for>
+                        <output expression="&quot;&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="(choice==2)">
+                            <then/>
+                            <else>
+                                <if expression="(choice==3)">
+                                    <then/>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;To test for another input, enter (y/Y) to continue or another key to terminate the program:&quot;" newline="True"/>
+                <input variable="continue"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

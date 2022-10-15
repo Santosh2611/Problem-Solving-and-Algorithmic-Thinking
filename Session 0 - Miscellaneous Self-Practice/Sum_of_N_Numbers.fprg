@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="gayat"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-12-15 12:20:32 PM"/>
+        <attribute name="created" value="Z2F5YXQ7TEFQVE9QLUM0OE9TVTlUOzIwMjAtMTItMTU7MTI6MDQ6MDEgUE07Mjg3MQ=="/>
+        <attribute name="edited" value="Z2F5YXQ7TEFQVE9QLUM0OE9TVTlUOzIwMjAtMTItMTU7MTI6MjA6MzIgUE07MTsyOTgx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, sum, ch" type="Integer" array="False" size=""/>
+            <do expression="ch==1">
+                <output expression="&quot;Enter the value of n&quot;" newline="True"/>
+                <input variable="n"/>
+                <assign variable="sum" expression="0"/>
+                <assign variable="i" expression="0"/>
+                <while expression="i&lt;=n">
+                    <if expression="i%2!=0">
+                        <then>
+                            <assign variable="sum" expression="sum+i"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="i" expression="i+1"/>
+                </while>
+                <output expression="&quot;sum of odd nos from 1 to &quot;&amp;n&amp;&quot; using while loop  is &quot;&amp;sum" newline="True"/>
+                <assign variable="sum" expression="0"/>
+                <for variable="i" start="0" end="n" direction="inc" step="1">
+                    <if expression="i%2!=0">
+                        <then>
+                            <assign variable="sum" expression="sum+i"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <output expression="&quot;sum of odd nos from 1 to &quot;&amp;n&amp;&quot; using for loop  is &quot;&amp;sum" newline="True"/>
+                <output expression="&quot;Do you want to continue? Press 1 to continue.&quot;" newline="True"/>
+                <input variable="ch"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

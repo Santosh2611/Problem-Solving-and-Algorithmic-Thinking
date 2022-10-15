@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-12-10 08:47:34 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0wODsxMjo1NDoxNyBBTTsyNjgw"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0wODsxMjo1NDoyMCBBTTsxO0RlTEw7REVTS1RPUC1KTEtCVDlQOzIwMjAtMTItMDg7MTI6Mjc6MTkgQU07UHJpbnQgbnVtYmVycyBmcm9tIDEgdG8gJ24nLmZwcmc7ODQwOA=="/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xMDswODo0NzozNCBQTTsxMjsyODUy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Hearty welcome to the program for print even and odd numbers from 1 to 'n', where n is the input (upper limit) given by the user!&quot;" newline="True"/>
+            <declare name="n, limit, choice" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter the upper limit (n) uptil where you wanna to print odd and even numbers from 1 to n!&quot;" newline="True"/>
+            <input variable="limit"/>
+            <output expression="&quot;Select any one based on your preference!&#13;&#10;1. Pretest (or) Entry Controlled Loop for Odd Numbers&#13;&#10;2. Post-test (or) Exit Controlled Loop for Even Numbers&quot;" newline="True"/>
+            <input variable="choice"/>
+            <if expression="choice==1">
+                <then>
+                    <assign variable="n" expression="1"/>
+                    <while expression="n&lt;=limit">
+                        <output expression="n" newline="True"/>
+                        <assign variable="n" expression="n+2"/>
+                    </while>
+                </then>
+                <else>
+                    <if expression="choice==2">
+                        <then>
+                            <assign variable="n" expression="2"/>
+                            <do expression="n&lt;=limit">
+                                <output expression="n" newline="True"/>
+                                <assign variable="n" expression="n+2"/>
+                            </do>
+                        </then>
+                        <else>
+                            <output expression="&quot;No Output! :(&#13;&#10;Please enter a number within the given range of numericals displayed in the menu.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Hope you enjoyed the program. Thank you very much! :)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
