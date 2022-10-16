@@ -1,0 +1,20 @@
+Function Main
+    Declare Integer a
+    
+    Output "Please enter a number of your choice!"
+    Input a
+    If a==1
+        Output "Green!"
+    False:
+        If a==2
+            Output "Yellow!"
+        False:
+            If a==3
+                Output "Blue!"
+            False:
+                Output "Red!"
+            End
+        End
+    End
+    Output "Hope you enjoyed my program. Thank you very much! :)"
+End

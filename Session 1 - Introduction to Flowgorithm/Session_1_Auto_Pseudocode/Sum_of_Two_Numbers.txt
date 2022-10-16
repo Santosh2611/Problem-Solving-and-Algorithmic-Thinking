@@ -1,0 +1,11 @@
+Function Main
+    Declare Integer a, b, s
+    
+    Output "Please enter the first number!"
+    Input a
+    Output "Please enter the second number!"
+    Input b
+    Assign s = (a+b)
+    Output "The sum of the two numbers is: " &s
+    Output "Hope you enjoyed my program. Thank you very much! :)"
+End

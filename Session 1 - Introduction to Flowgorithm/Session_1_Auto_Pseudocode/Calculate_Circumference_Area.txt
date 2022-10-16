@@ -1,0 +1,11 @@
+Function Main
+    Declare Real radius, cmf, area
+    
+    Output "Please enter the radius of the circle!"
+    Input radius
+    Assign cmf = 2*3.14*radius
+    Output "The circumference of the radius is: " &cmf
+    Assign area = 3.14*radius*radius
+    Output "The area of the circle is: " &area
+    Output "Hope you enjoyed my program. Thank you very much! :)"
+End

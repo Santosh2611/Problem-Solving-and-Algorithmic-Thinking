@@ -1,0 +1,33 @@
+Function Main
+    Declare Integer a, b, c
+    
+    Output "Please enter the value of a!"
+    Input a
+    Output "Please enter the value of b!"
+    Input b
+    Output "Please enter the value of c!"
+    Input c
+    If a<b
+        If a<c
+            Output "a is the smaller number!"
+        False:
+            If a==c
+                Output "a and c, both are equal!"
+            End
+            Output "c is the smaller number!"
+        End
+    False:
+        If a==b
+            Output "a and b, both are equal!"
+        End
+        If b<c
+            Output "b is the smaller number!"
+        False:
+            If b==c
+                Output "b and c, both are equal!"
+            End
+            Output "c is the smaller number!"
+        End
+    End
+    Output "Hope you enjoyed the program. Thank you very much! :)"
+End
