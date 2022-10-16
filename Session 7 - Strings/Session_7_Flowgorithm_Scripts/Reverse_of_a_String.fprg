@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-13 02:47:00 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswMjo0NToyOSBQTTsyNjY5"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswMjo0NzowMCBQTTsyOzI3Njk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="rev" type="String" array="False" size=""/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <assign variable="rev" expression="&quot;&quot;"/>
+            <input variable="name"/>
+            <for variable="n" start="len(name)-1" end="0" direction="dec" step="1">
+                <assign variable="rev" expression="rev &amp; Char(name,n)"/>
+            </for>
+            <output expression="rev" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

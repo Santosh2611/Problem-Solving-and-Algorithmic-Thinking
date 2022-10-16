@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-13 03:01:41 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswMjo1OTowMSBQTTsyNjY0"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswMzowMTo0MSBQTTsyOzI3NjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Program to count the number of letters that are same in the same locations in 2 different strings"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <declare name="str" type="String" array="False" size=""/>
+            <declare name="str1" type="String" array="False" size=""/>
+            <assign variable="str" expression="&quot;gorilla&quot;"/>
+            <assign variable="str1" expression="&quot;giraffe&quot;"/>
+            <assign variable="count" expression="0"/>
+            <for variable="i" start="0" end="len(str)-1" direction="inc" step="1">
+                <if expression="Char(str,i)=Char(str1,i)">
+                    <then>
+                        <assign variable="count" expression="count+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="count" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

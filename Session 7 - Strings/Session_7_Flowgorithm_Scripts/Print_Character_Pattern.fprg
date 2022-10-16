@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-13 02:56:11 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswMjo1NDo0MCBQTTsyNjYy"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswMjo1NjoxMSBQTTsyOzI3NzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="s" type="String" array="False" size=""/>
+            <declare name="c" type="String" array="False" size=""/>
+            <assign variable="s" expression="&quot;&quot;"/>
+            <assign variable="c" expression="&quot;&quot;"/>
+            <for variable="i" start="1" end="5" direction="inc" step="1">
+                <for variable="j" start="1" end="i" direction="inc" step="1">
+                    <assign variable="c" expression="c &amp; &quot; &quot; &amp; s"/>
+                </for>
+                <output expression="c" newline="True"/>
+                <assign variable="c" expression="&quot;&quot;"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

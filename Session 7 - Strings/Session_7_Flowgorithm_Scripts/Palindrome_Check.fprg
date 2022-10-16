@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-13 03:25:16 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswMzoyMToxMiBQTTsyNjU2"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswMzoyNToxNiBQTTsyOzI3NzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name, reverse" type="Integer" array="False" size=""/>
+            <declare name="length, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter Name&quot;" newline="True"/>
+            <input variable="name"/>
+            <assign variable="reverse" expression="&quot;&quot;"/>
+            <assign variable="length" expression="len(name)"/>
+            <output expression="&quot;Length of your name is &quot; &amp;length" newline="True"/>
+            <for variable="i" start="length-1" end="0" direction="dec" step="1">
+                <assign variable="reverse" expression="reverse&amp;char(name,i)"/>
+            </for>
+            <output expression="&quot;Reverse of &quot; &amp; name &amp; &quot; is &quot; &amp;reverse" newline="True"/>
+            <if expression="name == reverse">
+                <then>
+                    <output expression="&quot;Entered string is Palindrome&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Entered string is not a Palindrome&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

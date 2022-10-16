@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-21 07:12:03 PM"/>
+        <attribute name="created" value="RGVMTDtTQU5UT1NIOzIwMjEtMDItMTU7MDY6MzQ6MzcgUE07MjE0NQ=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDItMTU7MDY6MzU6MTcgUE07MTtEZUxMO1NBTlRPU0g7MjAyMS0wMi0xNTswMjozMjo0NSBQTTtTZXQgLSAxIFNlbGYgU29sdXRpb25zLmZwcmc7Njg3Nw=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDItMTU7MDY6NTM6NDggUE07MjtEZUxMO1NBTlRPU0g7MjAyMS0wMS0yMjswMjowODoyMiBQTTtTZXQgLSAzIFNlbGYgU29sdXRpb25zLmZwcmc7Njg3OQ=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDItMTU7MDg6MDU6MjEgUE07MTtEZUxMO1NBTlRPU0g7MjAyMS0wMS0yOTswMjo0NTo0NyBQTTtNZW51LWRyaXZlbiBwcm9ncmFtIGZvciBsaW5lYXIgc2VhcmNoLCBzZWxlY3Rpb24gc29ydCwgYnViYmxlIHNvcnQgYW5kIGluc2VydGlvbiBzb3J0LmZwcmc7MTMxMjc="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDItMTY7MTI6MTc6NTEgUE07MTtnYXlhdDtMQVBUT1AtQzQ4T1NVOVQ7MjAyMS0wMS0wODswOToxMzowNyBBTTtmcmVxX29mX2VsZW1lbnRzLmZwcmc7NzQwNg=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDktMjE7MDc6MTI6MDMgUE07Mzk7MjMwNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="continue" type="String" array="False" size=""/>
+            <do expression="((continue==&quot;y&quot;)||(continue==&quot;Y&quot;))">
+                <output expression="&quot;MENU&#13;&#10;&#13;&#10;1. Compare the length of two strings.&#13;&#10;2. Convert lowercase letters to uppercase and vice-versa in a string.&#13;&#10;3. Count alphabets, digits and alphanumeric in a string.&#13;&#10;4. Count the number of vowels in a string.&#13;&#10;5. Display maximum occurring character in a string.&#13;&#10;6. Sort the characters in string in ascending order based on their ASCII codes.&#13;&#10;&#13;&#10;Enter the number corresponding to the menu in order to implement the choice.&quot;" newline="True"/>
+                <declare name="choice" type="Integer" array="False" size=""/>
+                <input variable="choice"/>
+                <if expression="(choice==1)">
+                    <then>
+                        <declare name="string1, string2" type="String" array="False" size=""/>
+                        <output expression="&quot;Enter the first string:&quot;" newline="True"/>
+                        <input variable="string1"/>
+                        <output expression="&quot;Enter the second string:&quot;" newline="True"/>
+                        <input variable="string2"/>
+                        <call expression="length(string1,string2)"/>
+                    </then>
+                    <else>
+                        <if expression="(choice==2)">
+                            <then>
+                                <declare name="str" type="String" array="False" size=""/>
+                                <output expression="&quot;Enter the string:&quot;" newline="True"/>
+                                <input variable="str"/>
+                                <call expression="casechange(str)"/>
+                            </then>
+                            <else>
+                                <if expression="(choice==3)">
+                                    <then>
+                                        <declare name="str" type="String" array="False" size=""/>
+                                        <output expression="&quot;Enter the string:&quot;" newline="True"/>
+                                        <input variable="str"/>
+                                        <call expression="count(str)"/>
+                                    </then>
+                                    <else>
+                                        <if expression="(choice==4)">
+                                            <then>
+                                                <declare name="str" type="String" array="False" size=""/>
+                                                <output expression="&quot;Enter the string:&quot;" newline="True"/>
+                                                <input variable="str"/>
+                                                <call expression="countvowel(str)"/>
+                                            </then>
+                                            <else>
+                                                <if expression="(choice==5)">
+                                                    <then>
+                                                        <declare name="str" type="String" array="False" size=""/>
+                                                        <output expression="&quot;Enter the string:&quot;" newline="True"/>
+                                                        <input variable="str"/>
+                                                        <call expression="maximum(str)"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="(choice==6)">
+                                                            <then>
+                                                                <declare name="str" type="String" array="False" size=""/>
+                                                                <output expression="&quot;Enter the string:&quot;" newline="True"/>
+                                                                <input variable="str"/>
+                                                                <call expression="sort(str)"/>
+                                                            </then>
+                                                            <else>
+                                                                <output expression="&quot;Kindly enter a valid input from the menu by continuing the program once again.&quot;" newline="True"/>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;To test for another input, enter (y/Y) to continue or another key to terminate the program:&quot;" newline="True"/>
+                <input variable="continue"/>
+            </do>
+        </body>
+    </function>
+    <function name="casechange" type="None" variable="">
+        <parameters>
+            <parameter name="s" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="length, i" type="Integer" array="False" size=""/>
+            <assign variable="length" expression="Len(s)"/>
+            <output expression="&quot;The converted form of string is: &quot;" newline="False"/>
+            <for variable="i" start="0" end="(length-1)" direction="inc" step="1">
+                <if expression="(((char(s,i)&gt;=&quot;a&quot;)&amp;&amp;(char(s,i)&lt;=&quot;z&quot;))||((char(s,i)&gt;=&quot;A&quot;)&amp;&amp;(char(s,i)&lt;=&quot;Z&quot;)))">
+                    <then>
+                        <if expression="((char(s,i)&gt;=&quot;a&quot;)&amp;&amp;(char(s,i)&lt;=&quot;z&quot;))">
+                            <then>
+                                <declare name="alphabet" type="String" array="False" size=""/>
+                                <declare name="code" type="Integer" array="False" size=""/>
+                                <assign variable="alphabet" expression="Char(s,i)"/>
+                                <assign variable="code" expression="ToCode(Alphabet)"/>
+                                <assign variable="code" expression="(code-32)"/>
+                                <output expression="ToChar(code)" newline="False"/>
+                            </then>
+                            <else>
+                                <declare name="alphabet" type="String" array="False" size=""/>
+                                <declare name="code" type="Integer" array="False" size=""/>
+                                <assign variable="alphabet" expression="Char(s,i)"/>
+                                <assign variable="code" expression="ToCode(Alphabet)"/>
+                                <assign variable="code" expression="(code+32)"/>
+                                <output expression="ToChar(code)" newline="False"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <output expression="char(s,i)" newline="False"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="count" type="None" variable="">
+        <parameters>
+            <parameter name="s" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="length, i, count1, count2, count3" type="Integer" array="False" size=""/>
+            <assign variable="length" expression="Len(s)"/>
+            <assign variable="count1" expression="0"/>
+            <assign variable="count2" expression="0"/>
+            <assign variable="count3" expression="0"/>
+            <for variable="i" start="0" end="(length-1)" direction="inc" step="1">
+                <if expression="(((char(s,i)&gt;=&quot;a&quot;)&amp;&amp;(char(s,i)&lt;=&quot;z&quot;))||((char(s,i)&gt;=&quot;A&quot;)&amp;&amp;(char(s,i)&lt;=&quot;Z&quot;)))">
+                    <then>
+                        <assign variable="count1" expression="(count1+1)"/>
+                    </then>
+                    <else>
+                        <if expression="((char(s,i)&gt;=&quot;0&quot;)&amp;&amp;(char(s,i)&lt;=&quot;9&quot;))">
+                            <then>
+                                <assign variable="count2" expression="(count2+1)"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <assign variable="count3" expression="(count1+count2)"/>
+            <output expression="&quot;There are &quot; &amp;count1&amp; &quot; alphabets, &quot; &amp;count2&amp; &quot; digits and &quot; &amp;count3&amp; &quot; number of alphanumeric characters in the given string &quot; &amp;s" newline="True"/>
+        </body>
+    </function>
+    <function name="countvowel" type="None" variable="">
+        <parameters>
+            <parameter name="s" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="length, i, count" type="Integer" array="False" size=""/>
+            <assign variable="length" expression="Len(s)"/>
+            <assign variable="count" expression="0"/>
+            <for variable="i" start="0" end="(length-1)" direction="inc" step="1">
+                <if expression="((char(s,i)==&quot;a&quot;)||(char(s,i)==&quot;e&quot;)||(char(s,i)==&quot;i&quot;)||(char(s,i)==&quot;o&quot;)||(char(s,i)==&quot;u&quot;)||(char(s,i)==&quot;A&quot;)||(char(s,i)==&quot;E&quot;)||(char(s,i)==&quot;I&quot;)||(char(s,i)==&quot;O&quot;)||(char(s,i)==&quot;U&quot;))">
+                    <then>
+                        <assign variable="count" expression="(count+1)"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;The number of vowels in the given string &quot; &amp;s&amp; &quot; is &quot; &amp;count&amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="length" type="None" variable="">
+        <parameters>
+            <parameter name="str1" type="String" array="False"/>
+            <parameter name="str2" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="len1, len2" type="Integer" array="False" size=""/>
+            <assign variable="len1" expression="Len(str1)"/>
+            <output expression="&quot;The length of the first string &quot; &amp;str1&amp; &quot; is &quot; &amp;len1&amp; &quot;.&quot;" newline="False"/>
+            <assign variable="len2" expression="Len(str2)"/>
+            <output expression="&quot; The length of the second string &quot; &amp;str2&amp; &quot; is &quot; &amp;len2&amp; &quot;.&quot;" newline="False"/>
+            <if expression="(len1&gt;len2)">
+                <then>
+                    <output expression="&quot; Therefore, the length of the first string is greater than that of the second string.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="(len1=len2)">
+                        <then>
+                            <output expression="&quot; Therefore, the length of the first string is equal to that of the second string.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot; Therefore, the length of the first string is less than that of the second string.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="maximum" type="None" variable="">
+        <parameters>
+            <parameter name="s" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i, j, count, n, length, max, ele" type="Integer" array="False" size=""/>
+            <assign variable="max" expression="-10"/>
+            <assign variable="length" expression="Len(s)"/>
+            <declare name="str" type="Integer" array="True" size="length"/>
+            <declare name="freq" type="Integer" array="True" size="length"/>
+            <output expression="&quot;Enter the elements of the array&quot;" newline="True"/>
+            <for variable="i" start="0" end="(length-1)" direction="inc" step="1">
+                <assign variable="str[i]" expression="ToCode(char(s,i))"/>
+                <assign variable="freq[i]" expression="-1"/>
+            </for>
+            <for variable="i" start="0" end="(length-1)" direction="inc" step="1">
+                <assign variable="count" expression="1"/>
+                <for variable="j" start="i+1" end="(length-1)" direction="inc" step="1">
+                    <if expression="str[i]==str[j]">
+                        <then>
+                            <assign variable="count" expression="count+1"/>
+                            <assign variable="freq[j]" expression="0"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="freq[i]!=0">
+                    <then>
+                        <assign variable="freq[i]" expression="count"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <for variable="i" start="0" end="(length-1)" direction="inc" step="1">
+                <if expression="max&lt;freq[i]">
+                    <then>
+                        <assign variable="max" expression="freq[i]"/>
+                        <assign variable="ele" expression="str[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;The maximum occurring character in the string &quot;&amp;s&amp;&quot; is &quot;&amp;ToChar(ele)&amp;&quot; which repeats &quot;&amp;max&amp;&quot; times.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="sort" type="None" variable="">
+        <parameters>
+            <parameter name="s" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i, j, length, number, temp" type="Integer" array="False" size=""/>
+            <declare name="text" type="String" array="False" size=""/>
+            <assign variable="length" expression="Len(s)"/>
+            <declare name="arr" type="Integer" array="True" size="length"/>
+            <declare name="sort" type="String" array="True" size="length"/>
+            <for variable="i" start="0" end="(length-1)" direction="inc" step="1">
+                <assign variable="text" expression="char(s,i)"/>
+                <assign variable="number" expression="ToCode(text)"/>
+                <assign variable="arr[i]" expression="number"/>
+            </for>
+            <for variable="i" start="0" end="(length-2)" direction="inc" step="1">
+                <for variable="j" start="0" end="(length-i-2)" direction="inc" step="1">
+                    <if expression="(arr[j]&gt;arr[j+1])">
+                        <then>
+                            <assign variable="temp" expression="arr[j]"/>
+                            <assign variable="arr[j]" expression="arr[j+1]"/>
+                            <assign variable="arr[j+1]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;The sorted string based on the ascending order of the ASCII values of the charaters is as follows: &quot;" newline="False"/>
+            <for variable="i" start="0" end="length-1" direction="inc" step="1">
+                <assign variable="sort[i]" expression="ToChar(arr[i])"/>
+                <output expression="sort[i]" newline="False"/>
+            </for>
+            <output expression="&quot;&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

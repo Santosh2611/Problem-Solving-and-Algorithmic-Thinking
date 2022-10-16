@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-13 03:06:00 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswMzowMTo0OCBQTTsyNjYz"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswMzowNjowMCBQTTs0OzI3Njc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="str" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="modi" type="String" array="False" size=""/>
+            <declare name="c" type="String" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <assign variable="modi" expression="&quot;&quot;"/>
+            <output expression="&quot;enter a string&quot;" newline="True"/>
+            <input variable="str"/>
+            <for variable="i" start="0" end="len(str)-1" direction="inc" step="1">
+                <assign variable="c" expression="Char(str,i)"/>
+                <assign variable="count" expression="ToCode(c)"/>
+                <if expression="count&lt;48 or count&gt;57">
+                    <then>
+                        <assign variable="modi" expression="modi&amp;c"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="modi" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

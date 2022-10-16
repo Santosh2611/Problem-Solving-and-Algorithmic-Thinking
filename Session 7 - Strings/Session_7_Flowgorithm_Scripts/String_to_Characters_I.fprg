@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-13 02:36:59 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswMjozNDoxNiBQTTsyNjYz"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswMjozNjo1OSBQTTsyOzI3ODE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter Text&quot;" newline="True"/>
+            <input variable="name"/>
+            <for variable="n" start="0" end="len(name)-1" direction="inc" step="1">
+                <comment text="output the Nth character in the string 'name'."/>
+                <output expression="Char(name,n)" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

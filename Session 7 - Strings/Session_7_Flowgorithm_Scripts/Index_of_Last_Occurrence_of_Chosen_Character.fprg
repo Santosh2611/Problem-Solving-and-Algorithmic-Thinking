@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-13 04:38:02 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswNDozMzozMiBQTTsyNjYy"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswNDozODowMiBQTTsyOzI3NzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="str" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="pos" type="Integer" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <declare name="ele" type="String" array="False" size=""/>
+            <declare name="modi" type="String" array="False" size=""/>
+            <declare name="c" type="String" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <assign variable="modi" expression="&quot;&quot;"/>
+            <output expression="&quot;enter a string&quot;" newline="True"/>
+            <input variable="str"/>
+            <output expression="&quot;enter the character to check&quot;" newline="True"/>
+            <input variable="ele"/>
+            <for variable="i" start="len(str)-1" end="0" direction="dec" step="1">
+                <assign variable="c" expression="Char(str,i)"/>
+                <if expression="c=ele AND count=0">
+                    <then>
+                        <assign variable="pos" expression="i"/>
+                        <assign variable="count" expression="1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="pos" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

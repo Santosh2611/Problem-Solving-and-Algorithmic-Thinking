@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-13 02:53:07 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswMjo1MTo0OSBQTTsyNjY4"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswMjo1MzowNyBQTTsyOzI3NzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Note that there is no seperate &quot;character&quot;. Even character is to be declared as string only"/>
+            <declare name="s" type="String" array="False" size=""/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <input variable="s"/>
+            <assign variable="n" expression="ToCode(s)"/>
+            <output expression="n" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

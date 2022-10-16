@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-13 04:07:10 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswNDowMzo1MyBQTTsyNjYy"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswNDowNzoxMCBQTTsyOzI3Njg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ss" type="String" array="False" size=""/>
+            <declare name="s" type="String" array="False" size=""/>
+            <declare name="l" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <input variable="s"/>
+            <assign variable="ss" expression="&quot;&quot;"/>
+            <assign variable="l" expression="len(s)"/>
+            <for variable="i" start="0" end="l-1" direction="inc" step="1">
+                <assign variable="ss" expression="ss&amp;Char(s,i)"/>
+            </for>
+            <output expression="ss" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

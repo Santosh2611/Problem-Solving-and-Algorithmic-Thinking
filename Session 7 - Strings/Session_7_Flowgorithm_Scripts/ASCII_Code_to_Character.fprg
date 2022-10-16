@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-13 04:16:21 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswNDoxNDo0MSBQTTsyNjYx"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswNDoxNjoyMSBQTTsyOzI3NzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="convert integer (ascii value) to character"/>
+            <declare name="s" type="String" array="False" size=""/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="s" expression="ToChar(n)"/>
+            <output expression="s" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
