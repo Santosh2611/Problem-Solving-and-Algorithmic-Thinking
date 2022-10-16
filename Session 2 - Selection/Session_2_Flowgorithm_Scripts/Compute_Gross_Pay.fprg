@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-27 07:14:17 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yNzswNjo0NjowNiBQTTsyNjk3"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yNzswNzoxNDoxNyBQTTsxMTsyODUy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Hearty welcome to the program for computing Gross Pay of an Employee! Let's start.&quot;" newline="True"/>
+            <declare name="gp, bp, da, hra, temp" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter the Employee ID Number!&quot;" newline="True"/>
+            <input variable="temp"/>
+            <output expression="&quot;Please enter the Basic Salary of the Employee!&quot;" newline="True"/>
+            <input variable="bp"/>
+            <assign variable="da" expression="(40*bp)/100"/>
+            <assign variable="hra" expression="(10*bp)/100"/>
+            <assign variable="gp" expression="(bp+da+hra)"/>
+            <output expression="&quot;The Gross Pay of the Employee with ID Number &quot; &amp;temp&amp; &quot; is: &quot; &amp;gp" newline="True"/>
+            <output expression="&quot;Hope you enjoyed the program. Thank you very much! :)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

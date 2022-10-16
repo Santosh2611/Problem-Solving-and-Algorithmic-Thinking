@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-27 03:51:28 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yMDswMzoyNDoyMyBQTTsyNjgy"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yNzswMzo1MToyOCBQTTs1OzI4MDY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="si, p, r, t" type="Real" array="False" size=""/>
+            <output expression="&quot;Hearty welcome to the program to calculate Simple Interest by getting the values of Principal Amount, Rate of Interest and the number of Years!&quot;" newline="True"/>
+            <output expression="&quot;Please enter the Principal Amount in Rupees!&quot;" newline="True"/>
+            <input variable="p"/>
+            <output expression="&quot;Please enter Rate of Interesr in Percentage (%)&quot;" newline="True"/>
+            <input variable="r"/>
+            <output expression="&quot;Please enter Time in Years!&quot;" newline="True"/>
+            <input variable="t"/>
+            <assign variable="si" expression="(p*r*t)/100"/>
+            <output expression="&quot;The Simple Interest is: Rs.&quot; &amp;si" newline="True"/>
+            <output expression="&quot;Hope you enjoyed the program. Thank you very much! :)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

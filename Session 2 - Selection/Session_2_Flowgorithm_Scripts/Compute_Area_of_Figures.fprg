@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-27 05:03:47 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yNzswMzo1Njo0MSBQTTsyNjk0"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yNzswNTowMzo0NyBQTTs3OzI4MDg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="choice, radius, length, breadth, side, base, height, fside, sside, tside" type="Integer" array="False" size=""/>
+            <declare name="s, area" type="Real" array="False" size=""/>
+            <output expression="&quot;Hearty welcome to the program for computing the areas of various figures! The menu of the available shapes has been displayed below:&#13;&#10;1. Circle&#13;&#10;2. Square&#13;&#10;3. Rectangle&#13;&#10;4. Right-Angled Triangle&#13;&#10;5. Scalene Triangle&#13;&#10;Please select any one based on your choice!&quot;" newline="True"/>
+            <input variable="choice"/>
+            <if expression="choice==1">
+                <then>
+                    <output expression="&quot;Please enter the radius of the circle!&quot;" newline="True"/>
+                    <input variable="radius"/>
+                    <assign variable="area" expression="3.14*radius*radius"/>
+                    <output expression="&quot;The area of the circle with radius &quot; &amp;radius&amp; &quot; is: &quot; &amp;area" newline="True"/>
+                </then>
+                <else>
+                    <if expression="choice==2">
+                        <then>
+                            <output expression="&quot;Please enter the side of the square!&quot;" newline="True"/>
+                            <input variable="side"/>
+                            <assign variable="area" expression="side*side"/>
+                            <output expression="&quot;The area of the square with side &quot; &amp;side&amp; &quot; is: &quot; &amp;area" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="choice==3">
+                                <then>
+                                    <output expression="&quot;Please enter the length of the rectangle!&quot;" newline="True"/>
+                                    <input variable="length"/>
+                                    <output expression="&quot;Please enter the breadth of the rectangle!&quot;" newline="True"/>
+                                    <input variable="breadth"/>
+                                    <assign variable="area" expression="length*breadth"/>
+                                    <output expression="&quot;The area of the rectangle with length &quot; &amp;length&amp; &quot; and breadth &quot; &amp;breadth&amp; &quot; is: &quot; &amp;area" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="choice==4">
+                                        <then>
+                                            <output expression="&quot;Please enter the base of the right-angled triangle!&quot;" newline="True"/>
+                                            <input variable="base"/>
+                                            <output expression="&quot;Please enter the height of the right-angled triangle!&quot;" newline="True"/>
+                                            <input variable="height"/>
+                                            <assign variable="area" expression="0.5*base*height"/>
+                                            <output expression="&quot;The area of the right-angled triangle with base &quot; &amp;base&amp; &quot; and height &quot; &amp;height&amp; &quot; is: &quot; &amp;area" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="choice==5">
+                                                <then>
+                                                    <output expression="&quot;Please enter the first side of the triangle!&quot;" newline="True"/>
+                                                    <input variable="fside"/>
+                                                    <output expression="&quot;Please enter the second side of the triangle!&quot;" newline="True"/>
+                                                    <input variable="sside"/>
+                                                    <output expression="&quot;Please enter the third side of the triangle!&quot;" newline="True"/>
+                                                    <input variable="tside"/>
+                                                    <assign variable="s" expression="(fside+sside+tside)/2"/>
+                                                    <assign variable="area" expression="sqrt(s*(s-fside)*(s-sside)*(s-tside))"/>
+                                                    <output expression="&quot;The area of the triangle with the first side as &quot; &amp;fside&amp; &quot; ,second side as &quot; &amp;sside&amp; &quot; and the third side as &quot; &amp;tside&amp; &quot; is: &quot; &amp;area" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;No Output! :(&#13;&#10;Please enter a number within the given range of numericals displayed in the menu.&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Hope you enjoyed the program. Thank you very much! :)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

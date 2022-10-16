@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-27 03:51:19 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yNzsxMjo0MDo0NCBQTTsyNjkw"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yNzswMzo1MToxOSBQTTszOzI4MDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="temp" type="Integer" array="False" size=""/>
+            <output expression="&quot;Hearty welcome to the program to check whether a given number is positive, negative or zero!&quot;" newline="True"/>
+            <output expression="&quot;Please enter a number!&quot;" newline="True"/>
+            <input variable="temp"/>
+            <if expression="temp&gt;0">
+                <then>
+                    <output expression="&quot;The number is Positive!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="temp=0">
+                        <then>
+                            <output expression="&quot;The number is Zero!&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;The number is Negative!&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Hope you enjoyed the program. Thank you very much! :)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

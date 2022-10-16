@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-30 09:07:48 AM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0zMDswOTowMzoyOSBBTTsyNjc3"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0zMDswOTowNzo0OCBBTTsxOzI3OTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Hearty welcome to the program for computing whether two numbers are equal or not! Let's start.&quot;" newline="True"/>
+            <declare name="a, b" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter the first number!&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Please enter the second number!&quot;" newline="True"/>
+            <input variable="b"/>
+            <if expression="a==b">
+                <then>
+                    <output expression="&quot;Both the numbers are equal!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Both the numbers are not equal!&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Hope you enjoyed the program. Thank you very much! :)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

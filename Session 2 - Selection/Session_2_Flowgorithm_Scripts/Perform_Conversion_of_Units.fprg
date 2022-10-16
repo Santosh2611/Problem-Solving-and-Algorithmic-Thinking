@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-27 06:58:15 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yNzswNTowNDowNSBQTTsyNjg5"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yNzswNjo1ODoxNSBQTTs1OzI4MTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="choice, m, cm, feet, inches, c, f, kg, p" type="Real" array="False" size=""/>
+            <output expression="&quot;Hearty welcome to the program for performing conversions of various units! The menu of the available conversions has been displayed below:&#13;&#10;1. Meter to Centimetre&#13;&#10;2. Feet to Inches&#13;&#10;3. degree Celsius to Fahrenheit&#13;&#10;4. Kilogram to Pound &#13;&#10;Please select any one based on your choice!&quot;" newline="True"/>
+            <input variable="choice"/>
+            <if expression="choice==1">
+                <then>
+                    <output expression="&quot;Enter the value in metres (m) in order to get it converted to centimetres (cm).&quot;" newline="True"/>
+                    <input variable="m"/>
+                    <assign variable="cm" expression="(m*100)"/>
+                    <output expression="&quot;The conversion is: &quot; &#13;&#10;&amp;m&amp; &quot; m = &quot; &amp;cm&amp; &quot; cm. &quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="choice==2">
+                        <then>
+                            <output expression="&quot;Enter the value in Feet in order to get it converted to Inches.&quot;" newline="True"/>
+                            <input variable="feet"/>
+                            <assign variable="inches" expression="(12*feet)"/>
+                            <output expression="&quot;The conversion is: &quot; &#13;&#10;&amp;feet&amp; &quot; feet = &quot; &amp;inches&amp; &quot; inches. &quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="choice==3">
+                                <then>
+                                    <output expression="&quot;Enter the value in degree Celsius in order to get it converted to degree Fahrenheit.&quot;" newline="True"/>
+                                    <input variable="c"/>
+                                    <assign variable="f" expression="((c*9)/5) + 32"/>
+                                    <output expression="&quot;The conversion is: &quot; &#13;&#10;&amp;c&amp; &quot; degree Celsius = &quot; &amp;f&amp; &quot; degree Fahrenheit. &quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="choice==4">
+                                        <then>
+                                            <output expression="&quot;Enter the value in Kilograms in order to get it converted to Pounds.&quot;" newline="True"/>
+                                            <input variable="kg"/>
+                                            <assign variable="p" expression="(2.2*kg)"/>
+                                            <output expression="&quot;The conversion is: &quot; &#13;&#10;&amp;kg&amp; &quot; kg = &quot; &amp;p&amp; &quot; pounds. &quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;No Output! :(&#13;&#10;Please enter a number within the given range of numericals displayed in the menu.&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Hope you enjoyed the program. Thank you very much! :)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

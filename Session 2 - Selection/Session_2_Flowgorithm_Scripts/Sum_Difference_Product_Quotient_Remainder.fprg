@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-27 04:28:01 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yNzswMjoyNTowOSBQTTsyNjkz"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yNzswNDoyODowMSBQTTsxMDsyODQ2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="choice, a, b, sum, diff, prod, quo" type="Real" array="False" size=""/>
+            <declare name="rem" type="Integer" array="False" size=""/>
+            <output expression="&quot;Hearty welcome to the program of performing various algebraic operations on two numbers! The menu has been displayed below:&#13;&#10;1. Addition&#13;&#10;2. Subtraction&#13;&#10;3. Multiplication&#13;&#10;4. Quotient&#13;&#10;5. Remainder&#13;&#10;Please select any one of your choice! &quot;" newline="True"/>
+            <input variable="choice"/>
+            <if expression="choice==1">
+                <then>
+                    <output expression="&quot;Please enter the first number!&quot;" newline="True"/>
+                    <input variable="a"/>
+                    <output expression="&quot;Please enter the second number!&quot;" newline="True"/>
+                    <input variable="b"/>
+                    <assign variable="sum" expression="a+b"/>
+                    <output expression="&quot;The sum of the two numbers &quot; &amp;a &amp;&quot; and &quot; &amp;b &amp;&quot; is: &quot; &amp;sum" newline="True"/>
+                </then>
+                <else>
+                    <if expression="choice==2">
+                        <then>
+                            <output expression="&quot;Please enter the first number!&quot;" newline="True"/>
+                            <input variable="a"/>
+                            <output expression="&quot;Please enter the second number!&quot;" newline="True"/>
+                            <input variable="b"/>
+                            <assign variable="diff" expression="a-b"/>
+                            <output expression="&quot;The difference of the two numbers &quot; &amp;a &amp;&quot; and &quot; &amp;b &amp;&quot; is: &quot; &amp;diff" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="choice==3">
+                                <then>
+                                    <output expression="&quot;Please enter the first number!&quot;" newline="True"/>
+                                    <input variable="a"/>
+                                    <output expression="&quot;Please enter the second number!&quot;" newline="True"/>
+                                    <input variable="b"/>
+                                    <assign variable="prod" expression="a*b"/>
+                                    <output expression="&quot;The product of the two numbers &quot; &amp;a &amp;&quot; and &quot; &amp;b &amp;&quot; is: &quot; &amp;prod" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="choice==4">
+                                        <then>
+                                            <output expression="&quot;Please enter the dividend!&quot;" newline="True"/>
+                                            <input variable="a"/>
+                                            <output expression="&quot;Please enter the divisor!&quot;" newline="True"/>
+                                            <input variable="b"/>
+                                            <if expression="b=0">
+                                                <then>
+                                                    <output expression="&quot;The dividend cannot be zero! The fraction will be not defined.&quot;" newline="True"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                            <assign variable="quo" expression="a/b"/>
+                                            <output expression="&quot;The quotient of the two obtained upon dividing &quot; &amp;a &amp;&quot; with &quot; &amp;b &amp;&quot; is: &quot; &amp;quo" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="choice==5">
+                                                <then>
+                                                    <output expression="&quot;Please enter the dividend!&quot;" newline="True"/>
+                                                    <input variable="a"/>
+                                                    <output expression="&quot;Please enter the divisor!&quot;" newline="True"/>
+                                                    <input variable="b"/>
+                                                    <if expression="b=0">
+                                                        <then>
+                                                            <output expression="&quot;The dividend cannot be zero! The fraction will be not defined.&quot;" newline="True"/>
+                                                        </then>
+                                                        <else/>
+                                                    </if>
+                                                    <assign variable="rem" expression="a%b"/>
+                                                    <output expression="&quot;The remainder of the two obtained upon dividing &quot; &amp;a &amp;&quot; with &quot; &amp;b &amp;&quot; is: &quot; &amp;rem" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;No Output! :(&#13;&#10;Please enter a number within the given range of numericals displayed in the menu.&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Hope you enjoyed the program. Thank you very much! :)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
