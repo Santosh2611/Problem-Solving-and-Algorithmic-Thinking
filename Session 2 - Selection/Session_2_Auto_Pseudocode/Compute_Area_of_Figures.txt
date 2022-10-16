@@ -1,0 +1,53 @@
+Function Main
+    Declare Integer choice, radius, length, breadth, side, base, height, fside, sside, tside
+    Declare Real s, area
+    
+    Output "Hearty welcome to the program for computing the areas of various figures! The menu of the available shapes has been displayed below:  1. Circle  2. Square  3. Rectangle  4. Right-Angled Triangle  5. Scalene Triangle  Please select any one based on your choice!"
+    Input choice
+    If choice==1
+        Output "Please enter the radius of the circle!"
+        Input radius
+        Assign area = 3.14*radius*radius
+        Output "The area of the circle with radius " &radius& " is: " &area
+    False:
+        If choice==2
+            Output "Please enter the side of the square!"
+            Input side
+            Assign area = side*side
+            Output "The area of the square with side " &side& " is: " &area
+        False:
+            If choice==3
+                Output "Please enter the length of the rectangle!"
+                Input length
+                Output "Please enter the breadth of the rectangle!"
+                Input breadth
+                Assign area = length*breadth
+                Output "The area of the rectangle with length " &length& " and breadth " &breadth& " is: " &area
+            False:
+                If choice==4
+                    Output "Please enter the base of the right-angled triangle!"
+                    Input base
+                    Output "Please enter the height of the right-angled triangle!"
+                    Input height
+                    Assign area = 0.5*base*height
+                    Output "The area of the right-angled triangle with base " &base& " and height " &height& " is: " &area
+                False:
+                    If choice==5
+                        Output "Please enter the first side of the triangle!"
+                        Input fside
+                        Output "Please enter the second side of the triangle!"
+                        Input sside
+                        Output "Please enter the third side of the triangle!"
+                        Input tside
+                        Assign s = (fside+sside+tside)/2
+                        Assign area = sqrt(s*(s-fside)*(s-sside)*(s-tside))
+                        Output "The area of the triangle with the first side as " &fside& " ,second side as " &sside& " and the third side as " &tside& " is: " &area
+                    False:
+                        Output "No Output! :(  Please enter a number within the given range of numericals displayed in the menu."
+                    End
+                End
+            End
+        End
+    End
+    Output "Hope you enjoyed the program. Thank you very much! :)"
+End
