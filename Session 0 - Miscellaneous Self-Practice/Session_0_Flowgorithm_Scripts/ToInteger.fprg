@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Selvi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-12 08:29:28 PM"/>
+        <attribute name="created" value="U2Vsdmk7REVTS1RPUC1WM08xNjlFOzIwMjEtMDEtMjI7MDg6Mzk6MDYgQU07MjgwOA=="/>
+        <attribute name="edited" value="U2Vsdmk7REVTS1RPUC1WM08xNjlFOzIwMjEtMDEtMjI7MDk6MTM6MTIgQU07MjsyOTA3"/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDItMTI7MDg6Mjk6MjggUE07MTsyMjU2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="S" type="String" array="False" size=""/>
+            <declare name="I" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter a character&quot;" newline="True"/>
+            <input variable="S"/>
+            <assign variable="I" expression="ToInteger(S)"/>
+            <output expression="I" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

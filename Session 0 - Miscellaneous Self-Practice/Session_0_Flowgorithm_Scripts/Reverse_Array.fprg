@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="gayat"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-11 09:11:12 AM"/>
+        <attribute name="created" value="Z2F5YXQ7TEFQVE9QLUM0OE9TVTlUOzIwMjEtMDEtMTE7MDg6NTE6MjIgQU07Mjg2MQ=="/>
+        <attribute name="edited" value="Z2F5YXQ7TEFQVE9QLUM0OE9TVTlUOzIwMjEtMDEtMTE7MDk6MTE6MTIgQU07MTsyOTY1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the size of the array&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="arr" type="Integer" array="True" size="n"/>
+            <output expression="&quot;Enter the elements of the array&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="arr[i]"/>
+            </for>
+            <output expression="&quot;The elements entered by the user is&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="arr[i]&amp;&quot; &quot;" newline="False"/>
+            </for>
+            <output expression="&quot; &quot;" newline="True"/>
+            <output expression="&quot;Array in the reverse order&quot;" newline="True"/>
+            <assign variable="i" expression="n-1"/>
+            <while expression="i&gt;=0">
+                <output expression="arr[i] &amp;&quot; &quot;" newline="False"/>
+                <assign variable="i" expression="i-1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

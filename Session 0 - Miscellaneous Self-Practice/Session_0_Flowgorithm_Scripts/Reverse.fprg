@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Selvi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-22 08:38:45 AM"/>
+        <attribute name="created" value="U2Vsdmk7REVTS1RPUC1WM08xNjlFOzIwMjEtMDEtMjI7MDg6MjU6MDQgQU07MjgwMQ=="/>
+        <attribute name="edited" value="U2Vsdmk7REVTS1RPUC1WM08xNjlFOzIwMjEtMDEtMjI7MDg6Mzg6NDUgQU07NjsyOTIz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name, reverse" type="String" array="False" size=""/>
+            <declare name="length, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter Name&quot;" newline="True"/>
+            <input variable="name"/>
+            <assign variable="reverse" expression="&quot;&quot;"/>
+            <assign variable="length" expression="len(name)"/>
+            <output expression="&quot;Length of your name is &quot; &amp;length" newline="True"/>
+            <for variable="i" start="length-1" end="0" direction="dec" step="1">
+                <assign variable="reverse" expression="reverse&amp;char(name,i)"/>
+            </for>
+            <output expression="&quot;Reverse of &quot; &amp; name &amp; &quot; is &quot; &amp;reverse" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

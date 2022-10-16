@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Selvi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-22 11:25:23 AM"/>
+        <attribute name="created" value="U2Vsdmk7REVTS1RPUC1WM08xNjlFOzIwMjEtMDEtMjI7MDg6MjU6MDQgQU07MjgwMQ=="/>
+        <attribute name="edited" value="U2Vsdmk7REVTS1RPUC1WM08xNjlFOzIwMjEtMDEtMjI7MTE6MjU6MjMgQU07NDsyOTA3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="length" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter Name&quot;" newline="True"/>
+            <input variable="name"/>
+            <assign variable="length" expression="len(name)"/>
+            <output expression="&quot;Length of your name is &quot; &amp;length" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

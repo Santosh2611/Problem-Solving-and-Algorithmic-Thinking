@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-21 09:57:06 PM"/>
+        <attribute name="created" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjE7MDg6NTA6MzEgUE07MjEzNQ=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjE7MDg6NTA6MzUgUE07MTtEZUxMO1NBTlRPU0g7MjAyMS0wMS0wODswNzoxMzoxNiBQTTtHaXZlbiBOIGludGVnZXJzLCBjb3VudCB0aGUgdG90YWwgcGFpcnMgb2YgaW50ZWdlcnMgdGhhdCBoYXZlIGEgZGlmZmVyZW5jZSBvZiBLLmZwcmc7MTIyMzk="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjE7MDg6NTc6MTIgUE07MTtEZUxMO1NBTlRPU0g7MjAyMS0wMS0wODswOTowMzo0MyBQTTtCdWJibGUgU29ydC5mcHJnOzYwMzA="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjE7MDg6NTg6MDUgUE07MTtEZUxMO1NBTlRPU0g7MjAyMS0wMS0yMTswODowNjowOCBQTTtUb3kgRmFjdG9yeS5mcHJnOzYwNjM="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjE7MDk6NTc6MDYgUE07MTsyMjUz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Q. Given an array of distinct unsorted integers write a program that finds the pair of elements that have the maximum absolute difference between them. If there are multiple pairs, find them all.  &#13;&#10;Given {11, 13, 18, 100} the output should be (11,100).&#13;&#10;Given {5, 4, 3, 2} the output should be (4,5) (3,4) (2,3).&quot;" newline="True"/>
+            <declare name="continue" type="String" array="False" size=""/>
+            <do expression="((continue==&quot;y&quot;)||(continue==&quot;Y&quot;))">
+                <declare name="n, i, j, diff, mindiff, temp" type="Integer" array="False" size=""/>
+                <output expression="&quot;Enter the size of the array (value of n):&#13;&#10;Note: The size of the array cannot be 1 as no comparison is possible with a single element.&quot;" newline="True"/>
+                <input variable="n"/>
+                <declare name="arr" type="Integer" array="True" size="n"/>
+                <output expression="&quot;Enter the elements of the array:&quot;" newline="True"/>
+                <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                    <input variable="arr[i]"/>
+                </for>
+                <output expression="&quot;The array is as follows: &quot;" newline="False"/>
+                <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                    <output expression="&quot;&quot; &amp;arr[i]&amp; &quot; &quot;" newline="False"/>
+                </for>
+                <output expression="&quot;&quot;" newline="True"/>
+                <for variable="i" start="0" end="n-2" direction="inc" step="1">
+                    <for variable="j" start="0" end="n-i-2" direction="inc" step="1">
+                        <if expression="(arr[j]&gt;arr[j+1])">
+                            <then>
+                                <assign variable="temp" expression="arr[j]"/>
+                                <assign variable="arr[j]" expression="arr[j+1]"/>
+                                <assign variable="arr[j+1]" expression="temp"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </for>
+                </for>
+                <output expression="&quot;The array is sorted as follows: &quot;" newline="False"/>
+                <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                    <output expression="&quot;&quot; &amp;arr[i]&amp; &quot; &quot;" newline="False"/>
+                </for>
+                <output expression="&quot;&quot;" newline="True"/>
+                <assign variable="mindiff" expression="(arr[1]-arr[0])"/>
+                <for variable="i" start="2" end="n-1" direction="inc" step="1">
+                    <assign variable="diff" expression="(arr[i]-arr[i-1])"/>
+                    <if expression="(diff&gt;mindiff)">
+                        <then>
+                            <assign variable="mindiff" expression="diff"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <output expression="&quot;The desired output is as follows: &quot;" newline="False"/>
+                <for variable="i" start="1" end="n-1" direction="inc" step="1">
+                    <if expression="(arr[i]-arr[i-1]==mindiff)">
+                        <then>
+                            <output expression="&quot;(&quot; &amp;arr[i-1]&amp; &quot;,&quot; &amp;arr[i]&amp; &quot;) &quot;" newline="False"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <output expression="&quot;&quot;" newline="True"/>
+                <output expression="&quot;To continue with the program, press (y/Y) and any other key to stop.&quot;" newline="True"/>
+                <input variable="continue"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

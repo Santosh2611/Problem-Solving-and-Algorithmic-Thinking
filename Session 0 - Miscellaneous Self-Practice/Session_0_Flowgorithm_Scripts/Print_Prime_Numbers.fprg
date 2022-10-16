@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-12-11 02:22:52 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xMTsxMDozNjo0MCBBTTsyNjY4"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xMTsxMDozNjo0NiBBTTsxO0RlTEw7REVTS1RPUC1KTEtCVDlQOzIwMjAtMTItMTE7MTA6MDQ6MDEgQU07NTUwMQ=="/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xMTswMjoyMjo1MiBQTTsyOzI3OTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, temp, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;Prime Numbers from 2 to 100 are: &quot;" newline="True"/>
+            <for variable="num" start="2" end="100" direction="inc" step="1">
+                <assign variable="c" expression="0"/>
+                <for variable="temp" start="2" end="num/2" direction="inc" step="1">
+                    <if expression="num%temp==0">
+                        <then>
+                            <assign variable="c" expression="c+1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="c==0">
+                    <then>
+                        <output expression="&quot;&quot; &amp;num" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

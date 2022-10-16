@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-12-21 10:08:53 AM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0yMTsxMDowNjoyMCBBTTsyNjY0"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0yMTsxMDowNjoyNCBBTTsxO0RlTEw7REVTS1RPUC1KTEtCVDlQOzIwMjAtMTItMjE7MTA6MDA6MDkgQU07UmVhZCBuIG51bWJlciBvZiB2YWx1ZXMgaW4gYW4gQXJyYXkgYW5kIERpc3BsYXkgaXQgaW4gUmV2ZXJzZSBPcmRlci5mcHJnOzEyMTAy"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0yMTsxMDowODo1MyBBTTsxOzI3ODA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, sum" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <output expression="&quot;Enter the number of elements to be entered in the Array:&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="arr" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Element &quot; &amp;i&amp; &quot; in the Array is: &quot;" newline="True"/>
+                <input variable="arr[i]"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="sum" expression="sum+arr[i]"/>
+            </for>
+            <output expression="&quot;Sum of all elements stored in the array is : &quot; &amp;sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

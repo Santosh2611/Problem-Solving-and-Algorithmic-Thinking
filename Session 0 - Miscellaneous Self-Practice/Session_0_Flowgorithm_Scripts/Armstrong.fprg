@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="gayat"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-12-18 09:23:33 AM"/>
+        <attribute name="created" value="Z2F5YXQ7TEFQVE9QLUM0OE9TVTlUOzIwMjAtMTItMTg7MDk6MTQ6MDggQU07Mjg3Mw=="/>
+        <attribute name="edited" value="Z2F5YXQ7TEFQVE9QLUM0OE9TVTlUOzIwMjAtMTItMTg7MDk6MjM6MzMgQU07MTsyOTc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, initial, rem, ans, cube" type="Integer" array="False" size=""/>
+            <assign variable="ans" expression="0"/>
+            <output expression="&quot;enter a 3-digit number&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="initial" expression="n"/>
+            <while expression="initial!=0">
+                <assign variable="rem" expression="initial%10"/>
+                <assign variable="cube" expression="rem*rem*rem"/>
+                <assign variable="ans" expression="ans+cube"/>
+                <assign variable="initial" expression="initial/10"/>
+            </while>
+            <if expression="ans==n">
+                <then>
+                    <output expression="n &amp;&quot; is an armstrong number&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="n &amp;&quot; is not an armstrong number&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
