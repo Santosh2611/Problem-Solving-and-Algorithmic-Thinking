@@ -1,0 +1,50 @@
+Function Main
+    Output "Q. Write a Flowgorithm Script to read n numbers into an array and have a menu driven program.  1. Rotate the Array to Right  2. Rotate the Array to Left."
+    Declare Integer n, i, k, mc, modulus, temp
+    
+    Assign k = 1
+    Declare String ch1, ch2
+    
+    Loop
+        Output "Enter the Size of the Array (value of N):"
+        Input n
+        Declare Integer Array arr[n]
+        
+        Output "Enter the Elements of the Array:"
+        For i = 0 to n-1
+            Input arr[i]
+        End
+        Loop
+            Output "MENU:  1. Array Rotation to Right.  2. Array Rotation to Left.  Kindly select any one based on your choice:"
+            Input mc
+            If (mc==1)
+                Assign modulus = (k%n)
+                Output "The array rotated from right is: "
+                For i = 0 to n-1
+                    Output "" &arr[(modulus+i)%n]
+                End
+            False:
+                If (mc==2)
+                    Output "The array rotated from left is: "
+                    Assign temp = arr[n-1]
+                    Assign i = n-1
+                    While i!=0
+                        Assign arr[i] = arr[i-1]
+                        Assign i = i-1
+                    End
+                    Assign arr[0] = temp
+                    For i = 0 to n-1
+                        Output "" &arr[i]
+                    End
+                False:
+                    Output "Kindly enter a Valid Number from the given List of Numbers in the Menu by continuing the program again!"
+                End
+            End
+            Output ""
+            Output "To continue with the menu, press (y/Y) and any other key to stop."
+            Input ch2
+        Do ((ch2=="y")||(ch2=="Y"))
+        Output "To continue with the program, press (y/Y) and any other key to stop."
+        Input ch1
+    Do ((ch1=="y")||(ch1=="Y"))
+End
