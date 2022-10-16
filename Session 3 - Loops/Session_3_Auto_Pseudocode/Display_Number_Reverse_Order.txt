@@ -1,0 +1,14 @@
+Function Main
+    Declare Integer num, digit, rev
+    
+    Assign rev = 0
+    Output "Input a number:"
+    Input num
+    Output "The number " &num& " in reverse order is: "
+    While num!=0
+        Assign digit = num%10
+        Assign rev = (rev*10)+digit
+        Assign num = num/10
+    End
+    Output rev
+End

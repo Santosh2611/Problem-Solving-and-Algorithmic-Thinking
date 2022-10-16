@@ -1,0 +1,16 @@
+Function Main
+    Declare Integer first, second, third, n, temp
+    
+    Assign first = 0
+    Assign second = 1
+    Output "Input number of terms to display :"
+    Input n
+    Output "Here is the Fibonacci series upto " &n& " terms :"
+    Output "" &first& " " &second
+    For temp = 2 to n-1
+        Assign third = first+second
+        Output " " &third
+        Assign first = second
+        Assign second = third
+    End
+End

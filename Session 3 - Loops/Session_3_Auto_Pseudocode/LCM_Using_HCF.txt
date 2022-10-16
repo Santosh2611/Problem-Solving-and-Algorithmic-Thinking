@@ -1,0 +1,21 @@
+Function Main
+    Declare Integer i, j, lcm, hcf, n1, n2
+    
+    Assign hcf = 1
+    Output "Input 1st number for LCM:"
+    Input n1
+    Output "Input 2nd number for LCM:"
+    Input n2
+    If n1<n2
+        Assign j = n1
+    False:
+        Assign j = n1
+    End
+    For i = 1 to j
+        If ((n1%i==0)&&(n2%i==0))
+            Assign hcf = i
+        End
+    End
+    Assign lcm = (n1*n2)/hcf
+    Output "The LCM of " &n1& " and " &n2& " is : " &lcm
+End

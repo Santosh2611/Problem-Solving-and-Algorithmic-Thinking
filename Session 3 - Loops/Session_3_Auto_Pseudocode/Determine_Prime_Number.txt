@@ -1,0 +1,21 @@
+Function Main
+    Declare Integer num, temp, c
+    
+    Assign c = 0
+    Output "Input a number :"
+    Input num
+    If num==1
+        Output "1 is neither prime nor composite!"
+    False:
+        For temp = 2 to num/2
+            If num%temp==0
+                Assign c = c+1
+            End
+        End
+        If c==0
+            Output ""&num& " is a prime number."
+        False:
+            Output ""&num& " is not a prime number."
+        End
+    End
+End

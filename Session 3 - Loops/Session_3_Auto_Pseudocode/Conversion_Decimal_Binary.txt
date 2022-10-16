@@ -1,0 +1,39 @@
+Function Main
+    Declare Integer choice, n, continue, binary, rem, temp, decimal
+    
+    Loop
+        Output "Menu:  1. Decimal to Binary  2. Binary to Decimal  3. Exit"
+        Input choice
+        If choice==1
+            Assign binary = 0
+            Assign temp = 1
+            Output "Enter a number to convert: "
+            Input n
+            Output "The Binary of " &n& " is "
+            While n!=0
+                Assign rem = n%2
+                Assign n = n/2
+                Assign binary = binary+(rem*temp)
+                Assign temp = temp*10
+            End
+            Output ""&binary& ". "
+        False:
+            If choice==2
+                Assign decimal = 0
+                Assign temp = 0
+                Output "Enter a binary to convert: "
+                Input n
+                Output "The number corresponding to " &n& " is "
+                While n!=0
+                    Assign rem = n%10
+                    Assign n = n/10
+                    Assign decimal = decimal+(rem*(2^temp))
+                    Assign temp = temp+1
+                End
+                Output ""&decimal& ". "
+            End
+        End
+        Output "To get back, press 1. To terminate the execution, press any other key."
+        Input continue
+    Do continue==1
+End

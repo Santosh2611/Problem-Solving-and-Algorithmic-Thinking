@@ -1,0 +1,34 @@
+Function Main
+    Declare Integer temp, limit, choice, x, continue
+    Declare Real cube
+    
+    Assign temp = 1
+    Assign cube = 0
+    Loop
+        Output "MENU:  1. Calculate all the cubes of the numbers before the upper limit.  2. Display all the cubic numbers before the upper limit."
+        Input choice
+        Output "Please specify the upper limit based on your selection!"
+        Input limit
+        If choice==1
+            While temp<(sqrt(limit))
+                Assign cube = temp*temp*temp
+                If cube<=limit
+                    Output "The cube of " &temp& " is " &cube& ". "
+                End
+                Assign temp = temp+1
+            End
+        False:
+            If choice==2
+                While temp<=limit
+                    Assign cube = temp*temp*temp
+                    Output "The cube of " &temp& " is " &cube& ". "
+                    Assign temp = temp+1
+                End
+            False:
+                Output "No Output! :(  Please enter a number within the given range of numericals displayed in the menu."
+            End
+        End
+        Output "Please enter 1 to continue! To stop, enter any other number from your keypad."
+        Input continue
+    Do continue==1
+End

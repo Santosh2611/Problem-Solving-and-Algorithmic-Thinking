@@ -1,0 +1,15 @@
+Function Main
+    Declare Integer n
+    Declare Real temp, sum
+    
+    Assign sum = 0
+    Assign temp = 1
+    Output "Input the number of terms :"
+    Input n
+    While temp<=n
+        Output "1/ " &temp& " + "
+        Assign sum = sum+1/temp
+        Assign temp = temp+1
+    End
+    Output "  Sum of Series upto " &n& " : " &sum
+End
