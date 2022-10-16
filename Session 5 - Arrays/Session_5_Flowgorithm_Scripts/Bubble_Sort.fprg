@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-29 02:56:40 PM"/>
+        <attribute name="created" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDk6MDM6NDMgUE07MjE0Mg=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDk6MDY6NDIgUE07MTtEZUxMO1NBTlRPU0g7MjAyMS0wMS0wODswMzoyMjoxMiBQTTtGaW5kIHRoZSBQcm9kdWN0IG9mIEVsZW1lbnRzIGluIGFuIEFycmF5LmZwcmc7ODYyMg=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjk7MDI6NTY6NDAgUE07MzsyMjUz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Q. Write a Flowgorithm Script that implements bubble sort. The program should read the number of elements for the array and the numbers to be sorted from the user.&quot;" newline="True"/>
+            <declare name="n, i, j, temp" type="Integer" array="False" size=""/>
+            <declare name="ch" type="String" array="False" size=""/>
+            <do expression="((ch==&quot;y&quot;)||(ch==&quot;Y&quot;))">
+                <output expression="&quot;Enter the Size of the Array:&quot;" newline="True"/>
+                <input variable="n"/>
+                <declare name="arr" type="Integer" array="True" size="n"/>
+                <output expression="&quot;Enter the Elements of the Array:&quot;" newline="True"/>
+                <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                    <input variable="arr[i]"/>
+                </for>
+                <output expression="&quot;The unsorted array is: &quot;" newline="False"/>
+                <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                    <output expression="&quot;&quot; &amp;arr[i]&amp; &quot; &quot;" newline="False"/>
+                </for>
+                <output expression="&quot;&quot;" newline="True"/>
+                <for variable="i" start="0" end="n-2" direction="inc" step="1">
+                    <for variable="j" start="0" end="n-i-2" direction="inc" step="1">
+                        <if expression="(arr[j]&gt;arr[j+1])">
+                            <then>
+                                <assign variable="temp" expression="arr[j]"/>
+                                <assign variable="arr[j]" expression="arr[j+1]"/>
+                                <assign variable="arr[j+1]" expression="temp"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </for>
+                </for>
+                <output expression="&quot;The Sorted Array is: &quot;" newline="False"/>
+                <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                    <output expression="&quot;&quot; &amp;arr[i]&amp; &quot; &quot;" newline="False"/>
+                </for>
+                <output expression="&quot;&quot;" newline="True"/>
+                <output expression="&quot;To continue with the program, press (y/Y) and any other key to stop.&quot;" newline="True"/>
+                <input variable="ch"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

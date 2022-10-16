@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-08 06:00:42 PM"/>
+        <attribute name="created" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDQ6NDE6MTYgUE07MjEzOQ=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDQ6NDU6MDMgUE07MTtEZUxMO1NBTlRPU0g7MjAyMS0wMS0wODswNDoxNjoyNCBQTTtTZWFyY2hlcyBmb3IgYSBudW1iZXIgaW4gYSBsaXN0IG9mIG51bWJlcnMgYW5kIGRpc3BsYXkgYW4gYXBwcm9wcmlhdGUgbWVzc2FnZS5mcHJnOzEyMjIy"/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDU6MzA6NDUgUE07NTs5MTk4ODtMQVBUT1AtSUtLVTNPRkE7MjAyMC0xMi0yODsxMDoxNjoxOCBQTTtNb2JpbGUgTnVtYmVyIERpcmVjdG9yeSBNYW5hZ2VtZW50LmZwcmc7ODc2NQ=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDY6MDA6NDIgUE07MjA7MjI5Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Q. Write a menu driven program for a bank that read the following details of n customers: customer id(a 4-digit number), current balance and perform the following operations (menu driven)&#13;&#10;1. Read a customer number and display the balance for that customer.&#13;&#10;2. Display the id of the customer with highest balance.&#13;&#10;Also, display an error message if the search fails.&quot;" newline="True"/>
+            <declare name="menu, ctr, n, size, count, k" type="Integer" array="False" size=""/>
+            <declare name="ch, mc1, mc2, idc, highest, largest" type="String" array="False" size=""/>
+            <output expression="&quot;Enter the number of customers who have their accounts in this bank:&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="id, balance" type="String" array="True" size="n"/>
+            <assign variable="ctr" expression="0"/>
+            <do expression="((ch==&quot;y&quot;)||(ch==&quot;Y&quot;))">
+                <output expression="&quot;Menu:&#13;&#10;1. New Registration.&#13;&#10;2. Given a Customer ID, display the current balance.&#13;&#10;3. Display the Customer ID with the highest balance.&#13;&#10;Kindly select any one based on your choice.&quot;" newline="True"/>
+                <input variable="menu"/>
+                <if expression="(menu==1)">
+                    <then>
+                        <assign variable="mc1" expression="&quot;y&quot;"/>
+                        <while expression="((mc1==&quot;y&quot;)||(mc1==&quot;Y&quot;))">
+                            <output expression="&quot;Kindly enter the details of the new Customer as asked!&quot;" newline="True"/>
+                            <output expression="&quot;Customer ID:&quot;" newline="True"/>
+                            <input variable="id[ctr]"/>
+                            <if expression="(Len(id[ctr])!=4)">
+                                <then>
+                                    <do expression="(Len(id[ctr])!=4)">
+                                        <output expression="&quot;Kindly enter a valid Customer ID:&quot;" newline="True"/>
+                                        <input variable="id[ctr]"/>
+                                    </do>
+                                </then>
+                                <else/>
+                            </if>
+                            <output expression="&quot;Current Balance:&quot;" newline="True"/>
+                            <input variable="balance[ctr]"/>
+                            <output expression="&quot;The amount of Rs. &quot; &amp;balance[ctr]&amp; &quot;/- has been added succesfully for the customer ID &quot; &amp;id[ctr]&amp; &quot;. &quot;" newline="True"/>
+                            <assign variable="ctr" expression="ctr+1"/>
+                            <output expression="&quot;To add more new customers, press (Y/y) or any other key to terminate!&quot;" newline="True"/>
+                            <input variable="mc1"/>
+                            <assign variable="size" expression="ctr"/>
+                        </while>
+                    </then>
+                    <else>
+                        <if expression="(menu==2)">
+                            <then>
+                                <assign variable="mc2" expression="&quot;y&quot;"/>
+                                <while expression="((mc2==&quot;y&quot;)||(mc2==&quot;Y&quot;))">
+                                    <assign variable="count" expression="0"/>
+                                    <output expression="&quot;Enter the Customer ID:&quot;" newline="True"/>
+                                    <input variable="idc"/>
+                                    <for variable="k" start="0" end="size-1" direction="inc" step="1">
+                                        <if expression="(id[k]==idc)">
+                                            <then>
+                                                <output expression="&quot;The Customer with ID &quot; &amp;id[k]&amp; &quot; has Rs. &quot; &amp;balance[k]&amp; &quot;/- in the Savings.&quot;" newline="True"/>
+                                                <assign variable="count" expression="(count+1)"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </for>
+                                    <if expression="(count==0)">
+                                        <then>
+                                            <output expression="&quot;There is no customer with ID &quot; &amp;id&amp; &quot; registered in the Directory!&quot;" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                    <output expression="&quot;To check for other customers, press (Y/y) or any other key to terminate!&quot;" newline="True"/>
+                                    <input variable="mc2"/>
+                                </while>
+                            </then>
+                            <else>
+                                <if expression="(menu==3)">
+                                    <then>
+                                        <assign variable="highest" expression="balance[0]"/>
+                                        <assign variable="largest" expression="id[0]"/>
+                                        <for variable="k" start="0" end="size-1" direction="inc" step="1">
+                                            <if expression="(highest&lt;balance[k])">
+                                                <then>
+                                                    <assign variable="highest" expression="balance[k]"/>
+                                                    <assign variable="largest" expression="id[k]"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </for>
+                                        <output expression="&quot;The customer ID &quot; &amp;largest&amp; &quot; has the highest Balance of Rs.&quot; &amp;highest&amp; &quot; in the bank.&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Kindly enter a Valid Number from the given List of Numbers in the Menu by continuing the program again!&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;To continue with any other functionality in the menu, press (y/Y) and any other key to stop.&quot;" newline="True"/>
+                <input variable="ch"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

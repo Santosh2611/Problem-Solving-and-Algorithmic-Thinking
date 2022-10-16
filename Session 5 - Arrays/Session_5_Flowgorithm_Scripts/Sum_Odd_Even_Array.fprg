@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-08 03:52:46 PM"/>
+        <attribute name="created" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDM6MzE6NTcgUE07MjE0Mg=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDM6NDk6MDYgUE07MjtEZUxMO1NBTlRPU0g7MjAyMS0wMS0wODswMzoyMjoxMiBQTTtGaW5kIHRoZSBQcm9kdWN0IG9mIEVsZW1lbnRzIGluIGFuIEFycmF5LmZwcmc7ODYyNA=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDM6NTI6NDYgUE07MTsyMjUx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Q. Write a Flowgorithm Script that reads an array and print the sum of odd numbers and sum of even numbers in the array. If either the odd sum or the even sum is zero, print an appropriate message as well.&quot;" newline="True"/>
+            <declare name="n, i, even, odd" type="Integer" array="False" size=""/>
+            <declare name="ch" type="String" array="False" size=""/>
+            <do expression="((ch==&quot;y&quot;)||(ch==&quot;Y&quot;))">
+                <assign variable="even" expression="0"/>
+                <assign variable="odd" expression="0"/>
+                <output expression="&quot;Enter the Size of the Array:&quot;" newline="True"/>
+                <input variable="n"/>
+                <declare name="arr" type="Integer" array="True" size="n"/>
+                <output expression="&quot;Enter the Elements of the Array:&quot;" newline="True"/>
+                <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                    <input variable="arr[i]"/>
+                </for>
+                <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                    <if expression="(arr[i]%2==0)">
+                        <then>
+                            <assign variable="even" expression="(even+arr[i])"/>
+                        </then>
+                        <else>
+                            <assign variable="odd" expression="(odd+arr[i])"/>
+                        </else>
+                    </if>
+                </for>
+                <output expression="&quot;The Sum of Odd Elements is: &quot; &amp;odd&amp; &quot;.&quot;" newline="True"/>
+                <output expression="&quot;The Sum of Even Elements is: &quot; &amp;even&amp; &quot;.&quot;" newline="True"/>
+                <if expression="(odd==0)">
+                    <then>
+                        <output expression="&quot;This is to notify you again that the sum of all odd elements in the array is 0.&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="(even==0)">
+                    <then>
+                        <output expression="&quot;This is to notify you again that the sum of all even elements in the array is 0.&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;To continue with the program, press (y/Y) and any other key to stop.&quot;" newline="True"/>
+                <input variable="ch"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

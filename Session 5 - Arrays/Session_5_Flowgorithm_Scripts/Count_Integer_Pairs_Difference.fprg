@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-09 01:18:16 AM"/>
+        <attribute name="created" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDc6MTM6MTYgUE07MjE0MQ=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDc6MTY6MDcgUE07MTtEZUxMO1NBTlRPU0g7MjAyMS0wMS0wODswMzoyMjoxMiBQTTtGaW5kIHRoZSBQcm9kdWN0IG9mIEVsZW1lbnRzIGluIGFuIEFycmF5LmZwcmc7ODYyMg=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDk7MDE6MTg6MTYgQU07NDsyMjM3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Q. Write a Flowgorithm Script that given N integers, count the total pairs of integers that have a difference of K.&quot;" newline="True"/>
+            <declare name="n, i, j, k, count" type="Integer" array="False" size=""/>
+            <declare name="ch" type="String" array="False" size=""/>
+            <do expression="((ch==&quot;y&quot;)||(ch==&quot;Y&quot;))">
+                <assign variable="count" expression="0"/>
+                <output expression="&quot;Enter the Size of the Array (value of N):&quot;" newline="True"/>
+                <input variable="n"/>
+                <declare name="arr" type="Integer" array="True" size="n"/>
+                <output expression="&quot;Enter the Elements of the Array:&quot;" newline="True"/>
+                <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                    <input variable="arr[i]"/>
+                </for>
+                <output expression="&quot;Enter the difference: (value of K)&quot;" newline="True"/>
+                <input variable="k"/>
+                <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                    <for variable="j" start="0" end="n-1" direction="inc" step="1">
+                        <if expression="((arr[i]-arr[j]==k)||(arr[j]-arr[i]==k))">
+                            <then>
+                                <assign variable="count" expression="(count+1)"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </for>
+                </for>
+                <output expression="&quot;The number of pairs with difference &quot; &amp;k&amp; &quot; is/are &quot; &amp;(count/2)&amp; &quot;.&quot;" newline="True"/>
+                <output expression="&quot;To continue with the program, press (y/Y) and any other key to stop.&quot;" newline="True"/>
+                <input variable="ch"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

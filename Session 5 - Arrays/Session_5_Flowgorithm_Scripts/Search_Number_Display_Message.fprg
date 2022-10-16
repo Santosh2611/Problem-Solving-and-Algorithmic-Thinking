@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-08 06:02:01 PM"/>
+        <attribute name="created" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDQ6MTY6MjQgUE07MjE0MA=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDQ6MTY6NDUgUE07MjtEZUxMO1NBTlRPU0g7MjAyMS0wMS0wODswNDowMTo0MSBQTTtSZWFkcyBtYXJrcyBvZiBuIHN0dWRlbnRzIG9mIGEgY2xhc3MgYW5kIGRpc3BsYXkgdGhlIGNsYXNzIGF2ZXJhZ2UuZnByZzsxMTEwOQ=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDY6MDI6MDEgUE07NTsyMjQ0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Q. Write a Flowgorithm Script that searches for a number in a list of numbers and display an appropriate message. The list of numbers and the value to be searched should be read from the user.&quot;" newline="True"/>
+            <declare name="n, i, search, count" type="Integer" array="False" size=""/>
+            <declare name="ch" type="String" array="False" size=""/>
+            <do expression="((ch==&quot;y&quot;)||(ch==&quot;Y&quot;))">
+                <assign variable="count" expression="0"/>
+                <output expression="&quot;Enter the count of numbers in your list.&quot;" newline="True"/>
+                <input variable="n"/>
+                <declare name="arr" type="Integer" array="True" size="n"/>
+                <output expression="&quot;Enter the numbers in the list one-by-one.&quot;" newline="True"/>
+                <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                    <input variable="arr[i]"/>
+                </for>
+                <output expression="&quot;Enter the number to be searched:&quot;" newline="True"/>
+                <input variable="search"/>
+                <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                    <if expression="(arr[i]=search)">
+                        <then>
+                            <output expression="&quot;The number &quot; &amp;search&amp; &quot; is found in the &quot; &amp;i&amp; &quot; index.&quot;" newline="True"/>
+                            <assign variable="count" expression="(count+1)"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="(count==0)">
+                    <then>
+                        <output expression="&quot;The number &quot; &amp;search&amp; &quot; is not found in the given list.&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;To continue with the program, press (y/Y) and any other key to stop.&quot;" newline="True"/>
+                <input variable="ch"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

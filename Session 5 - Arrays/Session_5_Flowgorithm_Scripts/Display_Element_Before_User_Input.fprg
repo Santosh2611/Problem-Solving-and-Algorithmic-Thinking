@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-08 04:30:30 PM"/>
+        <attribute name="created" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDQ6MjQ6NDMgUE07MjE0MA=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDQ6MjY6NTYgUE07MTtEZUxMO1NBTlRPU0g7MjAyMS0wMS0wODswNDoxNjoyNCBQTTtTZWFyY2hlcyBmb3IgYSBudW1iZXIgaW4gYSBsaXN0IG9mIG51bWJlcnMgYW5kIGRpc3BsYXkgYW4gYXBwcm9wcmlhdGUgbWVzc2FnZS5mcHJnOzEyMjI5"/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDQ6MzA6MzAgUE07MTsyMjQx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Q. Write a Flowgorithm Script that reads an array and displays the element that comes in the array after a number entered by the user.&quot;" newline="True"/>
+            <declare name="n, i, search, count" type="Integer" array="False" size=""/>
+            <declare name="ch" type="String" array="False" size=""/>
+            <do expression="((ch==&quot;y&quot;)||(ch==&quot;Y&quot;))">
+                <assign variable="count" expression="0"/>
+                <output expression="&quot;Enter the count of numbers in your list.&quot;" newline="True"/>
+                <input variable="n"/>
+                <declare name="arr" type="Integer" array="True" size="n"/>
+                <output expression="&quot;Enter the numbers in the list one-by-one.&quot;" newline="True"/>
+                <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                    <input variable="arr[i]"/>
+                </for>
+                <output expression="&quot;Enter the number to find the number after it in the given list:&quot;" newline="True"/>
+                <input variable="search"/>
+                <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                    <if expression="(arr[i]=search)">
+                        <then>
+                            <output expression="&quot;&quot; &amp;arr[i+1]&amp; &quot; is the number that comes after &quot; &amp;search&amp; &quot; in the given list.&quot;" newline="True"/>
+                            <assign variable="count" expression="(count+1)"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="(count==0)">
+                    <then>
+                        <output expression="&quot;The number &quot; &amp;search&amp; &quot; is not found in the given list.&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;To continue with the program, press (y/Y) and any other key to stop.&quot;" newline="True"/>
+                <input variable="ch"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-08 04:40:16 PM"/>
+        <attribute name="created" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDQ6MzA6NTcgUE07MjE0Mg=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDQ6MzA6NTkgUE07MTtEZUxMO1NBTlRPU0g7MjAyMS0wMS0wODswNDoxNjoyNCBQTTtTZWFyY2hlcyBmb3IgYSBudW1iZXIgaW4gYSBsaXN0IG9mIG51bWJlcnMgYW5kIGRpc3BsYXkgYW4gYXBwcm9wcmlhdGUgbWVzc2FnZS5mcHJnOzEyMjI3"/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDQ6Mzc6NTkgUE07MjtEZUxMO0RFU0tUT1AtSkxLQlQ5UDsyMDIwLTEyLTExOzAxOjI2OjQ2IFBNO0NvbnZlcnNpb24gb2YgZGVjaW1hbCB0byBiaW5hcnkgYW5kIHZpY2UtdmVyc2EuZnByZzs5OTIx"/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDQ6NDA6MTYgUE07MTsyMjQ2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Q. Write a Flowgorithm Script to convert a decimal number to its binary equivalent.&quot;" newline="True"/>
+            <declare name="n, binary, rem, temp, decimal" type="Integer" array="False" size=""/>
+            <declare name="ch" type="String" array="False" size=""/>
+            <do expression="((ch==&quot;y&quot;)||(ch==&quot;Y&quot;))">
+                <assign variable="binary" expression="0"/>
+                <assign variable="temp" expression="1"/>
+                <output expression="&quot;Enter a number to convert: &quot;" newline="True"/>
+                <input variable="n"/>
+                <output expression="&quot;The Binary of &quot; &amp;n&amp; &quot; is &quot;" newline="False"/>
+                <while expression="n!=0">
+                    <assign variable="rem" expression="n%2"/>
+                    <assign variable="n" expression="n/2"/>
+                    <assign variable="binary" expression="binary+(rem*temp)"/>
+                    <assign variable="temp" expression="temp*10"/>
+                </while>
+                <output expression="&quot;&quot;&amp;binary&amp; &quot;. &quot;" newline="True"/>
+                <output expression="&quot;To continue with the program, press (y/Y) and any other key to stop.&quot;" newline="True"/>
+                <input variable="ch"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

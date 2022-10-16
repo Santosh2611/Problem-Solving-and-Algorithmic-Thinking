@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-08 04:26:18 PM"/>
+        <attribute name="created" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDQ6MDE6NDEgUE07MjEzMw=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDQ6MDE6NDUgUE07MTtEZUxMO1NBTlRPU0g7MjAyMS0wMS0wODswMzo1MzowMSBQTTtSZWFkcyBhbiBhcnJheSBhbmQgcHJpbnQgdGhlIHN1bSBvZiBlbGVtZW50cyBhdCBvZGQgYXJyYXkgaW5kaWNlcy5mcHJnOzExMDA2"/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMDg7MDQ6MjY6MTggUE07MzsyMjU0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Q. Write a Flowgorithm Script that reads marks of n students of a class and display the class average. Also if more than 2 students have marks less than class average, display a suitable message.&quot;" newline="True"/>
+            <declare name="n, i, sum, count" type="Integer" array="False" size=""/>
+            <declare name="avg" type="Real" array="False" size=""/>
+            <declare name="ch" type="String" array="False" size=""/>
+            <do expression="((ch==&quot;y&quot;)||(ch==&quot;Y&quot;))">
+                <assign variable="sum" expression="0"/>
+                <assign variable="count" expression="0"/>
+                <output expression="&quot;Enter the strength of the class:&quot;" newline="True"/>
+                <input variable="n"/>
+                <declare name="arr" type="Integer" array="True" size="n"/>
+                <output expression="&quot;Enter the marks of the students one-by-one:&quot;" newline="True"/>
+                <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                    <input variable="arr[i]"/>
+                </for>
+                <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                    <assign variable="sum" expression="(sum+arr[i])"/>
+                </for>
+                <assign variable="avg" expression="(sum/n)"/>
+                <output expression="&quot;The class average is: &quot; &amp;avg&amp; &quot;.&quot;" newline="True"/>
+                <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                    <if expression="(arr[i]&lt;avg)">
+                        <then>
+                            <assign variable="count" expression="(count+1)"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="(count&gt;2)">
+                    <then>
+                        <output expression="&quot;There are &quot; &amp;count&amp; &quot; student(s) below the class average.&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;To continue with the program, press (y/Y) and any other key to stop.&quot;" newline="True"/>
+                <input variable="ch"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>
