@@ -1,0 +1,43 @@
+Function Main
+    Declare Integer choice, a, b, temp, option
+    
+    Assign temp = 0
+    Output "Hearty welcome to the program for swapping two numbers! The menu of the available ways has been displayed below:  1. Swap using a temporary variable  2. Swap without using a temporary variable  Please select any one based on your choice!"
+    Input choice
+    If choice=1
+        Output "Please enter the first number!"
+        Input a
+        Output "Please enter the second number!"
+        Input b
+        Output "The first number before swapping is " &a& " and the second number before swapping is " &b& " ! "
+        Assign temp = a
+        Assign a = b
+        Assign b = temp
+        Output "The first number upon swapping has become " &a& " and the second number upon swapping has become " &b& "."
+    False:
+        If choice==2
+            Output "Please enter the first number!"
+            Input a
+            Output "Please enter the second number!"
+            Input b
+            Output "Please press 1 for swapping using operators and 2 for swapping using statements!"
+            Input option
+            If option==1
+                Output "The first number before swapping is " &a& " and the second number before swapping is " &b& " ! "
+                Assign a = a+b
+                Assign b = a-b
+                Assign a = a-b
+                Output "The first number upon swapping has become " &a& " and the second number upon swapping has become " &b& "."
+            False:
+                If option==2
+                    Output "The first number " &a& " upon swapping has become " &b& " and the second number " &b& " upon swapping has become " &a& "."
+                False:
+                    Output "No Output! :(  Please enter a number within the given range of numericals displayed in the menu."
+                End
+            End
+        False:
+            Output "No Output! :(  Please enter a number within the given range of numericals displayed in the menu."
+        End
+    End
+    Output "Hope you enjoyed the program. Thank you very much! :)"
+End

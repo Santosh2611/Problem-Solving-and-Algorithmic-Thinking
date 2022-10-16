@@ -1,0 +1,17 @@
+Function Main
+    Declare Integer temp
+    
+    Output "Hearty welcome to the program to check whether a given number is positive, negative or zero!"
+    Output "Please enter a number!"
+    Input temp
+    If temp>0
+        Output "The number is Positive!"
+    False:
+        If temp=0
+            Output "The number is Zero!"
+        False:
+            Output "The number is Negative!"
+        End
+    End
+    Output "Hope you enjoyed the program. Thank you very much! :)"
+End

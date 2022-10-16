@@ -1,0 +1,36 @@
+Function Main
+    Declare Real choice, m, cm, feet, inches, c, f, kg, p
+    
+    Output "Hearty welcome to the program for performing conversions of various units! The menu of the available conversions has been displayed below:  1. Meter to Centimetre  2. Feet to Inches  3. degree Celsius to Fahrenheit  4. Kilogram to Pound   Please select any one based on your choice!"
+    Input choice
+    If choice==1
+        Output "Enter the value in metres (m) in order to get it converted to centimetres (cm)."
+        Input m
+        Assign cm = (m*100)
+        Output "The conversion is: "   &m& " m = " &cm& " cm. "
+    False:
+        If choice==2
+            Output "Enter the value in Feet in order to get it converted to Inches."
+            Input feet
+            Assign inches = (12*feet)
+            Output "The conversion is: "   &feet& " feet = " &inches& " inches. "
+        False:
+            If choice==3
+                Output "Enter the value in degree Celsius in order to get it converted to degree Fahrenheit."
+                Input c
+                Assign f = ((c*9)/5) + 32
+                Output "The conversion is: "   &c& " degree Celsius = " &f& " degree Fahrenheit. "
+            False:
+                If choice==4
+                    Output "Enter the value in Kilograms in order to get it converted to Pounds."
+                    Input kg
+                    Assign p = (2.2*kg)
+                    Output "The conversion is: "   &kg& " kg = " &p& " pounds. "
+                False:
+                    Output "No Output! :(  Please enter a number within the given range of numericals displayed in the menu."
+                End
+            End
+        End
+    End
+    Output "Hope you enjoyed the program. Thank you very much! :)"
+End

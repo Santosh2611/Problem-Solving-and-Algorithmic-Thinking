@@ -1,0 +1,14 @@
+Function Main
+    Output "Hearty welcome to the program for computing Gross Pay of an Employee! Let's start."
+    Declare Real gp, bp, da, hra, temp
+    
+    Output "Please enter the Employee ID Number!"
+    Input temp
+    Output "Please enter the Basic Salary of the Employee!"
+    Input bp
+    Assign da = (40*bp)/100
+    Assign hra = (10*bp)/100
+    Assign gp = (bp+da+hra)
+    Output "The Gross Pay of the Employee with ID Number " &temp& " is: " &gp
+    Output "Hope you enjoyed the program. Thank you very much! :)"
+End

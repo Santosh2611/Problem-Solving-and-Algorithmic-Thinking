@@ -1,0 +1,14 @@
+Function Main
+    Declare Real si, p, r, t
+    
+    Output "Hearty welcome to the program to calculate Simple Interest by getting the values of Principal Amount, Rate of Interest and the number of Years!"
+    Output "Please enter the Principal Amount in Rupees!"
+    Input p
+    Output "Please enter Rate of Interesr in Percentage (%)"
+    Input r
+    Output "Please enter Time in Years!"
+    Input t
+    Assign si = (p*r*t)/100
+    Output "The Simple Interest is: Rs." &si
+    Output "Hope you enjoyed the program. Thank you very much! :)"
+End

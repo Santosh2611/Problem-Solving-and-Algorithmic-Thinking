@@ -1,0 +1,21 @@
+Function Main
+    Output "Hearty welcome to the program for computing the Monthy Expenses of an individual! Let's start."
+    Declare Real mi, rent, food, elec, phone, tv, me, rem
+    
+    Output "Please enter your Montly Income (in Rupees)."
+    Input mi
+    Output "Please enter the amount spent on Home Rent!"
+    Input rent
+    Output "Please enter the amount spent on Food!"
+    Input food
+    Output "Please enter the amount spent on Electricity!"
+    Input elec
+    Output "Please enter the amount spent on Phone Recharge!"
+    Input phone
+    Output "Please enter the amount spent on TV Recharge!"
+    Input tv
+    Assign me = (rent+food+elec+phone+tv)
+    Assign rem = (mi-me)
+    Output "Your Monthly Expenses sum upto: Rs. " &me& " /- and the remainder is Rs. " &rem& " /- only."
+    Output "Hope you enjoyed the program. Thank you very much! :)"
+End
