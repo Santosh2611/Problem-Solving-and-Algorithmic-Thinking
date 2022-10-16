@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-29 02:36:40 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xMTswMToxNjowMyBQTTsyNjgw"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xODswMzo0MDo1MiBBTTsyOzI3ODQ="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjk7MDI6MzY6NDAgUE07MTsyMjQ5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, digit, rev" type="Integer" array="False" size=""/>
+            <assign variable="rev" expression="0"/>
+            <output expression="&quot;Input a number:&quot;" newline="True"/>
+            <input variable="num"/>
+            <output expression="&quot;The number &quot; &amp;num&amp; &quot; in reverse order is: &quot;" newline="False"/>
+            <while expression="num!=0">
+                <assign variable="digit" expression="num%10"/>
+                <assign variable="rev" expression="(rev*10)+digit"/>
+                <assign variable="num" expression="num/10"/>
+            </while>
+            <output expression="rev" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

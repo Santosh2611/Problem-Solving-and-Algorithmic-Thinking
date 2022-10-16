@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-12-11 01:14:47 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xMTswMTowMTo0MCBQTTsyNjc1"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xMTswMToxNDo0NyBQTTsxOzI3OTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="first, second, third, n, temp" type="Integer" array="False" size=""/>
+            <assign variable="first" expression="0"/>
+            <assign variable="second" expression="1"/>
+            <output expression="&quot;Input number of terms to display :&quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="&quot;Here is the Fibonacci series upto &quot; &amp;n&amp; &quot; terms :&quot;" newline="True"/>
+            <output expression="&quot;&quot; &amp;first&amp; &quot; &quot; &amp;second" newline="False"/>
+            <for variable="temp" start="2" end="n-1" direction="inc" step="1">
+                <assign variable="third" expression="first+second"/>
+                <output expression="&quot; &quot; &amp;third" newline="False"/>
+                <assign variable="first" expression="second"/>
+                <assign variable="second" expression="third"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-12-11 06:45:49 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xMTswMToyNjo0NiBQTTsyNjg4"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xMTswNjo0NTo0OSBQTTszOzI4MDc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="choice, n, continue, binary, rem, temp, decimal" type="Integer" array="False" size=""/>
+            <do expression="continue==1">
+                <output expression="&quot;Menu:&#13;&#10;1. Decimal to Binary&#13;&#10;2. Binary to Decimal&#13;&#10;3. Exit&quot;" newline="True"/>
+                <input variable="choice"/>
+                <if expression="choice==1">
+                    <then>
+                        <assign variable="binary" expression="0"/>
+                        <assign variable="temp" expression="1"/>
+                        <output expression="&quot;Enter a number to convert: &quot;" newline="True"/>
+                        <input variable="n"/>
+                        <output expression="&quot;The Binary of &quot; &amp;n&amp; &quot; is &quot;" newline="False"/>
+                        <while expression="n!=0">
+                            <assign variable="rem" expression="n%2"/>
+                            <assign variable="n" expression="n/2"/>
+                            <assign variable="binary" expression="binary+(rem*temp)"/>
+                            <assign variable="temp" expression="temp*10"/>
+                        </while>
+                        <output expression="&quot;&quot;&amp;binary&amp; &quot;. &quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="choice==2">
+                            <then>
+                                <assign variable="decimal" expression="0"/>
+                                <assign variable="temp" expression="0"/>
+                                <output expression="&quot;Enter a binary to convert: &quot;" newline="True"/>
+                                <input variable="n"/>
+                                <output expression="&quot;The number corresponding to &quot; &amp;n&amp; &quot; is &quot;" newline="False"/>
+                                <while expression="n!=0">
+                                    <assign variable="rem" expression="n%10"/>
+                                    <assign variable="n" expression="n/10"/>
+                                    <assign variable="decimal" expression="decimal+(rem*(2^temp))"/>
+                                    <assign variable="temp" expression="temp+1"/>
+                                </while>
+                                <output expression="&quot;&quot;&amp;decimal&amp; &quot;. &quot;" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;To get back, press 1. To terminate the execution, press any other key.&quot;" newline="True"/>
+                <input variable="continue"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

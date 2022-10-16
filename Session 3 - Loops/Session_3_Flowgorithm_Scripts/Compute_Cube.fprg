@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-29 02:20:21 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xMDswODowMTo0MyBQTTsyNjg0"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xMTswMzoxMzowMyBQTTsxO0RlTEw7REVTS1RPUC1KTEtCVDlQOzIwMjAtMTItMTE7MDE6MjY6NDYgUE07NTUzNA=="/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xODswMTo0OToyNyBBTTsxMzsyODQz"/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjk7MDI6MjA6MjEgUE07MTsyMjQx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="temp, limit, choice, x, continue" type="Integer" array="False" size=""/>
+            <declare name="cube" type="Real" array="False" size=""/>
+            <assign variable="temp" expression="1"/>
+            <assign variable="cube" expression="0"/>
+            <do expression="continue==1">
+                <output expression="&quot;MENU:&#13;&#10;1. Calculate all the cubes of the numbers before the upper limit.&#13;&#10;2. Display all the cubic numbers before the upper limit.&quot;" newline="True"/>
+                <input variable="choice"/>
+                <output expression="&quot;Please specify the upper limit based on your selection!&quot;" newline="True"/>
+                <input variable="limit"/>
+                <if expression="choice==1">
+                    <then>
+                        <while expression="temp&lt;(sqrt(limit))">
+                            <assign variable="cube" expression="temp*temp*temp"/>
+                            <if expression="cube&lt;=limit">
+                                <then>
+                                    <output expression="&quot;The cube of &quot; &amp;temp&amp; &quot; is &quot; &amp;cube&amp; &quot;. &quot;" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                            <assign variable="temp" expression="temp+1"/>
+                        </while>
+                    </then>
+                    <else>
+                        <if expression="choice==2">
+                            <then>
+                                <while expression="temp&lt;=limit">
+                                    <assign variable="cube" expression="temp*temp*temp"/>
+                                    <output expression="&quot;The cube of &quot; &amp;temp&amp; &quot; is &quot; &amp;cube&amp; &quot;. &quot;" newline="True"/>
+                                    <assign variable="temp" expression="temp+1"/>
+                                </while>
+                            </then>
+                            <else>
+                                <output expression="&quot;No Output! :(&#13;&#10;Please enter a number within the given range of numericals displayed in the menu.&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;Please enter 1 to continue! To stop, enter any other number from your keypad.&quot;" newline="True"/>
+                <input variable="continue"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

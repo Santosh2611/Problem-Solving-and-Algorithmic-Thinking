@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-12-18 04:17:38 AM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xMTsxMDowNDowMSBBTTsyNjYw"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xODswNDoxNzozOCBBTTs1OzI3OTY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, temp, c" type="Integer" array="False" size=""/>
+            <assign variable="c" expression="0"/>
+            <output expression="&quot;Input a number :&quot;" newline="True"/>
+            <input variable="num"/>
+            <if expression="num==1">
+                <then>
+                    <output expression="&quot;1 is neither prime nor composite!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <for variable="temp" start="2" end="num/2" direction="inc" step="1">
+                        <if expression="num%temp==0">
+                            <then>
+                                <assign variable="c" expression="c+1"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </for>
+                    <if expression="c==0">
+                        <then>
+                            <output expression="&quot;&quot;&amp;num&amp; &quot; is a prime number.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;&quot;&amp;num&amp; &quot; is not a prime number.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

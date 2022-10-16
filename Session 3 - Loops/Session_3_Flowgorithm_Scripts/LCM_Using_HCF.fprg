@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-12-11 06:10:34 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xMTswNTo1MTo1NiBQTTsyNjkx"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xMTswNjoxMDozNCBQTTsyOzI3OTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, j, lcm, hcf, n1, n2" type="Integer" array="False" size=""/>
+            <assign variable="hcf" expression="1"/>
+            <output expression="&quot;Input 1st number for LCM:&quot;" newline="True"/>
+            <input variable="n1"/>
+            <output expression="&quot;Input 2nd number for LCM:&quot;" newline="True"/>
+            <input variable="n2"/>
+            <if expression="n1&lt;n2">
+                <then>
+                    <assign variable="j" expression="n1"/>
+                </then>
+                <else>
+                    <assign variable="j" expression="n1"/>
+                </else>
+            </if>
+            <for variable="i" start="1" end="j" direction="inc" step="1">
+                <if expression="((n1%i==0)&amp;&amp;(n2%i==0))">
+                    <then>
+                        <assign variable="hcf" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="lcm" expression="(n1*n2)/hcf"/>
+            <output expression="&quot;The LCM of &quot; &amp;n1&amp; &quot; and &quot; &amp;n2&amp; &quot; is : &quot; &amp;lcm" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
