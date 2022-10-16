@@ -1,0 +1,64 @@
+Function Main
+    Declare Real choice, a, b, sum, diff, prod, quo
+    Declare Integer rem, continue
+    
+    Loop
+        Output "Hearty welcome to the program of performing various algebraic operations on two numbers! The menu has been displayed below:  1. Addition  2. Subtraction  3. Multiplication  4. Quotient  5. Remainder  Please select any one of your choice! "
+        Input choice
+        If choice==1
+            Output "Please enter the first number!"
+            Input a
+            Output "Please enter the second number!"
+            Input b
+            Assign sum = a+b
+            Output "The sum of the two numbers " &a &" and " &b &" is: " &sum
+        False:
+            If choice==2
+                Output "Please enter the first number!"
+                Input a
+                Output "Please enter the second number!"
+                Input b
+                Assign diff = a-b
+                Output "The difference of the two numbers " &a &" and " &b &" is: " &diff
+            False:
+                If choice==3
+                    Output "Please enter the first number!"
+                    Input a
+                    Output "Please enter the second number!"
+                    Input b
+                    Assign prod = a*b
+                    Output "The product of the two numbers " &a &" and " &b &" is: " &prod
+                False:
+                    If choice==4
+                        Output "Please enter the dividend!"
+                        Input a
+                        Output "Please enter the divisor!"
+                        Input b
+                        If b=0
+                            Output "The dividend cannot be zero! The fraction will be not defined."
+                        End
+                        Assign quo = a/b
+                        Output "The quotient of the two obtained upon dividing " &a &" with " &b &" is: " &quo
+                    False:
+                        If choice==5
+                            Output "Please enter the dividend!"
+                            Input a
+                            Output "Please enter the divisor!"
+                            Input b
+                            If b=0
+                                Output "The dividend cannot be zero! The fraction will be not defined."
+                            End
+                            Assign rem = a%b
+                            Output "The remainder of the two obtained upon dividing " &a &" with " &b &" is: " &rem
+                        False:
+                            Output "No Output! :(  Please enter a number within the given range of numericals displayed in the menu."
+                        End
+                    End
+                End
+            End
+        End
+        Output "Hope you enjoyed the program. Thank you very much! :)"
+        Output "If you wanna to continue, press 1 or press any other key!"
+        Input continue
+    Do continue==1
+End

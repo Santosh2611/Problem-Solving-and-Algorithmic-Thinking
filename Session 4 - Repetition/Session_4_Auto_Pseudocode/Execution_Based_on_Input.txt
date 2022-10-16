@@ -1,0 +1,138 @@
+Function Main
+    Declare Integer choice, continue
+    
+    Loop
+        Output "MENU-  1. Sum of natural numbers till the input number.  2. Factorial of the number, if it is a positive number or zero.  3. Number of digits in the input.  4. Sum of digits of the nnumber.  5. Reversing the number.  6. Checking whether the number is a palindrome or not.  7. Printing the factors of the number.  Enter any number as per your choice!"
+        Input choice
+        If choice==1
+            Declare Integer number, temp, sum, fact, count, digit, rev, num
+            
+            Assign sum = 0
+            Assign fact = 1
+            Assign count = 0
+            Assign rev = 0
+            Output "Enter the number until where you want the sum :"
+            Input number
+            For temp = 0 to number
+                Assign sum = sum+temp
+            End
+            Output "The required sum until " &number& " of " &sum
+        False:
+            If choice==2
+                Declare Integer number, temp, sum, fact, count, digit, rev, num
+                
+                Assign sum = 0
+                Assign fact = 1
+                Assign count = 0
+                Assign rev = 0
+                Output "Enter the number whose factorial you want : "
+                Input number
+                If number<0
+                    Output "Factorial for negative number does not exist!"
+                False:
+                    For temp = 1 to number
+                        Assign fact = fact*temp
+                    End
+                End
+                Output "The factorial of " &number& " is: " &fact
+            False:
+                If choice==3
+                    Declare Integer number, temp, sum, fact, count, digit, rev, num
+                    
+                    Assign sum = 0
+                    Assign fact = 1
+                    Assign count = 0
+                    Assign rev = 0
+                    Output "Enter the input whose number of digits you wanna find :"
+                    Input number
+                    Output "The number of digits in " &number
+                    While number!=0
+                        Assign number = number/10
+                        Assign count = count+1
+                    End
+                    Output " is :  " &count
+                False:
+                    If choice==4
+                        Declare Integer number, temp, sum, fact, count, digit, rev, num
+                        
+                        Assign sum = 0
+                        Assign fact = 1
+                        Assign count = 0
+                        Assign rev = 0
+                        Output "Enter the number whose sum of digits you wanna find :"
+                        Input number
+                        Output "The sum of the digits in " &number
+                        While number>0
+                            Assign temp = number%10
+                            Assign sum = sum+temp
+                            Assign number = number/10
+                        End
+                        Output " is : " &sum
+                    False:
+                        If choice==5
+                            Declare Integer number, temp, sum, fact, count, digit, rev, num
+                            
+                            Assign sum = 0
+                            Assign fact = 1
+                            Assign count = 0
+                            Assign rev = 0
+                            Output "Enter the number which you wanna reverse :"
+                            Input number
+                            Output "The number " &number& " in reverse order is : "
+                            While number!=0
+                                Assign digit = number%10
+                                Assign rev = (rev*10)+digit
+                                Assign number = number/10
+                            End
+                            Output rev
+                        False:
+                            If choice==6
+                                Declare Integer number, temp, sum, fact, count, digit, rev, num
+                                
+                                Assign sum = 0
+                                Assign fact = 1
+                                Assign count = 0
+                                Assign rev = 0
+                                Output "Enter the number to check if it is a palindrome or not :"
+                                Input number
+                                Assign num = number
+                                Output "The number " &number& " in reverse order is : "
+                                While num!=0
+                                    Assign digit = num%10
+                                    Assign rev = (rev*10)+digit
+                                    Assign num = num/10
+                                End
+                                Output rev
+                                If number==rev
+                                    Output "As a result, it is a palindrome!"
+                                False:
+                                    Output "As a result, it is not a palindrome!"
+                                End
+                            False:
+                                If choice==7
+                                    Declare Integer number, temp, sum, fact, count, digit, rev, num
+                                    
+                                    Assign sum = 0
+                                    Assign fact = 1
+                                    Assign count = 0
+                                    Assign rev = 0
+                                    Output "Enter the number whose factors you want :"
+                                    Input number
+                                    For temp = 1 to number
+                                        If number%temp==0
+                                            Output "" &temp& " is a factor of " &number
+                                        End
+                                    End
+                                False:
+                                    Output "Invalid Input."
+                                End
+                            End
+                        End
+                    End
+                End
+            End
+        End
+        Output "Press 1 to continue or else any other key to exit!"
+        Input continue
+    Do continue==1
+End

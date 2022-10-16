@@ -1,0 +1,10 @@
+Function Main
+    Declare Integer temp, cube, square
+    
+    For temp = 0 to 10
+        Assign square = temp*temp
+        Assign cube = temp*temp*temp
+        Output "The square of " &temp& " is " &square
+        Output "The cube of " &temp& " is " &cube
+    End
+End
