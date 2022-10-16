@@ -1,0 +1,13 @@
+Function Main
+    ... Function example - A simple function that print the message stored in a string variable 
+    ... Passing an argument
+    Declare String YourMessage
+    
+    Output "Enter a string"
+    Input YourMessage
+    Call PrintMessage(YourMessage)
+End
+
+Function PrintMessage (String Message)
+    Output Message
+End

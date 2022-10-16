@@ -1,0 +1,21 @@
+Function Main
+    Declare Integer a, b, AS
+    
+    Output "Enter values for a and b:"
+    Input a
+    Input b
+    Output "Before swapping value of a and b are:" & a & " " & b
+    
+    ... By returning the swapped numbers, swapping takes place
+    Assign AS = swap(a,b)
+    Output "After swapping values - 'a' value return from function:" & AS
+End
+
+Function swap (Integer a, Integer b)
+    Declare Integer temp
+    
+    Assign temp = a
+    Assign a = b
+    Assign b = temp
+    Output "After swapping within function:" & a & "" & b
+Return Integer a

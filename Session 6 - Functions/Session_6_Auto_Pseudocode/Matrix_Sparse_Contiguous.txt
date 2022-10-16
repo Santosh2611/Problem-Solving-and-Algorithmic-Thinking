@@ -1,0 +1,133 @@
+Function Main
+    Output "Q. Write a menu driven program to do the following:  1. Read an array and display it in the matrix-form.  2. Check whether an array is a sparse array.  3. To find the largest sum of contiguous subarray of an array."
+    Output "*******************************************************************"
+    Declare Integer choice
+    Declare String continue
+    
+    Loop
+        Output "MENU:  1. Read an array and display it in the matrix-form.  2. Check whether an array is a sparse array.  3. To find the largest sum of contiguous subarray of an array.  Enter the number corresponding to the choice to execute your program:"
+        Input choice
+        If (choice==1)
+            Declare Integer n, i
+            
+            Output "Enter the size of the array as a perfect square in order to display it as a square matrix:"
+            Input n
+            Declare Integer Array arr[n]
+            
+            Output "Enter the elements of the array:"
+            For i = 0 to (n-1)
+                Input arr[i]
+            End
+            Output "The array is displayed as follows: "
+            For i = 0 to (n-1)
+                Output "" &arr[i]& " "
+            End
+            Output ""
+            Call arraytomatrix(arr,n)
+        False:
+            If (choice==2)
+                Declare Integer n, i
+                
+                Output "Enter the size of the array:"
+                Input n
+                Declare Integer Array arr[n]
+                
+                Output "Enter the elements of the array:"
+                For i = 0 to (n-1)
+                    Input arr[i]
+                End
+                For i = 0 to (n-1)
+                    Output "" &arr[i]& " "
+                End
+                Call sparsearray(arr,n)
+            False:
+                If (choice==3)
+                    Declare Integer n, i, sum
+                    
+                    Assign sum = 0
+                    Output "Enter the size of the array:"
+                    Input n
+                    Declare Integer Array arr[n]
+                    
+                    Output "Enter the elements of the array:"
+                    For i = 0 to (n-1)
+                        Input arr[i]
+                        Assign sum = sum+arr[i]
+                    End
+                    Output "The array is displayed as follows: "
+                    For i = 0 to (n-1)
+                        Output "" &arr[i]& " "
+                    End
+                    Output ""
+                    Call csubarray(arr,n,sum)
+                False:
+                    Output "Kindly enter a valid input from the menu by continuing the program once again."
+                End
+            End
+        End
+        Output "To continue with another functionality, press (y/Y) to continue or any other key to terminate execution:"
+        Input continue
+    Do ((continue=="y")||(continue=="Y"))
+End
+
+Function arraytomatrix (Integer Array array, Integer size)
+    Declare Integer root
+    
+    Assign root = sqrt(size)
+    Declare Integer i, j
+    
+    For i = 0 to (size-1)
+        If (((i+1)%root)==0)
+            For j = (i-(root-1)) to i
+                Output "" &array[j]& " "
+            End
+            If (i==size-1)
+            False:
+                Output ""
+            End
+        End
+    End
+    Output ""
+End
+
+Function csubarray (Integer Array array, Integer size, Integer s)
+    Declare Integer i, less, more, temp
+    
+    Assign less = 0
+    Assign more = 0
+    For i = 0 to (size-1)
+        Assign more = (more+array[i])
+        If (less<more)
+            Assign temp = less
+            Assign less = more
+        End
+        If (more<0)
+            Assign more = 0
+        End
+    End
+    If s==less
+        Output "The largest sum of contiguous subarray is: " &temp& "."
+    False:
+        Output "The largest sum of contiguous subarray is: " &less& "."
+    End
+End
+
+Function sparsearray (Integer Array array, Integer size)
+    Declare Integer i, e, z
+    
+    Assign e = 0
+    Assign z = 0
+    For i = 0 to (size-1)
+        If (array[i]==0)
+            Assign z = (z+1)
+        False:
+            Assign e = (e+1)
+        End
+    End
+    If (z>e)
+        Output " is a sparse array."
+    False:
+        Output " is not a sparse array."
+    End
+    Output ""
+End

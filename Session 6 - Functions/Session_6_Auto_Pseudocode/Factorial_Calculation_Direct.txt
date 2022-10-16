@@ -1,0 +1,18 @@
+Function Main
+    Declare Integer N, Fact
+    
+    Output "Read input"
+    Loop
+        
+        ... do-while loop till user gives a positive value. Factorial of negative number doesn't exist.
+        Input N
+        
+        ... we can add a comment to enter positive values if negative value is entered
+    Do N<=0
+    Assign Fact = 1
+    While N>0
+        Assign Fact = Fact * N
+        Assign N = N - 1
+    End
+    Output Fact
+End

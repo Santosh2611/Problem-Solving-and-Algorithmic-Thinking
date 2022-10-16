@@ -1,0 +1,22 @@
+Function Main
+    ... Function example - A function that prints the largest of two numbers passed as arguments 
+    ... Passing arguments
+    Declare Integer N1, N2, L
+    
+    Output "Enter first integer"
+    Input N1
+    Output "Enter second integer"
+    Input N2
+    Call Largest(N1,N2)
+End
+
+Function Largest (Integer Num1, Integer Num2)
+    Declare Integer Big
+    
+    If Num1>Num2
+        Assign Big = Num1
+    False:
+        Assign Big = Num2
+    End
+    Output Big
+End

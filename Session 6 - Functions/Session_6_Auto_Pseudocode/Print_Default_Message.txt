@@ -1,0 +1,8 @@
+Function Main
+    ... Function example - A simple function that print the message "Welcome to Functions"
+    Call PrintMessage
+End
+
+Function PrintMessage
+    Output "Welcome to Functions"
+End

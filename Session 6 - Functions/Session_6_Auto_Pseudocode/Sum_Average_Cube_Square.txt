@@ -1,0 +1,103 @@
+Function Main
+    Output "Q. Write a menu driven program to do the following:  1. Display n terms of natural numbers and display their sum.  2. Read n numbers from the user and to display the sum and average.  3. Display cube of numbers upto n.  4. Display square of numbers upto n."
+    Output "*******************************************************************"
+    Declare Integer choice
+    Declare String continue
+    
+    Loop
+        Output "MENU:  1. Display n terms of natural numbers and display their sum.  2. Read n numbers from the user and to display the sum and average  3. Display cube of numbers upto n.  4. Display square of numbers upto n.  Enter the number corresponding to the choice to execute your program:"
+        Input choice
+        If (choice==1)
+            Declare Integer n
+            
+            Output "Enter the limit upto which the natural numbers have to displayed along with their sum:"
+            Input n
+            Call sum(n)
+        False:
+            If (choice==2)
+                Declare Integer n
+                
+                Output "Enter the limit upto which the sum and average of the natural numbers have to be evaluated:"
+                Input n
+                Call sumavg(n)
+            False:
+                If (choice==3)
+                    Declare Integer n
+                    
+                    Output "Enter the limit upto which the cube of the natural numbers have to be evaluated:"
+                    Input n
+                    Call cube(n)
+                False:
+                    If (choice==4)
+                        Declare Integer n
+                        
+                        Output "Enter the limit upto which the sqaure of the natural numbers have to be evaluated:"
+                        Input n
+                        Call square(n)
+                    False:
+                        Output "Kindly enter a valid input from the menu by continuing the program once again."
+                    End
+                End
+            End
+        End
+        Output "To continue with another functionality, press (y/Y) to continue or any other key to terminate execution:"
+        Input continue
+    Do ((continue=="y")||(continue=="Y"))
+End
+
+Function cube (Integer num)
+    Declare Integer temp
+    Declare Real c
+    
+    Assign temp = 1
+    Assign c = 0
+    While temp<(sqrt(num))
+        Assign c = temp*temp*temp
+        If c<=num
+            Output "The cube of " &temp& " is " &c& ". "
+        End
+        Assign temp = temp+1
+    End
+End
+
+Function square (Integer num)
+    Declare Integer temp
+    Declare Real s
+    
+    Assign temp = 1
+    Assign s = 0
+    While (temp<(sqrt(num)))
+        Assign s = (temp*temp)
+        If (s<=num)
+            Output "The square of " &temp& " is " &s& ". "
+        End
+        Assign temp = temp+1
+    End
+End
+
+Function sum (Integer num)
+    Declare Integer Array arr[num]
+    Declare Integer i, add
+    
+    Assign add = 0
+    Output "The numbers upto " &num& " (inclusive) is/are been displayed: "
+    For i = 1 to num
+        Output "" &i& " "
+        Assign add = (add+i)
+    End
+    Output ""
+    Output "The sum of all the numbers is " &add& "."
+End
+
+Function sumavg (Integer num)
+    Declare Integer Array arr[num]
+    Declare Integer i, add
+    Declare Real avg
+    
+    Assign add = 0
+    For i = 1 to num
+        Assign add = (add+i)
+    End
+    Assign avg = (add/num)
+    Output "The sum of all the numbers is " &add& " and their average is " &avg& "."
+End

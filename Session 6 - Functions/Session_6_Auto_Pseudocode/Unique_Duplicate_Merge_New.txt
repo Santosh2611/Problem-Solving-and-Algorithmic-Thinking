@@ -1,0 +1,197 @@
+Function Main
+    Output "Q. Write a menu driven program to do the following:  1. Display the unique elements in an array.  2. Display the array by removing the duplicate elements in the array.  3. Merge two arrays in descending order.  4. Insert a new value at its correct position in the array which is sorted in ascending order."
+    Output "*******************************************************************"
+    Declare Integer choice
+    Declare String continue
+    
+    Loop
+        Output "MENU:  1. Display the unique elements in an array.  2. Display the array by removing the duplicate elements in the array.  3. Merge two arrays in descending order.  4. Insert a new value at its correct position in the array which is sorted in ascending order.  Enter the number corresponding to the choice to execute your program:"
+        Input choice
+        If (choice==1)
+            Declare Integer n, i
+            
+            Output "Enter the size of the array:"
+            Input n
+            Declare Integer Array arr[n]
+            
+            Output "Enter the elements of the array:"
+            For i = 0 to (n-1)
+                Input arr[i]
+            End
+            Output "The array is displayed as follows: "
+            For i = 0 to (n-1)
+                Output "" &arr[i]& " "
+            End
+            Output ""
+            Call unique(arr,n)
+        False:
+            If (choice==2)
+                Declare Integer n, i
+                
+                Output "Enter the size of the array:"
+                Input n
+                Declare Integer Array arr[n]
+                
+                Output "Enter the elements of the array:"
+                For i = 0 to (n-1)
+                    Input arr[i]
+                End
+                Output "The array is displayed as follows: "
+                For i = 0 to (n-1)
+                    Output "" &arr[i]& " "
+                End
+                Output ""
+                Call duplicate(arr,n)
+            False:
+                If (choice==3)
+                    Declare Integer n1, n2, i
+                    
+                    Output "Enter the size of the first array:"
+                    Input n1
+                    Declare Integer Array arr1[n1]
+                    
+                    Output "Enter the elements of the first array:"
+                    For i = 0 to (n1-1)
+                        Input arr1[i]
+                    End
+                    Output "The first array is displayed as follows: "
+                    For i = 0 to (n1-1)
+                        Output "" &arr1[i]& " "
+                    End
+                    Output ""
+                    Output "Enter the size of the second array:"
+                    Input n2
+                    Declare Integer Array arr2[n2]
+                    
+                    Output "Enter the elements of the second array:"
+                    For i = 0 to (n2-1)
+                        Input arr2[i]
+                    End
+                    Output "The second array is displayed as follows: "
+                    For i = 0 to (n2-1)
+                        Output "" &arr2[i]& " "
+                    End
+                    Output ""
+                    Call merge(arr1,n1,arr2,n2)
+                False:
+                    If (choice==4)
+                        Declare Integer n, i, val
+                        
+                        Output "Enter the size of the array:"
+                        Input n
+                        Declare Integer Array arr[(n+1)]
+                        
+                        Output "Enter the elements of the array sorted in ascending order:"
+                        For i = 0 to (n-1)
+                            Input arr[i]
+                        End
+                        Output "The array is displayed as follows: "
+                        For i = 0 to (n-1)
+                            Output "" &arr[i]& " "
+                        End
+                        Output ""
+                        Output "Enter the new value to be inserted:"
+                        Input val
+                        Call newvalue(arr,n,val)
+                    False:
+                        Output "Kindly enter a valid input from the menu by continuing the program once again."
+                    End
+                End
+            End
+        End
+        Output "To continue with another functionality, press (y/Y) to continue or any other key to terminate execution:"
+        Input continue
+    Do ((continue=="y")||(continue=="Y"))
+End
+
+Function duplicate (Integer Array array, Integer size)
+    Declare Integer i, j, k
+    
+    For i = 0 to (size-1)
+        For j = (i+1) to (size-1)
+            If (array[i]==array[j])
+                For k = j to (size-2)
+                    Assign array[k] = array[k+1]
+                End
+                Assign size = (size-1)
+            False:
+                Assign j = (j+1)
+            End
+        End
+    End
+    Output "Array elements after deleting duplicates are: "
+    For i = 0 to (size-1)
+        Output "" &array[i]& " "
+    End
+    Output ""
+End
+
+Function merge (Integer Array array1, Integer size1, Integer Array array2, Integer size2)
+    Declare Integer size3, i, j, k
+    
+    Assign size3 = (size1+size2)
+    Declare Integer Array array3[size3]
+    
+    For i = 0 to (size1-1)
+        Assign array3[i] = array1[i]
+    End
+    For j = 0 to (size2-1)
+        Assign array3[i] = array2[j]
+        Assign i = (i+1)
+    End
+    For i = 0 to (size3-1)
+        For k = 0 to (size3-2)
+            If (array3[k]<=array3[k+1])
+                Assign j = array3[k+1]
+                Assign array3[k+1] = array3[k]
+                Assign array3[k] = j
+            End
+        End
+    End
+    Output "Merged array in descending order is: "
+    For i = 0 to (size3-1)
+        Output "" &array3[i]& " "
+    End
+    Output ""
+End
+
+Function newvalue (Integer Array array, Integer size, Integer value)
+    Declare Integer i, j, temp
+    
+    Assign array[size] = value
+    For i = 0 to (size-1)
+        For j = 0 to (size-i-1)
+            If (array[j]>array[j+1])
+                Assign temp = array[j]
+                Assign array[j] = array[j+1]
+                Assign array[j+1] = temp
+            End
+        End
+    End
+    Output "The array after the new value has been inserted is as follows: "
+    For i = 0 to size
+        Output "" &array[i]& " "
+    End
+    Output ""
+End
+
+Function unique (Integer Array array, Integer size)
+    Declare Integer i, j, k, count
+    
+    Output "The unique elements found in the array is/are - "
+    Assign k = (size-1)
+    For i = 0 to (size-1)
+        Assign count = 0
+        For j = 0 to k
+            If (i!=j)
+                If (array[i]==array[j])
+                    Assign count = (count+1)
+                End
+            End
+        End
+        If (count==0)
+            Output array[i]& " "
+        End
+    End
+    Output ""
+End

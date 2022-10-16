@@ -1,0 +1,80 @@
+Function Main
+    Output "Q. Write a menu driven program to do the following:  1. Display Fibonacci series upto n numbers.  2. Display a number in reverse order.  3. Find the sum of digits of a number."
+    Output "*******************************************************************"
+    Declare Integer choice
+    Declare String continue
+    
+    Loop
+        Output "MENU:  1. Display Fibonacci series upto n numbers.  2. Display a number in reverse order.  3. Find the sum of digits of a number.  Enter the number corresponding to the choice to execute your program:"
+        Input choice
+        If (choice==1)
+            Declare Integer n
+            
+            Output "Input number of terms to display :"
+            Input n
+            Call fibonacci(n)
+        False:
+            If (choice==2)
+                Declare Integer n
+                
+                Output "Input a number:"
+                Input n
+                Call reverse(n)
+            False:
+                If (choice==3)
+                    Declare Integer n
+                    
+                    Output "Input a number:"
+                    Input n
+                    Call sumofdigits(n)
+                False:
+                    Output "Kindly enter a valid input from the menu by continuing the program once again."
+                End
+            End
+        End
+        Output "To continue with another functionality, press (y/Y) to continue or any other key to terminate execution:"
+        Input continue
+    Do ((continue=="y")||(continue=="Y"))
+End
+
+Function fibonacci (Integer num)
+    Declare Integer first, second, third, temp
+    
+    Assign first = 0
+    Assign second = 1
+    Output "Here is the Fibonacci series upto " &num& " terms: "
+    Output "" &first& " " &second
+    For temp = 2 to num-1
+        Assign third = first+second
+        Output " " &third
+        Assign first = second
+        Assign second = third
+    End
+    Output ""
+End
+
+Function reverse (Integer num)
+    Declare Integer digit, rev
+    
+    Assign rev = 0
+    Output "The number " &num& " in reverse order is: "
+    While num!=0
+        Assign digit = num%10
+        Assign rev = (rev*10)+digit
+        Assign num = num/10
+    End
+    Output rev
+End
+
+Function sumofdigits (Integer num)
+    Declare Integer sum, temp
+    
+    Assign sum = 0
+    Output "The sum of the digits in " &num
+    While num>0
+        Assign temp = num%10
+        Assign sum = sum+temp
+        Assign num = num/10
+    End
+    Output " is: " &sum
+End

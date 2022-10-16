@@ -1,0 +1,32 @@
+Function Main
+    Declare Integer N, i
+    
+    Output "Enter number of elements"
+    Input N
+    Declare Integer Array Arr[N]
+    
+    Output "Enter Array Elements"
+    For i = 0 to N-1
+        Input Arr[i]
+    End
+    Output "Before after values in function : "
+    For i = 0 to N-1
+        Output "The " & i & "th" & " element is " & arr[i]
+    End
+    Call ArraySum(Arr,N)
+    For i = 0 to N-1
+        Output "The " & i & "th" & " element is " & arr[i]
+    End
+End
+
+Function ArraySum (Integer Array Arr, Integer N)
+    Declare Integer i
+    
+    For i = 0 to N-1
+        Assign Arr[i] = Arr[i]+10
+    End
+    Output "After element values modified within function:"
+    For i = 0 to N-1
+        Output "The " & i & "th" & " element is " & arr[i]
+    End
+End

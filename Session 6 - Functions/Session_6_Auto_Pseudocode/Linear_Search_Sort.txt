@@ -1,0 +1,174 @@
+Function Main
+    Output "Q. Write a menu driven program to do the following:  1. Linear Search.  2. Selection Sort.  3. Bubble Sort.  4. Insertion Sort."
+    Output "*******************************************************************"
+    Declare Integer choice
+    Declare String continue
+    
+    Loop
+        Output "MENU:  1. Linear Search.  2. Selection Sort.  3. Bubble Sort.  4. Insertion Sort.  Enter the number corresponding to the choice to execute your program:"
+        Input choice
+        If (choice==1)
+            Declare Integer n, i, element
+            
+            Output "Enter the size of the array:"
+            Input n
+            Declare Integer Array arr[n]
+            
+            Output "Enter the elements of the array:"
+            For i = 0 to (n-1)
+                Input arr[i]
+            End
+            Output "The array is displayed as follows: "
+            For i = 0 to (n-1)
+                Output "" &arr[i]& " "
+            End
+            Output ""
+            Output "Enter the element to be searched:"
+            Input element
+            Call linearsearch(arr,n,element)
+        False:
+            If (choice==2)
+                Declare Integer n, i
+                
+                Output "Enter the size of the array:"
+                Input n
+                Declare Integer Array arr[n]
+                
+                Output "Enter the elements of the array:"
+                For i = 0 to (n-1)
+                    Input arr[i]
+                End
+                Output "The unsorted array is: "
+                For i = 0 to (n-1)
+                    Output "" &arr[i]& " "
+                End
+                Output ""
+                Call selectionsort(arr,n)
+            False:
+                If (choice==3)
+                    Declare Integer n, i
+                    
+                    Output "Enter the size of the array:"
+                    Input n
+                    Declare Integer Array arr[n]
+                    
+                    Output "Enter the elements of the array:"
+                    For i = 0 to (n-1)
+                        Input arr[i]
+                    End
+                    Output "The unsorted array is: "
+                    For i = 0 to (n-1)
+                        Output "" &arr[i]& " "
+                    End
+                    Output ""
+                    Call bubblesort(arr,n)
+                False:
+                    If (choice==4)
+                        Declare Integer n, i
+                        
+                        Output "Enter the size of the array:"
+                        Input n
+                        Declare Integer Array arr[n]
+                        
+                        Output "Enter the elements of the array:"
+                        For i = 0 to (n-1)
+                            Input arr[i]
+                        End
+                        Output "The unsorted array is: "
+                        For i = 0 to (n-1)
+                            Output "" &arr[i]& " "
+                        End
+                        Output ""
+                        Call insertionsort(arr,n)
+                    False:
+                        Output "Kindly enter a valid input from the menu by continuing the program once again."
+                    End
+                End
+            End
+        End
+        Output "To continue with another functionality, press (y/Y) to continue or any other key to terminate execution:"
+        Input continue
+    Do ((continue=="y")||(continue=="Y"))
+End
+
+Function bubblesort (Integer Array array, Integer size)
+    Declare Integer i, j, temp
+    
+    For i = 0 to (size-2)
+        For j = 0 to (size-i-2)
+            If (array[j]>array[j+1])
+                Assign temp = array[j]
+                Assign array[j] = array[j+1]
+                Assign array[j+1] = temp
+            End
+        End
+    End
+    Output "The sorted array is: "
+    For i = 0 to (size-1)
+        Output "" &array[i]& " "
+    End
+    Output ""
+End
+
+Function insertionsort (Integer Array array, Integer size)
+    Declare Integer i, j, temp, x
+    
+    For i = 1 to (size-1)
+        For j = 0 to (i-1)
+            If (array[i-1]<=array[i])
+            False:
+                Assign x = 0
+                While (array[i]>=array[j])
+                    Assign x = (x+1)
+                    Assign j = (j+1)
+                End
+                Assign temp = array[i]
+                Assign array[i] = array[j]
+                Assign array[j] = temp
+            End
+        End
+    End
+    Output "The sorted array is: "
+    For i = 0 to (size-1)
+        Output "" &array[i]& " "
+    End
+    Output ""
+End
+
+Function linearsearch (Integer Array array, Integer size, Integer ele)
+    Declare Integer i, check
+    
+    Assign check = 0
+    For i = 0 to (size-1)
+        If (array[i]=ele)
+            Assign check = 1
+            Output "" &ele& " is found at index position " &i& "."
+        End
+    End
+    If (check=0)
+        Output "" &ele& " is not found in the entered array."
+    End
+End
+
+Function selectionsort (Integer Array array, Integer size)
+    Declare Integer i, j, smallest, temp
+    
+    For i = 0 to (size-2)
+        Assign smallest = i
+        For j = (i+1) to (size-1)
+            If (array[smallest]>array[j])
+                Assign smallest = j
+            End
+        End
+        If (smallest!=i)
+            Assign temp = array[i]
+            Assign array[i] = array[smallest]
+            Assign array[smallest] = temp
+        End
+    End
+    Output "The sorted array is: "
+    For i = 0 to (size-1)
+        Output "" &array[i]& " "
+    End
+    Output ""
+End
