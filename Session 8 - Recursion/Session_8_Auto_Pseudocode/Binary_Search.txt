@@ -1,0 +1,35 @@
+Function Main
+    Declare Integer ArraySize, SearchValue, index, i
+    
+    Output "Enter Array Size"
+    Input ArraySize
+    Declare Integer Array list[ArraySize]
+    
+    Output "Enter Array Elements in Sorted order"
+    For i = 0 to ArraySize-1
+        Input list[i]
+    End
+    Output "Enter the value to be searched"
+    Input SearchValue
+    Assign index = bSearch(list, 0, ArraySize-1, SearchValue)
+    Output index
+End
+
+Function bSearch (Integer Array Data, Integer First, Integer Last, Integer Value)
+    Declare Integer index, middle
+    
+    Assign middle = ( First + Last )/2
+    If Data[Middle] == Value
+        Assign index = middle
+    False:
+        If First >= Last
+            Assign index = -1
+        False:
+            If Value < Data[middle]
+                Assign index = bSearch(Data, First, middle-1, Value)
+            False:
+                Assign index = bSearch(Data, middle+1, Last, Value)
+            End
+        End
+    End
+Return Integer index
