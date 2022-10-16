@@ -1,0 +1,34 @@
+Function Main
+    Output "Q. Write a Flowgorithm Script that reads marks of n students of a class and display the class average. Also if more than 2 students have marks less than class average, display a suitable message."
+    Declare Integer n, i, sum, count
+    Declare Real avg
+    Declare String ch
+    
+    Loop
+        Assign sum = 0
+        Assign count = 0
+        Output "Enter the strength of the class:"
+        Input n
+        Declare Integer Array arr[n]
+        
+        Output "Enter the marks of the students one-by-one:"
+        For i = 0 to n-1
+            Input arr[i]
+        End
+        For i = 0 to n-1
+            Assign sum = (sum+arr[i])
+        End
+        Assign avg = (sum/n)
+        Output "The class average is: " &avg& "."
+        For i = 0 to n-1
+            If (arr[i]<avg)
+                Assign count = (count+1)
+            End
+        End
+        If (count>2)
+            Output "There are " &count& " student(s) below the class average."
+        End
+        Output "To continue with the program, press (y/Y) and any other key to stop."
+        Input ch
+    Do ((ch=="y")||(ch=="Y"))
+End

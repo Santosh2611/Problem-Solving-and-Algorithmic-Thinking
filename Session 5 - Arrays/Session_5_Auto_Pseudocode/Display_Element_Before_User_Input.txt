@@ -1,0 +1,30 @@
+Function Main
+    Output "Q. Write a Flowgorithm Script that reads an array and displays the element that comes in the array after a number entered by the user."
+    Declare Integer n, i, search, count
+    Declare String ch
+    
+    Loop
+        Assign count = 0
+        Output "Enter the count of numbers in your list."
+        Input n
+        Declare Integer Array arr[n]
+        
+        Output "Enter the numbers in the list one-by-one."
+        For i = 0 to n-1
+            Input arr[i]
+        End
+        Output "Enter the number to find the number after it in the given list:"
+        Input search
+        For i = 0 to n-1
+            If (arr[i]=search)
+                Output "" &arr[i+1]& " is the number that comes after " &search& " in the given list."
+                Assign count = (count+1)
+            End
+        End
+        If (count==0)
+            Output "The number " &search& " is not found in the given list."
+        End
+        Output "To continue with the program, press (y/Y) and any other key to stop."
+        Input ch
+    Do ((ch=="y")||(ch=="Y"))
+End

@@ -1,0 +1,37 @@
+Function Main
+    Output "Q. Write a Flowgorithm Script that implements bubble sort. The program should read the number of elements for the array and the numbers to be sorted from the user."
+    Declare Integer n, i, j, temp
+    Declare String ch
+    
+    Loop
+        Output "Enter the Size of the Array:"
+        Input n
+        Declare Integer Array arr[n]
+        
+        Output "Enter the Elements of the Array:"
+        For i = 0 to n-1
+            Input arr[i]
+        End
+        Output "The unsorted array is: "
+        For i = 0 to n-1
+            Output "" &arr[i]& " "
+        End
+        Output ""
+        For i = 0 to n-2
+            For j = 0 to n-i-2
+                If (arr[j]>arr[j+1])
+                    Assign temp = arr[j]
+                    Assign arr[j] = arr[j+1]
+                    Assign arr[j+1] = temp
+                End
+            End
+        End
+        Output "The Sorted Array is: "
+        For i = 0 to n-1
+            Output "" &arr[i]& " "
+        End
+        Output ""
+        Output "To continue with the program, press (y/Y) and any other key to stop."
+        Input ch
+    Do ((ch=="y")||(ch=="Y"))
+End

@@ -1,0 +1,23 @@
+Function Main
+    Output "Q. Write a Flowgorithm Script to Find the Product of Elements in an Array."
+    Declare Integer n, i, product
+    Declare String ch
+    
+    Loop
+        Assign product = 1
+        Output "Enter the Size of the Array:"
+        Input n
+        Declare Integer Array arr[n]
+        
+        Output "Enter the Elements of the Array:"
+        For i = 0 to n-1
+            Input arr[i]
+        End
+        For i = 0 to n-1
+            Assign product = (product*arr[i])
+        End
+        Output "The product of elements in the Array is: " &product& "."
+        Output "To continue with the program, press (y/Y) and any other key to stop."
+        Input ch
+    Do ((ch=="y")||(ch=="Y"))
+End

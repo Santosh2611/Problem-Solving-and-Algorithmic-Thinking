@@ -1,0 +1,72 @@
+Function Main
+    Output "Q. Write a menu driven program for a bank that read the following details of n customers: customer id(a 4-digit number), current balance and perform the following operations (menu driven)  1. Read a customer number and display the balance for that customer.  2. Display the id of the customer with highest balance.  Also, display an error message if the search fails."
+    Declare Integer menu, ctr, n, size, count, k
+    Declare String ch, mc1, mc2, idc, highest, largest
+    
+    Output "Enter the number of customers who have their accounts in this bank:"
+    Input n
+    Declare String Array id[n], balance[n]
+    
+    Assign ctr = 0
+    Loop
+        Output "Menu:  1. New Registration.  2. Given a Customer ID, display the current balance.  3. Display the Customer ID with the highest balance.  Kindly select any one based on your choice."
+        Input menu
+        If (menu==1)
+            Assign mc1 = "y"
+            While ((mc1=="y")||(mc1=="Y"))
+                Output "Kindly enter the details of the new Customer as asked!"
+                Output "Customer ID:"
+                Input id[ctr]
+                If (Len(id[ctr])!=4)
+                    Loop
+                        Output "Kindly enter a valid Customer ID:"
+                        Input id[ctr]
+                    Do (Len(id[ctr])!=4)
+                End
+                Output "Current Balance:"
+                Input balance[ctr]
+                Output "The amount of Rs. " &balance[ctr]& "/- has been added succesfully for the customer ID " &id[ctr]& ". "
+                Assign ctr = ctr+1
+                Output "To add more new customers, press (Y/y) or any other key to terminate!"
+                Input mc1
+                Assign size = ctr
+            End
+        False:
+            If (menu==2)
+                Assign mc2 = "y"
+                While ((mc2=="y")||(mc2=="Y"))
+                    Assign count = 0
+                    Output "Enter the Customer ID:"
+                    Input idc
+                    For k = 0 to size-1
+                        If (id[k]==idc)
+                            Output "The Customer with ID " &id[k]& " has Rs. " &balance[k]& "/- in the Savings."
+                            Assign count = (count+1)
+                        End
+                    End
+                    If (count==0)
+                        Output "There is no customer with ID " &id& " registered in the Directory!"
+                    End
+                    Output "To check for other customers, press (Y/y) or any other key to terminate!"
+                    Input mc2
+                End
+            False:
+                If (menu==3)
+                    Assign highest = balance[0]
+                    Assign largest = id[0]
+                    For k = 0 to size-1
+                        If (highest<balance[k])
+                            Assign highest = balance[k]
+                            Assign largest = id[k]
+                        End
+                    End
+                    Output "The customer ID " &largest& " has the highest Balance of Rs." &highest& " in the bank."
+                False:
+                    Output "Kindly enter a Valid Number from the given List of Numbers in the Menu by continuing the program again!"
+                End
+            End
+        End
+        Output "To continue with any other functionality in the menu, press (y/Y) and any other key to stop."
+        Input ch
+    Do ((ch=="y")||(ch=="Y"))
+End

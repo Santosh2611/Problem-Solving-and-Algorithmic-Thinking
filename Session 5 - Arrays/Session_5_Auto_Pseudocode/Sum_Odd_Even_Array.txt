@@ -1,0 +1,35 @@
+Function Main
+    Output "Q. Write a Flowgorithm Script that reads an array and print the sum of odd numbers and sum of even numbers in the array. If either the odd sum or the even sum is zero, print an appropriate message as well."
+    Declare Integer n, i, even, odd
+    Declare String ch
+    
+    Loop
+        Assign even = 0
+        Assign odd = 0
+        Output "Enter the Size of the Array:"
+        Input n
+        Declare Integer Array arr[n]
+        
+        Output "Enter the Elements of the Array:"
+        For i = 0 to n-1
+            Input arr[i]
+        End
+        For i = 0 to n-1
+            If (arr[i]%2==0)
+                Assign even = (even+arr[i])
+            False:
+                Assign odd = (odd+arr[i])
+            End
+        End
+        Output "The Sum of Odd Elements is: " &odd& "."
+        Output "The Sum of Even Elements is: " &even& "."
+        If (odd==0)
+            Output "This is to notify you again that the sum of all odd elements in the array is 0."
+        End
+        If (even==0)
+            Output "This is to notify you again that the sum of all even elements in the array is 0."
+        End
+        Output "To continue with the program, press (y/Y) and any other key to stop."
+        Input ch
+    Do ((ch=="y")||(ch=="Y"))
+End

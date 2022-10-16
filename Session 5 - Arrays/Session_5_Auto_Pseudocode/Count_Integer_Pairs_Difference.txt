@@ -1,0 +1,29 @@
+Function Main
+    Output "Q. Write a Flowgorithm Script that given N integers, count the total pairs of integers that have a difference of K."
+    Declare Integer n, i, j, k, count
+    Declare String ch
+    
+    Loop
+        Assign count = 0
+        Output "Enter the Size of the Array (value of N):"
+        Input n
+        Declare Integer Array arr[n]
+        
+        Output "Enter the Elements of the Array:"
+        For i = 0 to n-1
+            Input arr[i]
+        End
+        Output "Enter the difference: (value of K)"
+        Input k
+        For i = 0 to n-1
+            For j = 0 to n-1
+                If ((arr[i]-arr[j]==k)||(arr[j]-arr[i]==k))
+                    Assign count = (count+1)
+                End
+            End
+        End
+        Output "The number of pairs with difference " &k& " is/are " &(count/2)& "."
+        Output "To continue with the program, press (y/Y) and any other key to stop."
+        Input ch
+    Do ((ch=="y")||(ch=="Y"))
+End

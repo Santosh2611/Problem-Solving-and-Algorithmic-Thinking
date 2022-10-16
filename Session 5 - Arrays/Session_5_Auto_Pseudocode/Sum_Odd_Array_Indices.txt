@@ -1,0 +1,29 @@
+Function Main
+    Output "Q. Write a Flowgorithm Script that reads an array and print the sum of elements at odd array indices."
+    Declare Integer n, i, even, odd
+    Declare String ch
+    
+    Loop
+        Assign even = 0
+        Assign odd = 0
+        Output "Enter the Size of the Array:"
+        Input n
+        Declare Integer Array arr[n]
+        
+        Output "Enter the Elements of the Array:"
+        For i = 0 to n-1
+            Input arr[i]
+        End
+        For i = 0 to n-1
+            If (i%2==0)
+                Assign even = (even+arr[i])
+            False:
+                Assign odd = (odd+arr[i])
+            End
+        End
+        Output "The Sum of Elements present in the Odd Array Indices is: " &odd& "."
+        Output "The Sum of Elements present in the Even Array Indices is: " &even& "."
+        Output "To continue with the program, press (y/Y) and any other key to stop."
+        Input ch
+    Do ((ch=="y")||(ch=="Y"))
+End

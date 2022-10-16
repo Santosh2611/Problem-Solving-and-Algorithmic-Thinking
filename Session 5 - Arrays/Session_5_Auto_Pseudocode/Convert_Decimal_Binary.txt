@@ -1,0 +1,22 @@
+Function Main
+    Output "Q. Write a Flowgorithm Script to convert a decimal number to its binary equivalent."
+    Declare Integer n, binary, rem, temp, decimal
+    Declare String ch
+    
+    Loop
+        Assign binary = 0
+        Assign temp = 1
+        Output "Enter a number to convert: "
+        Input n
+        Output "The Binary of " &n& " is "
+        While n!=0
+            Assign rem = n%2
+            Assign n = n/2
+            Assign binary = binary+(rem*temp)
+            Assign temp = temp*10
+        End
+        Output ""&binary& ". "
+        Output "To continue with the program, press (y/Y) and any other key to stop."
+        Input ch
+    Do ((ch=="y")||(ch=="Y"))
+End
