@@ -1,0 +1,137 @@
+Function Main
+    Declare Integer continue, choice
+    
+    Loop
+        Output "MENU to check whether input is a-  1. Prime Number  2. Perfect Number (Sum of Factors other than the number is equal to the number itself)  3. Abundant Number (Sum of Factors other than the number is greater than the number itself)  4. Armstrong Number (Sum of dth power of digits is equal to the number with d digits)  5. Strong Number (Number = Sum of Factorials of Digits)  6. Harshad's Number (Number is exactly divisible by sum of its digits)  Please enter any one of your choice :"
+        Input choice
+        If choice==1
+            Declare Integer number, temp, count
+            
+            Assign count = 0
+            Output "Enter the number to check if it is prime or not :"
+            Input number
+            If number==1
+                Output "1 is neither prime nor composite."
+            False:
+                For temp = 2 to number/2
+                    If number%temp==0
+                        Assign count = count+1
+                    End
+                End
+                If count==0
+                    Output ""&number& " is a prime number."
+                False:
+                    Output ""&number& " is not a prime number."
+                End
+            End
+        False:
+            If choice==2
+                Declare Integer number, temp, sum
+                
+                Assign sum = 0
+                Assign temp = 1
+                Output "Enter the input to check if it is a perfect number or not :"
+                Input number
+                Output "The positive divisor is :"
+                While temp<number
+                    If number%temp==0
+                        Output " " &temp
+                        Assign sum = sum+temp
+                    End
+                    Assign temp = temp+1
+                End
+                Output "  The sum of the divisor is : " &sum
+                If sum==number
+                    Output "So, the number is perfect."
+                False:
+                    Output "So, the number is not perfect."
+                End
+            False:
+                If choice==3
+                    Declare Integer number, sum, temp
+                    
+                    Assign sum = 0
+                    Assign temp = 1
+                    Output "Enter the input to check if it is an abundant number or not :"
+                    Input number
+                    For temp = 1 to number-1
+                        If number%temp==0
+                            Assign sum = sum+temp
+                        End
+                    End
+                    If sum>number
+                        Output "" &number& " is an Abundant Number."
+                    False:
+                        Output "" &number& " is not an abundant number."
+                    End
+                False:
+                    If choice==4
+                        Declare Integer number, rem, temp, sum, power
+                        
+                        Assign sum = 0
+                        Output "Enter the input to check if it is an armstrong number or not :"
+                        Input number
+                        Assign temp = number
+                        Output "Enter the power of digits (value of d) :"
+                        Input power
+                        While temp>0
+                            Assign rem = temp%10
+                            Assign sum = sum+(rem^power)
+                            Assign temp = temp/10
+                        End
+                        If number==sum
+                            Output "" &number& " is an Armstrong Number."
+                        False:
+                            Output "" &number& " is not an Armstrong Number."
+                        End
+                    False:
+                        If choice==5
+                            Declare Integer temp, num, number, rem, sum, fact
+                            
+                            Assign sum = 0
+                            Assign fact = 1
+                            Output "Enter the input to check if it is a strong number or not :"
+                            Input number
+                            Assign num = number
+                            While num>0
+                                Assign fact = 1
+                                Assign rem = num%10
+                                For temp = 1 to rem
+                                    Assign fact = fact*temp
+                                End
+                                Assign sum = sum+fact
+                                Assign num = num/10
+                            End
+                            If number==sum
+                                Output "" &number& " is a Strong Number."
+                            False:
+                                Output "" &number& " is not a Strong Number."
+                            End
+                        False:
+                            If choice==6
+                                Declare Integer number, num, rem, sum
+                                
+                                Assign sum = 0
+                                Output "Enter the input to check if it is a Harshad number or not :"
+                                Input number
+                                Assign num = number
+                                While num>0
+                                    Assign rem = num%10
+                                    Assign sum = sum+rem
+                                    Assign num = num/10
+                                End
+                                If (number%sum)==0
+                                    Output "" &number& " is a Harshad Number."
+                                False:
+                                    Output "" &number& " is not a Harshad Number."
+                                End
+                            End
+                        End
+                    End
+                End
+            End
+        End
+        Output "Press 1 to continue and any other key to exit."
+        Input continue
+    Do continue==1
+End
