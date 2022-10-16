@@ -1,0 +1,22 @@
+Function Main
+    Declare Integer Numb, Result
+    
+    Output "Enter Number"
+    Input Numb
+    Assign Result = Zeros(Numb)
+    Output "Number of Zeros "&Result
+End
+
+Function Zeros (Integer num)
+    Declare Integer Result
+    
+    If num == 0
+        Assign Result = 1
+    False:
+        If num < 10
+            Assign Result = 0
+        False:
+            Assign Result = Zeros(num/10) + Zeros(num %10)
+        End
+    End
+Return Integer Result

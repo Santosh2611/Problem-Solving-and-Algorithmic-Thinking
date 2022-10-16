@@ -1,0 +1,9 @@
+Function Main
+    Declare Integer a, b, Prod
+    
+    Output "Enter Multiplicand a and Multiplier b"
+    Input a
+    Input b
+    Assign Prod = a * b
+    Output Prod
+End

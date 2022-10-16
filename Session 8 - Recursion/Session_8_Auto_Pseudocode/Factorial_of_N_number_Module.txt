@@ -1,0 +1,20 @@
+Function Main
+    Declare Integer N, Fact
+    
+    Output "Read input"
+    Loop
+        Input N
+    Do N <= 0
+    Assign Fact = Factorial(N)
+    Output Fact
+End
+
+Function Factorial (Integer N1)
+    Declare Integer Fact1
+    
+    Assign Fact1 = 1
+    While N1>0
+        Assign Fact1 = Fact1 * N1
+        Assign N1 = N1 - 1
+    End
+Return Integer Fact1

@@ -1,0 +1,19 @@
+Function Main
+    Declare Integer N, sum
+    
+    Loop
+        Input N
+    Do N<=0
+    Assign sum = SumModule(N)
+    Output sum
+End
+
+Function SumModule (Integer N)
+    Declare Integer sum
+    
+    If N==1
+        Assign sum = 1
+    False:
+        Assign sum = SumModule(N-1)+N
+    End
+Return Integer sum

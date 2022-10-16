@@ -1,0 +1,20 @@
+Function Main
+    Declare Integer A, B, res
+    
+    Output "Enter First Number"
+    Input A
+    Output "Enter Second Number"
+    Input B
+    Assign res = GCD(A,B)
+    Output res
+End
+
+Function GCD (Integer A, Integer B)
+    Declare Integer res
+    
+    If B == 0
+        Assign res = A
+    False:
+        Assign res = GCD(B,A%B)
+    End
+Return Integer res

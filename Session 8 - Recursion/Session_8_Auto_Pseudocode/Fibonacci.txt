@@ -1,0 +1,23 @@
+Function Main
+    Declare Integer n, Fib
+    
+    Loop
+        Input n
+    Do n <= 0
+    Assign Fib = Fibonacci(n)
+    Output Fib
+End
+
+Function Fibonacci (Integer n1)
+    Declare Integer Fib1
+    
+    If n1>2
+        Assign Fib1 = Fibonacci(n1-2) + Fibonacci(n1-1)
+    False:
+        If n1 == 2
+            Assign Fib1 = 1
+        False:
+            Assign Fib1 = 0
+        End
+    End
+Return Integer Fib1

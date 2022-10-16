@@ -1,0 +1,14 @@
+Function Main
+    Declare Integer N, Fact
+    
+    Output "Read input"
+    Loop
+        Input N
+    Do N <= 0
+    Assign Fact = 1
+    While N>0
+        Assign Fact = Fact * N
+        Assign N = N - 1
+    End
+    Output Fact
+End

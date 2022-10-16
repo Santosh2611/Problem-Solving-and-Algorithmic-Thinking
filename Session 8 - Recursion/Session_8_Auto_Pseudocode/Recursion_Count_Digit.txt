@@ -1,0 +1,20 @@
+Function Main
+    Declare Integer number
+    Declare Integer count
+    
+    Assign count = 0
+    Output "Enter the number"
+    Input number
+    Assign count = countdigit(number)
+    Output count
+End
+
+Function countdigit (Integer number)
+    Declare Integer count
+    
+    If number < 10
+        Assign count = 1
+    False:
+        Assign count = 1+countdigit(number/10)
+    End
+Return Integer count

@@ -1,0 +1,25 @@
+Function Main
+    Declare Integer number
+    Declare Integer sum
+    
+    Output "Enter +ve number"
+    Input number
+    If number > 0
+        Assign sum = sum(number)
+        Output sum
+    False:
+        Output "Enter +ve number"
+    End
+End
+
+Function sum (Integer number)
+    Declare Integer sum
+    
+    If number == 1
+        Assign sum = 1
+        Output sum
+    False:
+        Assign sum = sum(number-1)+number
+        Output sum
+    End
+Return Integer sum

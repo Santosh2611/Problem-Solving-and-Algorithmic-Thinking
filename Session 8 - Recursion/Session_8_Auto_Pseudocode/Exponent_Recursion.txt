@@ -1,0 +1,20 @@
+Function Main
+    Declare Integer num, power, Result
+    
+    Output "Enter Number"
+    Input num
+    Output "Enter Power"
+    Input power
+    Assign Result = Exp(num, power)
+    Output Result
+End
+
+Function Exp (Integer Num, Integer Power)
+    Declare Integer Result
+    
+    If Power == 0
+        Assign Result = 1
+    False:
+        Assign Result = Exp(Num, Power-1) * Num
+    End
+Return Integer Result

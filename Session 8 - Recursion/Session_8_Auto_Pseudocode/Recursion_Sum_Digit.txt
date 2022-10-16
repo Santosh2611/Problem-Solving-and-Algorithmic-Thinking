@@ -1,0 +1,20 @@
+Function Main
+    Declare Integer number
+    Declare Integer count
+    
+    Assign count = 0
+    Output "Enter the number"
+    Input number
+    Assign count = Sumdigit(number)
+    Output count
+End
+
+Function Sumdigit (Integer number)
+    Declare Integer Sum
+    
+    If number < 10
+        Assign Sum = number
+    False:
+        Assign Sum = number%10+Sumdigit(number/10)
+    End
+Return Integer Sum
