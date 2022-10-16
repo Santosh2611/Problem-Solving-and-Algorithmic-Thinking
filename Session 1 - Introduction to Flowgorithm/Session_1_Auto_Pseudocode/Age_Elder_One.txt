@@ -1,0 +1,18 @@
+Function Main
+    Declare Integer age1, age2
+    
+    Output "Please enter the age of the first person!"
+    Input age1
+    Output "Please enter the age of the second person!"
+    Input age2
+    If age1>age2
+        Output "The first person is the elder one!"
+    False:
+        If age1==age2
+            Output "Both persons are of the same age!"
+        False:
+            Output "The second person is the elder one!"
+        End
+    End
+    Output "Hope you enjoyed my program. Thank you very much! :)"
+End
