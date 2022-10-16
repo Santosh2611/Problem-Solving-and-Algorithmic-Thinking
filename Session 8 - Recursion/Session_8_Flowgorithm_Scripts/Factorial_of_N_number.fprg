@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Selvi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-30 12:38:24 PM"/>
+        <attribute name="created" value="U2Vsdmk7REVTS1RPUC1WM08xNjlFOzIwMjEtMDEtMzA7MTE6Mjg6MDMgQU07Mjc5Ng=="/>
+        <attribute name="edited" value="U2Vsdmk7REVTS1RPUC1WM08xNjlFOzIwMjEtMDEtMzA7MTI6Mzg6MjQgUE07MTsyOTI0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, Fact" type="Integer" array="False" size=""/>
+            <output expression="&quot;Read input&quot;" newline="True"/>
+            <do expression="N &lt;= 0">
+                <input variable="N"/>
+            </do>
+            <assign variable="Fact" expression="1"/>
+            <while expression="N&gt;0">
+                <assign variable="Fact" expression="Fact * N"/>
+                <assign variable="N" expression="N - 1"/>
+            </while>
+            <output expression="Fact" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

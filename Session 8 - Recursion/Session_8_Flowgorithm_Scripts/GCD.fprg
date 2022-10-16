@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Selvi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-10-09 04:44:22 PM"/>
+        <attribute name="created" value="U2Vsdmk7REVTS1RPUC02M0xGT0tMOzIwMTgtMTAtMDg7MDQ6MjE6MjEgUE07Mjg1Mw=="/>
+        <attribute name="edited" value="U2Vsdmk7REVTS1RPUC02M0xGT0tMOzIwMTgtMTAtMDk7MDQ6NDQ6MjIgUE07MjsyOTY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A, B, res" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter First Number&quot;" newline="True"/>
+            <input variable="A"/>
+            <output expression="&quot;Enter Second Number&quot;" newline="True"/>
+            <input variable="B"/>
+            <assign variable="res" expression="GCD(A,B)"/>
+            <output expression="res" newline="True"/>
+        </body>
+    </function>
+    <function name="GCD" type="Integer" variable="res">
+        <parameters>
+            <parameter name="A" type="Integer" array="False"/>
+            <parameter name="B" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="res" type="Integer" array="False" size=""/>
+            <if expression="B == 0">
+                <then>
+                    <assign variable="res" expression="A"/>
+                </then>
+                <else>
+                    <assign variable="res" expression="GCD(B,A%B)"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

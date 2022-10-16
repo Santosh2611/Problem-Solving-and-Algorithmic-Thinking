@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="dhany"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-29 12:14:46 AM"/>
+        <attribute name="created" value="ZGhhbnk7IFRSWUFNQkFLQU07IDIwMjEtMDEtMjg7IDExOjM4OjE5IFBNOyAyNjU2"/>
+        <attribute name="edited" value="ZGhhbnk7IFRSWUFNQkFLQU07IDIwMjEtMDEtMjk7IDEyOjE0OjQ2IEFNOyAyNjM3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, sum" type="Integer" array="False" size=""/>
+            <do expression="N&lt;=0">
+                <input variable="N"/>
+            </do>
+            <assign variable="sum" expression="SumModule(N)"/>
+            <output expression="sum"/>
+        </body>
+    </function>
+    <function name="SumModule" type="Integer" variable="sum">
+        <parameters>
+            <parameter name="N" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <if expression="N==1">
+                <then>
+                    <assign variable="sum" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="sum" expression="SumModule(N-1)+N"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Selvi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-31 08:35:05 AM"/>
+        <attribute name="created" value="U2Vsdmk7REVTS1RPUC1WM08xNjlFOzIwMjEtMDEtMzE7MDg6MDE6MjYgQU07Mjc5OQ=="/>
+        <attribute name="edited" value="U2Vsdmk7REVTS1RPUC1WM08xNjlFOzIwMjEtMDEtMzE7MDg6MzU6MDUgQU07MzsyOTEz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, Prod" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter Multiplicand a and Multiplier b&quot;" newline="True"/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <assign variable="Prod" expression="Product(a,b)"/>
+            <output expression="Prod" newline="True"/>
+        </body>
+    </function>
+    <function name="Product" type="Integer" variable="Prod1">
+        <parameters>
+            <parameter name="c" type="Integer" array="False"/>
+            <parameter name="d" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Prod1" type="Integer" array="False" size=""/>
+            <assign variable="Prod1" expression="c * d"/>
+        </body>
+    </function>
+</flowgorithm>

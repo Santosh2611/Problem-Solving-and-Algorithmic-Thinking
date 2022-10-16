@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Selvi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-10-09 04:36:21 PM"/>
+        <attribute name="created" value="U2Vsdmk7REVTS1RPUC02M0xGT0tMOzIwMTgtMTAtMDU7MTA6MTc6NDYgQU07Mjg0NA=="/>
+        <attribute name="edited" value="U2Vsdmk7REVTS1RPUC02M0xGT0tMOzIwMTgtMTAtMDk7MDQ6MzY6MjEgUE07NzsyOTc0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <declare name="Rev" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number&quot;" newline="True"/>
+            <input variable="number"/>
+            <assign variable="Rev" expression="Revdigit(number,0)"/>
+            <output expression="Rev" newline="True"/>
+        </body>
+    </function>
+    <function name="Revdigit" type="Integer" variable="Rev">
+        <parameters>
+            <parameter name="number" type="Integer" array="False"/>
+            <parameter name="r" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Rev" type="Integer" array="False" size=""/>
+            <if expression="number == 0">
+                <then>
+                    <assign variable="Rev" expression="r"/>
+                </then>
+                <else>
+                    <assign variable="Rev" expression="Revdigit(number/10,number%10+r*10)"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

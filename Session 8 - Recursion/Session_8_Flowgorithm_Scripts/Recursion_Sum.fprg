@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Selvi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-10-05 10:17:44 AM"/>
+        <attribute name="created" value="U2Vsdmk7REVTS1RPUC02M0xGT0tMOzIwMTgtMTAtMDU7MDk6Mzc6MzggQU07Mjg1NQ=="/>
+        <attribute name="edited" value="U2Vsdmk7REVTS1RPUC02M0xGT0tMOzIwMTgtMTAtMDU7MTA6MTc6NDQgQU07MTsyOTUw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter +ve number&quot;" newline="True"/>
+            <input variable="number"/>
+            <if expression="number &gt; 0">
+                <then>
+                    <assign variable="sum" expression="sum(number)"/>
+                    <output expression="sum" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Enter +ve number&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="sum" type="Integer" variable="sum">
+        <parameters>
+            <parameter name="number" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <if expression="number == 1">
+                <then>
+                    <assign variable="sum" expression="1"/>
+                    <output expression="sum" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="sum" expression="sum(number-1)+number"/>
+                    <output expression="sum" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

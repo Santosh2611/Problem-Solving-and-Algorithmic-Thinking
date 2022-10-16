@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Selvi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-31 10:32:01 AM"/>
+        <attribute name="created" value="U2Vsdmk7REVTS1RPUC1WM08xNjlFOzIwMjEtMDEtMzE7MTA6MTQ6NTYgQU07Mjc5OQ=="/>
+        <attribute name="edited" value="U2Vsdmk7REVTS1RPUC1WM08xNjlFOzIwMjEtMDEtMzE7MTA6MzI6MDEgQU07MjsyODk4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ArraySize, SearchValue, index, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter Array Size&quot;" newline="True"/>
+            <input variable="ArraySize"/>
+            <declare name="list" type="Integer" array="True" size="ArraySize"/>
+            <output expression="&quot;Enter Array Elements in Sorted order&quot;" newline="True"/>
+            <for variable="i" start="0" end="ArraySize-1" direction="inc" step="1">
+                <input variable="list[i]"/>
+            </for>
+            <output expression="&quot;Enter the value to be searched&quot;" newline="True"/>
+            <input variable="SearchValue"/>
+            <assign variable="index" expression="bSearch(list, 0, ArraySize-1, SearchValue)"/>
+            <output expression="index" newline="True"/>
+        </body>
+    </function>
+    <function name="bSearch" type="Integer" variable="index">
+        <parameters>
+            <parameter name="Data" type="Integer" array="True"/>
+            <parameter name="First" type="Integer" array="False"/>
+            <parameter name="Last" type="Integer" array="False"/>
+            <parameter name="Value" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="index, middle" type="Integer" array="False" size=""/>
+            <assign variable="middle" expression="( First + Last )/2"/>
+            <if expression="Data[Middle] == Value">
+                <then>
+                    <assign variable="index" expression="middle"/>
+                </then>
+                <else>
+                    <if expression="First &gt;= Last">
+                        <then>
+                            <assign variable="index" expression="-1"/>
+                        </then>
+                        <else>
+                            <if expression="Value &lt; Data[middle]">
+                                <then>
+                                    <assign variable="index" expression="bSearch(Data, First, middle-1, Value)"/>
+                                </then>
+                                <else>
+                                    <assign variable="index" expression="bSearch(Data, middle+1, Last, Value)"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

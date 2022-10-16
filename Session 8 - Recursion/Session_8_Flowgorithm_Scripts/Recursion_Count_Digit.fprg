@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Selvi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-10-09 04:23:51 PM"/>
+        <attribute name="created" value="U2Vsdmk7REVTS1RPUC02M0xGT0tMOzIwMTgtMTAtMDU7MTA6MTc6NDYgQU07Mjg0NA=="/>
+        <attribute name="edited" value="U2Vsdmk7REVTS1RPUC02M0xGT0tMOzIwMTgtMTAtMDk7MDQ6MjM6NTEgUE07NTsyOTcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <output expression="&quot;Enter the number&quot;" newline="True"/>
+            <input variable="number"/>
+            <assign variable="count" expression="countdigit(number)"/>
+            <output expression="count" newline="True"/>
+        </body>
+    </function>
+    <function name="countdigit" type="Integer" variable="count">
+        <parameters>
+            <parameter name="number" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <if expression="number &lt; 10">
+                <then>
+                    <assign variable="count" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="count" expression="1+countdigit(number/10)"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
