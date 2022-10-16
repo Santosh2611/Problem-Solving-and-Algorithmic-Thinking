@@ -1,0 +1,22 @@
+Function Main
+    Declare Integer n, i, sum
+    
+    Assign sum = 0
+    Assign i = 1
+    Output "Input the number :"
+    Input n
+    Output "The positive divisor is :"
+    While i<n
+        If n%i==0
+            Output " " &i
+            Assign sum = sum+i
+        End
+        Assign i = i+1
+    End
+    Output "  The sum of the divisor is : " &sum
+    If sum==n
+        Output "So, the number is perfect."
+    False:
+        Output "So, the number is not perfect."
+    End
+End
