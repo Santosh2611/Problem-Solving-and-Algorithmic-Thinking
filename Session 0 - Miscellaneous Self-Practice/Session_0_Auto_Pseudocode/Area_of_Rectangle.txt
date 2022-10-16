@@ -1,0 +1,11 @@
+Function Main
+    Declare Integer area, l, b
+    
+    Output "Please enter the length of the rectangle in cm!"
+    Input l
+    Output "Please enter the breadth of the rectangle in cm!"
+    Input b
+    Assign area = (l*b)
+    Output "The area of the rectangle is: " &area
+    Output "Hope you enjoyed my program. Thank you very much! :)"
+End
