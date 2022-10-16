@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-12-18 01:49:33 AM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xODswMTowMTo0OSBBTTsyNjc2"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xODswMTo0OTozMyBBTTsyOzI3OTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="temp, cube, square" type="Integer" array="False" size=""/>
+            <for variable="temp" start="0" end="10" direction="inc" step="1">
+                <assign variable="square" expression="temp*temp"/>
+                <assign variable="cube" expression="temp*temp*temp"/>
+                <output expression="&quot;The square of &quot; &amp;temp&amp; &quot; is &quot; &amp;square" newline="True"/>
+                <output expression="&quot;The cube of &quot; &amp;temp&amp; &quot; is &quot; &amp;cube" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

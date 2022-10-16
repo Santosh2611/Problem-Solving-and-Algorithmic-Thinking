@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-07-04 06:50:49 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xODswMzo1MToxNiBBTTsyNjc3"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xODswNDoxNjozMyBBTTsxO0RlTEw7REVTS1RPUC1KTEtCVDlQOzIwMjAtMTItMTE7MTA6MDQ6MDEgQU07RGV0ZXJtaW5hdGlvbiBvZiB3aGV0aGVyIGEgZ2l2ZW4gbnVtYmVyIGlzIHByaW1lIG9yIG5vdC5mcHJnOzExMjcw"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xODswNDoxODoyNyBBTTsxO0RlTEw7REVTS1RPUC1KTEtCVDlQOzIwMjAtMTItMTA7MDk6Mzk6MDAgUE07Q2hlY2sgd2hldGhlciBhIGdpdmVuIG51bWJlciBpcyBwZXJmZWN0IG9yIG5vdC5mcHJnOzEwMzc4"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xODswOTozNjo1OSBBTTs0OzI4MDQ="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDctMDQ7MDY6NTA6NDkgUE07MjsyMjU4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="continue, choice" type="Integer" array="False" size=""/>
+            <do expression="continue==1">
+                <output expression="&quot;MENU to check whether input is a-&#13;&#10;1. Prime Number&#13;&#10;2. Perfect Number (Sum of Factors other than the number is equal to the number itself)&#13;&#10;3. Abundant Number (Sum of Factors other than the number is greater than the number itself)&#13;&#10;4. Armstrong Number (Sum of dth power of digits is equal to the number with d digits)&#13;&#10;5. Strong Number (Number = Sum of Factorials of Digits)&#13;&#10;6. Harshad's Number (Number is exactly divisible by sum of its digits)&#13;&#10;Please enter any one of your choice :&quot;" newline="True"/>
+                <input variable="choice"/>
+                <if expression="choice==1">
+                    <then>
+                        <declare name="number, temp, count" type="Integer" array="False" size=""/>
+                        <assign variable="count" expression="0"/>
+                        <output expression="&quot;Enter the number to check if it is prime or not :&quot;" newline="True"/>
+                        <input variable="number"/>
+                        <if expression="number==1">
+                            <then>
+                                <output expression="&quot;1 is neither prime nor composite.&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <for variable="temp" start="2" end="number/2" direction="inc" step="1">
+                                    <if expression="number%temp==0">
+                                        <then>
+                                            <assign variable="count" expression="count+1"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </for>
+                                <if expression="count==0">
+                                    <then>
+                                        <output expression="&quot;&quot;&amp;number&amp; &quot; is a prime number.&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;&quot;&amp;number&amp; &quot; is not a prime number.&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="choice==2">
+                            <then>
+                                <declare name="number, temp, sum" type="Integer" array="False" size=""/>
+                                <assign variable="sum" expression="0"/>
+                                <assign variable="temp" expression="1"/>
+                                <output expression="&quot;Enter the input to check if it is a perfect number or not :&quot;" newline="True"/>
+                                <input variable="number"/>
+                                <output expression="&quot;The positive divisor is :&quot;" newline="False"/>
+                                <while expression="temp&lt;number">
+                                    <if expression="number%temp==0">
+                                        <then>
+                                            <output expression="&quot; &quot; &amp;temp" newline="False"/>
+                                            <assign variable="sum" expression="sum+temp"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                    <assign variable="temp" expression="temp+1"/>
+                                </while>
+                                <output expression="&quot;&#13;&#10;The sum of the divisor is : &quot; &amp;sum" newline="True"/>
+                                <if expression="sum==number">
+                                    <then>
+                                        <output expression="&quot;So, the number is perfect.&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;So, the number is not perfect.&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <if expression="choice==3">
+                                    <then>
+                                        <declare name="number, sum, temp" type="Integer" array="False" size=""/>
+                                        <assign variable="sum" expression="0"/>
+                                        <assign variable="temp" expression="1"/>
+                                        <output expression="&quot;Enter the input to check if it is an abundant number or not :&quot;" newline="True"/>
+                                        <input variable="number"/>
+                                        <for variable="temp" start="1" end="number-1" direction="inc" step="1">
+                                            <if expression="number%temp==0">
+                                                <then>
+                                                    <assign variable="sum" expression="sum+temp"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </for>
+                                        <if expression="sum&gt;number">
+                                            <then>
+                                                <output expression="&quot;&quot; &amp;number&amp; &quot; is an Abundant Number.&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;&quot; &amp;number&amp; &quot; is not an abundant number.&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <if expression="choice==4">
+                                            <then>
+                                                <declare name="number, rem, temp, sum, power" type="Integer" array="False" size=""/>
+                                                <assign variable="sum" expression="0"/>
+                                                <output expression="&quot;Enter the input to check if it is an armstrong number or not :&quot;" newline="True"/>
+                                                <input variable="number"/>
+                                                <assign variable="temp" expression="number"/>
+                                                <output expression="&quot;Enter the power of digits (value of d) :&quot;" newline="True"/>
+                                                <input variable="power"/>
+                                                <while expression="temp&gt;0">
+                                                    <assign variable="rem" expression="temp%10"/>
+                                                    <assign variable="sum" expression="sum+(rem^power)"/>
+                                                    <assign variable="temp" expression="temp/10"/>
+                                                </while>
+                                                <if expression="number==sum">
+                                                    <then>
+                                                        <output expression="&quot;&quot; &amp;number&amp; &quot; is an Armstrong Number.&quot;" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;&quot; &amp;number&amp; &quot; is not an Armstrong Number.&quot;" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <if expression="choice==5">
+                                                    <then>
+                                                        <declare name="temp, num, number, rem, sum, fact" type="Integer" array="False" size=""/>
+                                                        <assign variable="sum" expression="0"/>
+                                                        <assign variable="fact" expression="1"/>
+                                                        <output expression="&quot;Enter the input to check if it is a strong number or not :&quot;" newline="True"/>
+                                                        <input variable="number"/>
+                                                        <assign variable="num" expression="number"/>
+                                                        <while expression="num&gt;0">
+                                                            <assign variable="fact" expression="1"/>
+                                                            <assign variable="rem" expression="num%10"/>
+                                                            <for variable="temp" start="1" end="rem" direction="inc" step="1">
+                                                                <assign variable="fact" expression="fact*temp"/>
+                                                            </for>
+                                                            <assign variable="sum" expression="sum+fact"/>
+                                                            <assign variable="num" expression="num/10"/>
+                                                        </while>
+                                                        <if expression="number==sum">
+                                                            <then>
+                                                                <output expression="&quot;&quot; &amp;number&amp; &quot; is a Strong Number.&quot;" newline="True"/>
+                                                            </then>
+                                                            <else>
+                                                                <output expression="&quot;&quot; &amp;number&amp; &quot; is not a Strong Number.&quot;" newline="True"/>
+                                                            </else>
+                                                        </if>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="choice==6">
+                                                            <then>
+                                                                <declare name="number, num, rem, sum" type="Integer" array="False" size=""/>
+                                                                <assign variable="sum" expression="0"/>
+                                                                <output expression="&quot;Enter the input to check if it is a Harshad number or not :&quot;" newline="True"/>
+                                                                <input variable="number"/>
+                                                                <assign variable="num" expression="number"/>
+                                                                <while expression="num&gt;0">
+                                                                    <assign variable="rem" expression="num%10"/>
+                                                                    <assign variable="sum" expression="sum+rem"/>
+                                                                    <assign variable="num" expression="num/10"/>
+                                                                </while>
+                                                                <if expression="(number%sum)==0">
+                                                                    <then>
+                                                                        <output expression="&quot;&quot; &amp;number&amp; &quot; is a Harshad Number.&quot;" newline="True"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <output expression="&quot;&quot; &amp;number&amp; &quot; is not a Harshad Number.&quot;" newline="True"/>
+                                                                    </else>
+                                                                </if>
+                                                            </then>
+                                                            <else/>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;Press 1 to continue and any other key to exit.&quot;" newline="True"/>
+                <input variable="continue"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

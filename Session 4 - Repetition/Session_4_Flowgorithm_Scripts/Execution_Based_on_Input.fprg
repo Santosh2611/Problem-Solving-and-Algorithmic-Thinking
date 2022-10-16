@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-06-08 11:16:16 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xODswMjowNjoyMyBBTTsyNjc0"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0yNjswOTowNDo1MSBQTTszOzI4MDQ="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDYtMDg7MTE6MTY6MTYgUE07MTsyMjUy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="choice, continue" type="Integer" array="False" size=""/>
+            <do expression="continue==1">
+                <output expression="&quot;MENU-&#13;&#10;1. Sum of natural numbers till the input number.&#13;&#10;2. Factorial of the number, if it is a positive number or zero.&#13;&#10;3. Number of digits in the input.&#13;&#10;4. Sum of digits of the nnumber.&#13;&#10;5. Reversing the number.&#13;&#10;6. Checking whether the number is a palindrome or not.&#13;&#10;7. Printing the factors of the number.&#13;&#10;Enter any number as per your choice!&quot;" newline="True"/>
+                <input variable="choice"/>
+                <if expression="choice==1">
+                    <then>
+                        <declare name="number, temp, sum, fact, count, digit, rev, num" type="Integer" array="False" size=""/>
+                        <assign variable="sum" expression="0"/>
+                        <assign variable="fact" expression="1"/>
+                        <assign variable="count" expression="0"/>
+                        <assign variable="rev" expression="0"/>
+                        <output expression="&quot;Enter the number until where you want the sum :&quot;" newline="True"/>
+                        <input variable="number"/>
+                        <for variable="temp" start="0" end="number" direction="inc" step="1">
+                            <assign variable="sum" expression="sum+temp"/>
+                        </for>
+                        <output expression="&quot;The required sum until &quot; &amp;number&amp; &quot; of &quot; &amp;sum" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="choice==2">
+                            <then>
+                                <declare name="number, temp, sum, fact, count, digit, rev, num" type="Integer" array="False" size=""/>
+                                <assign variable="sum" expression="0"/>
+                                <assign variable="fact" expression="1"/>
+                                <assign variable="count" expression="0"/>
+                                <assign variable="rev" expression="0"/>
+                                <output expression="&quot;Enter the number whose factorial you want : &quot;" newline="True"/>
+                                <input variable="number"/>
+                                <if expression="number&lt;0">
+                                    <then>
+                                        <output expression="&quot;Factorial for negative number does not exist!&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <for variable="temp" start="1" end="number" direction="inc" step="1">
+                                            <assign variable="fact" expression="fact*temp"/>
+                                        </for>
+                                    </else>
+                                </if>
+                                <output expression="&quot;The factorial of &quot; &amp;number&amp; &quot; is: &quot; &amp;fact" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="choice==3">
+                                    <then>
+                                        <declare name="number, temp, sum, fact, count, digit, rev, num" type="Integer" array="False" size=""/>
+                                        <assign variable="sum" expression="0"/>
+                                        <assign variable="fact" expression="1"/>
+                                        <assign variable="count" expression="0"/>
+                                        <assign variable="rev" expression="0"/>
+                                        <output expression="&quot;Enter the input whose number of digits you wanna find :&quot;" newline="True"/>
+                                        <input variable="number"/>
+                                        <output expression="&quot;The number of digits in &quot; &amp;number" newline="False"/>
+                                        <while expression="number!=0">
+                                            <assign variable="number" expression="number/10"/>
+                                            <assign variable="count" expression="count+1"/>
+                                        </while>
+                                        <output expression="&quot; is :  &quot; &amp;count" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="choice==4">
+                                            <then>
+                                                <declare name="number, temp, sum, fact, count, digit, rev, num" type="Integer" array="False" size=""/>
+                                                <assign variable="sum" expression="0"/>
+                                                <assign variable="fact" expression="1"/>
+                                                <assign variable="count" expression="0"/>
+                                                <assign variable="rev" expression="0"/>
+                                                <output expression="&quot;Enter the number whose sum of digits you wanna find :&quot;" newline="True"/>
+                                                <input variable="number"/>
+                                                <output expression="&quot;The sum of the digits in &quot; &amp;number" newline="False"/>
+                                                <while expression="number&gt;0">
+                                                    <assign variable="temp" expression="number%10"/>
+                                                    <assign variable="sum" expression="sum+temp"/>
+                                                    <assign variable="number" expression="number/10"/>
+                                                </while>
+                                                <output expression="&quot; is : &quot; &amp;sum" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="choice==5">
+                                                    <then>
+                                                        <declare name="number, temp, sum, fact, count, digit, rev, num" type="Integer" array="False" size=""/>
+                                                        <assign variable="sum" expression="0"/>
+                                                        <assign variable="fact" expression="1"/>
+                                                        <assign variable="count" expression="0"/>
+                                                        <assign variable="rev" expression="0"/>
+                                                        <output expression="&quot;Enter the number which you wanna reverse :&quot;" newline="True"/>
+                                                        <input variable="number"/>
+                                                        <output expression="&quot;The number &quot; &amp;number&amp; &quot; in reverse order is : &quot;" newline="False"/>
+                                                        <while expression="number!=0">
+                                                            <assign variable="digit" expression="number%10"/>
+                                                            <assign variable="rev" expression="(rev*10)+digit"/>
+                                                            <assign variable="number" expression="number/10"/>
+                                                        </while>
+                                                        <output expression="rev" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="choice==6">
+                                                            <then>
+                                                                <declare name="number, temp, sum, fact, count, digit, rev, num" type="Integer" array="False" size=""/>
+                                                                <assign variable="sum" expression="0"/>
+                                                                <assign variable="fact" expression="1"/>
+                                                                <assign variable="count" expression="0"/>
+                                                                <assign variable="rev" expression="0"/>
+                                                                <output expression="&quot;Enter the number to check if it is a palindrome or not :&quot;" newline="True"/>
+                                                                <input variable="number"/>
+                                                                <assign variable="num" expression="number"/>
+                                                                <output expression="&quot;The number &quot; &amp;number&amp; &quot; in reverse order is : &quot;" newline="False"/>
+                                                                <while expression="num!=0">
+                                                                    <assign variable="digit" expression="num%10"/>
+                                                                    <assign variable="rev" expression="(rev*10)+digit"/>
+                                                                    <assign variable="num" expression="num/10"/>
+                                                                </while>
+                                                                <output expression="rev" newline="True"/>
+                                                                <if expression="number==rev">
+                                                                    <then>
+                                                                        <output expression="&quot;As a result, it is a palindrome!&quot;" newline="True"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <output expression="&quot;As a result, it is not a palindrome!&quot;" newline="True"/>
+                                                                    </else>
+                                                                </if>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="choice==7">
+                                                                    <then>
+                                                                        <declare name="number, temp, sum, fact, count, digit, rev, num" type="Integer" array="False" size=""/>
+                                                                        <assign variable="sum" expression="0"/>
+                                                                        <assign variable="fact" expression="1"/>
+                                                                        <assign variable="count" expression="0"/>
+                                                                        <assign variable="rev" expression="0"/>
+                                                                        <output expression="&quot;Enter the number whose factors you want :&quot;" newline="True"/>
+                                                                        <input variable="number"/>
+                                                                        <for variable="temp" start="1" end="number" direction="inc" step="1">
+                                                                            <if expression="number%temp==0">
+                                                                                <then>
+                                                                                    <output expression="&quot;&quot; &amp;temp&amp; &quot; is a factor of &quot; &amp;number" newline="True"/>
+                                                                                </then>
+                                                                                <else/>
+                                                                            </if>
+                                                                        </for>
+                                                                    </then>
+                                                                    <else>
+                                                                        <output expression="&quot;Invalid Input.&quot;" newline="True"/>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;Press 1 to continue or else any other key to exit!&quot;" newline="True"/>
+                <input variable="continue"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

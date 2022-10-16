@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-12-18 01:01:10 AM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xNzsxMDo0NTozNyBQTTsyNjk1"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMi0xODswMTowMToxMCBBTTs0OzI3NzU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="miles, temp" type="Integer" array="False" size=""/>
+            <declare name="gallons, mg, amg, sg, sm" type="Real" array="False" size=""/>
+            <assign variable="sm" expression="0"/>
+            <assign variable="sg" expression="0"/>
+            <output expression="&quot;Enter the gallons used (-1 to end):&quot;" newline="True"/>
+            <input variable="gallons"/>
+            <assign variable="temp" expression="1"/>
+            <while expression="gallons!=-1">
+                <if expression="temp=1">
+                    <then>
+                        <output expression="&quot;Enter the miles driven:&quot;" newline="True"/>
+                        <input variable="miles"/>
+                        <assign variable="mg" expression="miles/gallons"/>
+                        <output expression="&quot;The miles / gallon for this tank was &quot; &amp;mg" newline="True"/>
+                    </then>
+                    <else>
+                        <while expression="gallons!=-1">
+                            <output expression="&quot;Enter the gallons used (-1 to end):&quot;" newline="True"/>
+                            <input variable="gallons"/>
+                            <if expression="gallons!=-1">
+                                <then>
+                                    <output expression="&quot;Enter the miles driven:&quot;" newline="True"/>
+                                    <input variable="miles"/>
+                                    <assign variable="mg" expression="miles/gallons"/>
+                                    <output expression="&quot;The miles / gallon for this tank was &quot; &amp;mg" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </while>
+                    </else>
+                </if>
+                <assign variable="temp" expression="temp+1"/>
+                <assign variable="sg" expression="sg+gallons+1"/>
+                <assign variable="sm" expression="sm+miles"/>
+            </while>
+            <assign variable="amg" expression="sm/sg"/>
+            <output expression="&quot;The overall average miles/gallon was &quot; &amp;amg" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
