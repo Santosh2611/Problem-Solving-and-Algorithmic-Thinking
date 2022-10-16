@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-20 03:42:34 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yMDswMzozODoyMCBQTTsyNjg0"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yMDswMzo0MjozNCBQTTsyOzI3OTM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, s" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter the first number!&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Please enter the second number!&quot;" newline="True"/>
+            <input variable="b"/>
+            <assign variable="s" expression="(a+b)"/>
+            <output expression="&quot;The sum of the two numbers is: &quot; &amp;s" newline="True"/>
+            <output expression="&quot;Hope you enjoyed my program. Thank you very much! :)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

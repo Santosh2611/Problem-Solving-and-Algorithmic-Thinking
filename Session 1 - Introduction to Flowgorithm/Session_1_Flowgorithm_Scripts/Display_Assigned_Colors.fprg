@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-20 03:43:00 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yMDswMjozOToxNyBQTTsyNjkw"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yMDswMzo0MzowMCBQTTsyOzI3ODc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter a number of your choice!&quot;" newline="True"/>
+            <input variable="a"/>
+            <if expression="a==1">
+                <then>
+                    <output expression="&quot;Green!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="a==2">
+                        <then>
+                            <output expression="&quot;Yellow!&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="a==3">
+                                <then>
+                                    <output expression="&quot;Blue!&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Red!&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Hope you enjoyed my program. Thank you very much! :)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-20 03:42:46 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yMDswMzoxNDozMSBQTTsyNjgw"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yMDswMzo0Mjo0NiBQTTsyOzI3OTY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="radius, cmf, area" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter the radius of the circle!&quot;" newline="True"/>
+            <input variable="radius"/>
+            <assign variable="cmf" expression="2*3.14*radius"/>
+            <output expression="&quot;The circumference of the radius is: &quot; &amp;cmf" newline="True"/>
+            <assign variable="area" expression="3.14*radius*radius"/>
+            <output expression="&quot;The area of the circle is: &quot; &amp;area" newline="True"/>
+            <output expression="&quot;Hope you enjoyed my program. Thank you very much! :)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

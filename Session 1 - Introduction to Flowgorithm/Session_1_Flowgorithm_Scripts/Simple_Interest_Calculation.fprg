@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-20 03:42:55 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yMDswMzoyNDoyMyBQTTsyNjgy"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yMDswMzo0Mjo1NSBQTTsyOzI3OTY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="si, p, r, t" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter the Principal Amount in Rupees!&quot;" newline="True"/>
+            <input variable="p"/>
+            <output expression="&quot;Please enter Rate of Interesr in Percentage (%)&quot;" newline="True"/>
+            <input variable="r"/>
+            <output expression="&quot;Please enter Time in Years!&quot;" newline="True"/>
+            <input variable="t"/>
+            <assign variable="si" expression="(p*r*t)/100"/>
+            <output expression="&quot;The Simple Interest is: Rs.&quot; &amp;si" newline="True"/>
+            <output expression="&quot;Hope you enjoyed my program. Thank you very much! :)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

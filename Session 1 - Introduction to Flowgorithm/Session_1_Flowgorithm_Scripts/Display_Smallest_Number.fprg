@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-27 12:38:05 PM"/>
+        <attribute name="created" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yMDswMjoyNzo0OCBQTTsyNjkx"/>
+        <attribute name="edited" value="RGVMTDtERVNLVE9QLUpMS0JUOVA7MjAyMC0xMS0yNzsxMjozODowNSBQTTszOzI4MDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter the value of a!&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Please enter the value of b!&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;Please enter the value of c!&quot;" newline="True"/>
+            <input variable="c"/>
+            <if expression="a&lt;b">
+                <then>
+                    <if expression="a&lt;c">
+                        <then>
+                            <output expression="&quot;a is the smaller number!&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="a==c">
+                                <then>
+                                    <output expression="&quot;a and c, both are equal!&quot;" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                            <output expression="&quot;c is the smaller number!&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="a==b">
+                        <then>
+                            <output expression="&quot;a and b, both are equal!&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="b&lt;c">
+                        <then>
+                            <output expression="&quot;b is the smaller number!&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="b==c">
+                                <then>
+                                    <output expression="&quot;b and c, both are equal!&quot;" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                            <output expression="&quot;c is the smaller number!&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Hope you enjoyed the program. Thank you very much! :)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
