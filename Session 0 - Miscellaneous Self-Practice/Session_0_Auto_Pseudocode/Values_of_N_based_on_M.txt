@@ -1,0 +1,20 @@
+Function Main
+    Output "Hearty welcome to the program for computing values of n based on the input m! Let's start."
+    Declare Integer m, n
+    
+    Output "Please enter the value of m!"
+    Input m
+    If m>0
+        Assign n = 1
+        Output "The value of n when m is " &m& " : " &n& "."
+    False:
+        If m=0
+            Assign n = 0
+            Output "The value of n when m is " &m& " : " &n& "."
+        False:
+            Assign n = -1
+            Output "The value of n when m is " &m& " : " &n& "."
+        End
+    End
+    Output "Hope you enjoyed the program. Thank you very much! :)"
+End

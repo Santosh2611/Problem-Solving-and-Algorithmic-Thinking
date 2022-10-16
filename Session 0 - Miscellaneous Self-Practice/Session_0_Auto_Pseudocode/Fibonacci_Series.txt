@@ -1,0 +1,25 @@
+Function Main
+    Declare Integer i, n, n1, n2, next
+    
+    Assign n1 = 0
+    Assign n2 = 1
+    Output "Enter the n value"
+    Input n
+    For i = 1 to n
+        Output n1
+        Assign next = n1+n2
+        Assign n1 = n2
+        Assign n2 = next
+    End
+    Output "Fibonacci Series Using While Loop"
+    Assign n1 = 0
+    Assign n2 = 1
+    Assign i = 1
+    While i<=n
+        Output n1
+        Assign next = n1+n2
+        Assign n1 = n2
+        Assign n2 = next
+        Assign i = i+1
+    End
+End

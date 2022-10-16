@@ -1,0 +1,7 @@
+Function Main
+    Declare Integer i
+    
+    For i = 0 to 255
+        Output "ASCII " & i &" Char is "& ToChar(i)
+    End
+End

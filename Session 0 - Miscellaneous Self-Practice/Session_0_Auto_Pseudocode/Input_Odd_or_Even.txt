@@ -1,0 +1,13 @@
+Function Main
+    Output "Hearty welcome to the program for computing whether input is odd or even! Let's start."
+    Declare Integer a
+    
+    Output "Please enter a number of your choice!"
+    Input a
+    If a%2==1
+        Output "The input is an odd number!"
+    False:
+        Output "The input is an even number!"
+    End
+    Output "Hope you enjoyed the program. Thank you very much! :)"
+End

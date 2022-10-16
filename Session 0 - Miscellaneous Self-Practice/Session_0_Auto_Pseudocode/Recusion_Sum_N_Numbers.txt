@@ -1,0 +1,18 @@
+Function Main
+    Declare Integer n, sum
+    
+    Output "Enter the no of elements"
+    Input n
+    Assign sum = AddNos(n)
+    Output "Sum of "&n &" numbers is "&sum
+End
+
+Function AddNos (Integer n)
+    Declare Integer value
+    
+    If n==1
+        Assign value = 1
+    False:
+        Assign value = n+AddNos(n-1)
+    End
+Return Integer value

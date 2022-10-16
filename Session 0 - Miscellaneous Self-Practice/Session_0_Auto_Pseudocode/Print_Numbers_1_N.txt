@@ -1,0 +1,26 @@
+Function Main
+    Output "Hearty welcome to the program for print numbers from 1 to 'n', where n is the input (upper limit) given by the user!"
+    Declare Integer n, limit, choice
+    
+    Assign n = 1
+    Output "Please enter the upper limit (n) uptil where you wanna to print numbers from 1 to n!"
+    Input limit
+    Output "Select any one based on your preference!  1. Pretest (or) Entry Controlled Loop  2. Post-test (or) Exit Controlled Loop"
+    Input choice
+    If choice==1
+        While n<=limit
+            Output n
+            Assign n = n+1
+        End
+    False:
+        If choice==2
+            Loop
+                Output n
+                Assign n = n+1
+            Do n<=limit
+        False:
+            Output "No Output! :(  Please enter a number within the given range of numericals displayed in the menu."
+        End
+    End
+    Output "Hope you enjoyed the program. Thank you very much! :)"
+End

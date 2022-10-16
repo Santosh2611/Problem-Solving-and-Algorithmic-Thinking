@@ -1,0 +1,23 @@
+Function Main
+    Declare Integer i, n, k, count, j
+    
+    Output "enter the value of n"
+    Input n
+    Declare Integer Array arr[n]
+    
+    Output "enter the elements in the array"
+    For i = 0 to n-1
+        Input arr[i]
+    End
+    Output "enter the value of k"
+    Input k
+    Assign count = 0
+    For i = 0 to n-1
+        For j = i+1 to n-1
+            If (arr[i]-arr[j]==k)or(arr[j]-arr[i]==k)
+                Assign count = count+1
+            End
+        End
+    End
+    Output "count is "&count
+End

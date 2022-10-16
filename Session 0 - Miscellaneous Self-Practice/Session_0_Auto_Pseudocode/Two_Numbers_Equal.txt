@@ -1,0 +1,15 @@
+Function Main
+    Output "Hearty welcome to the program for computing whether two numbers are equal or not! Let's start."
+    Declare Integer a, b
+    
+    Output "Please enter the first number!"
+    Input a
+    Output "Please enter the second number!"
+    Input b
+    If a==b
+        Output "Both the numbers are equal!"
+    False:
+        Output "Both the numbers are not equal!"
+    End
+    Output "Hope you enjoyed the program. Thank you very much! :)"
+End

@@ -1,0 +1,36 @@
+Function Main
+    Output "Q. Design Flowgorithm script to determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum.  Sample Input:  Array -> 2,1,1,4,3,6 and Sum-> 8  Sample Output: Minimum sequence is 2, because 3,6 is minimum sequence greater than 8."
+    Declare String continue
+    
+    Loop
+        Declare Integer n, i, sum, count
+        
+        Assign count = 0
+        Output "Enter the size of the array:"
+        Input n
+        Declare Integer Array arr[n]
+        
+        Output "Enter the elements in the array one-by-one:"
+        For i = 0 to n-1
+            Input arr[i]
+        End
+        Output "The elements have been obtained as follows: "
+        For i = 0 to n-1
+            Output "" &arr[i]& " "
+        End
+        Output ""
+        Output "Enter the required sum:"
+        Input sum
+        For i = 0 to n-2
+            If ((arr[i]+arr[i+1])>sum)
+                Output "Minimum sequence is 2. This is because " &arr[i]& " & " &arr[i+1]& " are minimum greater sequence greater than " &sum& "."
+                Assign count = (count+1)
+            End
+        End
+        If (count==0)
+            Output "No element greater than " &sum& " has been obtained."
+        End
+        Output "To test for another input, enter (y/Y) to continue or another key to terminate the program:"
+        Input continue
+    Do ((continue=="Y")||(continue=="y"))
+End

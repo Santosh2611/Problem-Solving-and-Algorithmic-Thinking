@@ -1,0 +1,16 @@
+Function Main
+    Declare Integer num, temp, c
+    
+    Output "Prime Numbers from 2 to 100 are: "
+    For num = 2 to 100
+        Assign c = 0
+        For temp = 2 to num/2
+            If num%temp==0
+                Assign c = c+1
+            End
+        End
+        If c==0
+            Output "" &num
+        End
+    End
+End

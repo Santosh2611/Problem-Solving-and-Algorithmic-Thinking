@@ -1,0 +1,26 @@
+Function Main
+    Declare Integer i, n, sum, ch
+    
+    Loop
+        Output "Enter the value of n"
+        Input n
+        Assign sum = 0
+        Assign i = 0
+        While i<=n
+            If i%2!=0
+                Assign sum = sum+i
+            End
+            Assign i = i+1
+        End
+        Output "sum of odd nos from 1 to "&n&" using while loop  is "&sum
+        Assign sum = 0
+        For i = 0 to n
+            If i%2!=0
+                Assign sum = sum+i
+            End
+        End
+        Output "sum of odd nos from 1 to "&n&" using for loop  is "&sum
+        Output "Do you want to continue? Press 1 to continue."
+        Input ch
+    Do ch==1
+End

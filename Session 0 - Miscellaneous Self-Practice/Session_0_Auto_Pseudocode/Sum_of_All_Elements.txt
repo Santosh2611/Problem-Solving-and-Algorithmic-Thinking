@@ -1,0 +1,17 @@
+Function Main
+    Declare Integer i, n, sum
+    
+    Assign sum = 0
+    Output "Enter the number of elements to be entered in the Array:"
+    Input n
+    Declare Integer Array arr[n]
+    
+    For i = 0 to n-1
+        Output "Element " &i& " in the Array is: "
+        Input arr[i]
+    End
+    For i = 0 to n-1
+        Assign sum = sum+arr[i]
+    End
+    Output "Sum of all elements stored in the array is : " &sum
+End

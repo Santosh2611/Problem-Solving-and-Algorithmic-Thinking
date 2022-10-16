@@ -1,0 +1,9 @@
+Function Main
+    Declare String S
+    Declare Integer I
+    
+    Output "Enter a character"
+    Input S
+    Assign I = ToInteger(S)
+    Output I
+End

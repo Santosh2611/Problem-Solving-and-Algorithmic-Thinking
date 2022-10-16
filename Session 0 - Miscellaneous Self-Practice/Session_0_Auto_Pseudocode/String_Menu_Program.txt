@@ -1,0 +1,77 @@
+Function Main
+    Declare String str
+    Declare Integer ch, i, ch2, c
+    
+    Loop
+        Output "Enter the string"
+        Input str
+        Output "1. Display string   2. Display length   3. Display the ASCII Codes   4. Reverse the string   5. Count words in the string"
+        Input ch
+        If ch==1
+            Call disp(str)
+        False:
+            If ch==2
+                Call length(str)
+            False:
+                If ch==3
+                    Output "The ascii codes are"
+                    Call ascii(str)
+                False:
+                    If ch==4
+                        Call reverse(str)
+                    False:
+                        If ch==5
+                            Output "Count of words is : "&words(str)
+                        False:
+                            Output "wrong choice"
+                        End
+                    End
+                End
+            End
+        End
+        Output "Do you want to continue? Press 1 to continue"
+        Input ch2
+    Do ch2==1
+End
+
+Function ascii (String s)
+    Declare String ch
+    Declare Integer i
+    
+    For i = 0 to len(s)-1
+        Assign ch = char(s,i)
+        Output "The code of letter " &i &" is "&toCode(ch)
+    End
+End
+
+Function disp (String s)
+    Output "The string is "&s
+End
+
+Function length (String s)
+    Output "Length of the string is "&len(s)
+End
+
+Function reverse (String s)
+    Declare Integer i
+    Declare String ch
+    
+    For i = len(s)-1 to 0 decreasing
+        Assign ch = char(s,i)
+        Output " "&ch
+    End
+    Output " "
+End
+
+Function words (String s)
+    Declare String ch
+    Declare Integer i, count
+    
+    Assign count = 1
+    For i = 0 to len(s)-1
+        Assign ch = char(s,i)
+        If ch==" "
+            Assign count = count+1
+        End
+    End
+Return Integer count

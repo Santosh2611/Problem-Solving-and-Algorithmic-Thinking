@@ -1,0 +1,33 @@
+Function Main
+    Declare Integer n, ch, choice
+    
+    Loop
+        Output "Enter the number"
+        Input n
+        Output "1. Square   2. Cube  Enter your choice"
+        Input ch
+        If ch==1
+            Output "The square =" & square(n)
+        False:
+            If ch==2
+                Output "The cube =" & cube(n)
+            False:
+                Output "invalid choice"
+            End
+        End
+        Output "do you want to continue? press 1 to continue"
+        Input choice
+    Do choice==1
+End
+
+Function cube (Integer no)
+    Declare Integer cu
+    
+    Assign cu = no*no*no
+Return Integer cu
+
+Function square (Integer no)
+    Declare Integer sq
+    
+    Assign sq = no*no
+Return Integer sq

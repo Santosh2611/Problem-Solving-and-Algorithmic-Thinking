@@ -1,0 +1,33 @@
+Function Main
+    Declare Integer i, n, low, mid, high, target
+    
+    Output "Enter the number of elements"
+    Input n
+    Declare Integer Array arr[n]
+    
+    Output "enter the elements in sorted order"
+    For i = 0 to n-1
+        Input arr[i]
+    End
+    Output "Enter the element to be searched"
+    Input target
+    Assign low = 0
+    Assign high = n-1
+    While low<=high
+        Assign mid = (low+high)/2
+        If arr[mid]<target
+            Assign low = mid+1
+        False:
+            If arr[mid]>target
+                Assign high = mid-1
+            False:
+                If arr[mid]==target
+                    Output "Target found at index location "&mid
+                End
+            End
+        End
+    End
+    If high<low
+        Output "element not found"
+    End
+End

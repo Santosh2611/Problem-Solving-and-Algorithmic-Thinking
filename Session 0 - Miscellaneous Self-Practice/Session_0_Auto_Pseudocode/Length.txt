@@ -1,0 +1,9 @@
+Function Main
+    Declare String name
+    Declare Integer length
+    
+    Output "Enter Name"
+    Input name
+    Assign length = len(name)
+    Output "Length of your name is " &length
+End

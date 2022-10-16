@@ -1,0 +1,114 @@
+Function Main
+    Declare Integer ch, n1, n2, size, ch1, i
+    Declare Integer Array arr[100]
+    
+    Assign ch1 = 0
+    Loop
+        Output "MENU  1.LCM  2.HCF  3.COUNT OF EVEN ELEMENTS IN ARRAY  4.SUM OF ARRAY ELEMENTS  5.ODD ELEMENTS  ENTER YOUR CHOICE"
+        Input ch
+        If ch==1
+            Output "Enter nos"
+            Input n1
+            Input n2
+            Output "LCM OF "&n1 & " and "&n2&" is "&LCM(n1,n2)
+        False:
+            If ch==2
+                Output "Enter no"
+                Input n1
+                Input n2
+                Output "HCF OF "&n1 &" and "&n2&" is "&HCF(n1,n2)
+            False:
+                If ch==3
+                    Output "Enter size of array whose even count has to be found out"
+                    Input size
+                    Output "enter array"
+                    For i = 0 to size-1
+                        Input arr[i]
+                    End
+                    Output "COUNT OF EVEN NOS IS" &countEven(arr,size)
+                False:
+                    If ch==4
+                        Output "Enter size of array whose even count has to be found out"
+                        Input size
+                        Output "enter array"
+                        For i = 0 to size-1
+                            Input arr[i]
+                        End
+                        Output "SUM OF ELEMENTS IS" &sum(arr,size)
+                    False:
+                        If ch==5
+                            Output "Enter size of array whose even count has to be found out"
+                            Input size
+                            Output "enter array"
+                            For i = 0 to size-1
+                                Input arr[i]
+                            End
+                            Call display(arr,size)
+                        End
+                    End
+                End
+            End
+        End
+        Output "Press 1 to continue"
+        Input ch1
+    Do ch1==1
+End
+
+Function countEven (Integer Array a, Integer n)
+    Declare Integer i
+    Declare Integer c
+    
+    Assign c = 0
+    For i = 0 to n-1
+        If a[i]%2==0
+            Assign c = c+1
+        End
+    End
+Return Integer c
+
+Function display (Integer Array a, Integer n)
+    Declare Integer i
+    
+    Output "ODD ELEMENTS ARE"
+    For i = 0 to n-1
+        If a[i]%2!=0
+            Output a[i]
+        End
+    End
+End
+
+Function hcf (Integer n1, Integer n2)
+    Declare Integer i, j
+    Declare Integer temp
+    Declare Integer hcf
+    
+    If n1<n2
+        Assign j = n1
+    False:
+        Assign j = n2
+    End
+    Assign i = 1
+    While i<=j
+        If n1%i==0 and n2%i==0
+            Assign hcf = i
+        End
+        Assign i = i+1
+    End
+Return Integer hcf
+
+Function lcm (Integer n1, Integer n2)
+    Declare Integer lcm
+    Declare Integer temp
+    
+    Assign temp = n1*n2
+    Assign lcm = temp/hcf(n1,n2)
+Return Integer lcm
+
+Function sum (Integer Array a, Integer n)
+    Declare Integer s, i
+    
+    Assign s = 0
+    For i = 0 to n-1
+        Assign s = s+a[i]
+    End
+Return Integer s

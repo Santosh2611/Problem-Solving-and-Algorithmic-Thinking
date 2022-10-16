@@ -1,0 +1,24 @@
+Function Main
+    Declare Integer n, i, ele, j
+    
+    Assign j = 0
+    Output "enter the size of the array"
+    Input n
+    Declare Integer Array arr[n]
+    
+    Output "enter the elements of the array"
+    For i = 0 to n-1
+        Input arr[i]
+    End
+    Output "enter the element to be searched"
+    Input ele
+    For i = 0 to n-1
+        If arr[i]==ele
+            Assign j = 1
+            Output "element found at position "&i
+        End
+    End
+    If j==0
+        Output "Element not found"
+    End
+End

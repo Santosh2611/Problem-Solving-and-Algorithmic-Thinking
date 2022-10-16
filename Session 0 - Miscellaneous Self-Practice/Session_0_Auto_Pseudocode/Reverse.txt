@@ -1,0 +1,14 @@
+Function Main
+    Declare String name, reverse
+    Declare Integer length, i
+    
+    Output "Enter Name"
+    Input name
+    Assign reverse = ""
+    Assign length = len(name)
+    Output "Length of your name is " &length
+    For i = length-1 to 0 decreasing
+        Assign reverse = reverse&char(name,i)
+    End
+    Output "Reverse of " & name & " is " &reverse
+End

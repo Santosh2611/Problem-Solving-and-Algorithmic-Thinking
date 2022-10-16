@@ -1,0 +1,19 @@
+Function Main
+    Declare Integer i, j, flag
+    
+    Assign i = 3
+    While i<10
+        Assign flag = 0
+        Assign j = 2
+        While j<i
+            If i%j==0
+                Assign flag = 1
+            End
+            Assign j = j+1
+        End
+        If flag==0
+            Output i
+        End
+        Assign i = i+1
+    End
+End

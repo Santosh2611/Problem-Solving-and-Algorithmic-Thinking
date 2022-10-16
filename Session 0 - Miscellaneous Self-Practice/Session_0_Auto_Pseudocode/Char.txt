@@ -1,0 +1,15 @@
+Function Main
+    Declare String name
+    Declare Integer length, i
+    
+    Output "Enter Name"
+    Input name
+    Assign length = len(name)
+    Output "Length of your name is " &length
+    Output "Enter index position"
+    Input i
+    Output char(name, i)
+    For i = 0 to length - 1
+        Output "Character at index "& i & " is "&char(name,i)
+    End
+End

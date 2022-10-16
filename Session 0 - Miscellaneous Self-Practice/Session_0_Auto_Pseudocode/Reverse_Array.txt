@@ -1,0 +1,23 @@
+Function Main
+    Declare Integer n, i
+    
+    Output "Enter the size of the array"
+    Input n
+    Declare Integer Array arr[n]
+    
+    Output "Enter the elements of the array"
+    For i = 0 to n-1
+        Input arr[i]
+    End
+    Output "The elements entered by the user is"
+    For i = 0 to n-1
+        Output arr[i]&" "
+    End
+    Output " "
+    Output "Array in the reverse order"
+    Assign i = n-1
+    While i>=0
+        Output arr[i] &" "
+        Assign i = i-1
+    End
+End

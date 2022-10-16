@@ -1,0 +1,29 @@
+Function Main
+    Declare String reply
+    Declare Integer userRoll, compRoll
+    
+    Output "Do you want to play (Y/N):"
+    Input reply
+    While reply="Y" || reply="y"
+        Assign userRoll = Random(6)+1
+        Assign compRoll = Random(6)+1
+        Output "You got a "&userRoll&", I got a "&compRoll
+        Output getMessage(userRoll,compRoll)
+        Output "Do you want to play (Y/N):"
+        Input reply
+    End
+End
+
+Function getMessage (Integer uRoll, Integer cRoll)
+    Declare String msg
+    
+    If uRoll>cRoll
+        Assign msg = "You won"
+    False:
+        If cRoll>uRoll
+            Assign msg = "I won"
+        False:
+            Assign msg = "It is a tie"
+        End
+    End
+Return String msg

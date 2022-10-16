@@ -1,0 +1,24 @@
+Function Main
+    Declare Integer size, i
+    
+    Output "enter the size of the array"
+    Input size
+    Declare Integer Array arr[size]
+    
+    Output "Enter the elements of the array"
+    For i = 0 to size-1
+        Input arr[i]
+    End
+    Output "The largest element is "&maxElement(arr,size)
+End
+
+Function maxElement (Integer Array a, Integer n)
+    Declare Integer max, i
+    
+    Assign max = a[0]
+    For i = 1 to n-1
+        If max<a[i]
+            Assign max = a[i]
+        End
+    End
+Return Integer max

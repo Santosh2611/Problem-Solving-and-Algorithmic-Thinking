@@ -1,0 +1,29 @@
+Function Main
+    Output "Hearty welcome to the program for finding the sum of even and odd numbers from 1 to 'n', where n is the input (upper limit) given by the user!"
+    Declare Integer n, limit, choice, sum
+    
+    Assign sum = 0
+    Output "Please enter the upper limit (n) uptil where you wanna to find the sum of odd and even numbers from 1 to n!"
+    Input limit
+    Output "Select any one based on your preference!  1. Pretest (or) Entry Controlled Loop for Odd Numbers  2. Post-test (or) Exit Controlled Loop for Even Numbers"
+    Input choice
+    If choice==1
+        Assign n = 1
+        While n<=limit
+            Assign sum = sum+n
+            Assign n = n+2
+        End
+    False:
+        If choice==2
+            Assign n = 2
+            Loop
+                Assign sum = sum+n
+                Assign n = n+2
+            Do n<=limit
+        False:
+            Output "No Output! :(  Please enter a number within the given range of numericals displayed in the menu."
+        End
+    End
+    Output "The required sum upto " &limit& " is " &sum& " . "
+    Output "Hope you enjoyed the program. Thank you very much! :)"
+End

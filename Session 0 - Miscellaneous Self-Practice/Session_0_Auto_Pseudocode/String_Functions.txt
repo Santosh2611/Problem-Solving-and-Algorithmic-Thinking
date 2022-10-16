@@ -1,0 +1,106 @@
+Function Main
+    Declare String Name, First, Last, Uppercase, Lowercase
+    Declare Integer Index
+    
+    Output "Enter Name (Last, First) : "
+    Input Name
+    For Index = 0 to Len(Name)
+        Output Substring(Name,0,Index)
+    End
+    Output Find("Thomas Alwa Edison","Newton")
+    Assign Uppercase = Upper(Name)
+    Assign Lowercase = Lower(Name)
+    Output "Name in Uppercase : "&Uppercase
+    Output "Name in Lowercase : "&Lowercase
+    Assign Index = Find(Name,",")
+    Assign Last = Trim(Substring(Name,0,Index))
+    Assign First = Trim(Substring(Name,Index+1,Len(Name)-Index-1))
+    Output "Hello "&First&" "&Last&"!"
+End
+
+Function Find (String Text, String substring)
+    Declare Integer Index
+    Declare Boolean Done
+    
+    Assign Index = 0
+    Assign Done = False
+    Loop
+        If Index+Len(substring)<=Len(Text)
+            If Substring(Text,Index,Len(substring))=substring
+                Assign Done = True
+            False:
+                Assign Index = Index+1
+            End
+        False:
+            Assign Index = -1
+            Assign Done = True
+        End
+    Do Not Done
+Return Integer Index
+
+Function Lower (String Text)
+    Declare Integer Index, Code
+    
+    For Index = 0 to Len(Text)-1
+        Assign Code = ToCode(Char(Text,Index))
+        If Code>=65 && Code<=90
+            Assign Code = Code+32
+            Assign Text = Substring(Text,0,Index)&ToChar(Code)&Substring(Text,Index+1,Len(Text)-Index-1)
+        End
+    End
+Return String Text
+
+Function Substring (String Text, Integer Start, Integer Length)
+    ... Returns the sub-string of the Text beginning at Start upto the given Length
+    Declare String Result
+    Declare Integer Index
+    
+    Assign Result = ""
+    Assign Index = Start
+    While Index<Len(Text) && Length>0
+        Assign Result = Result &Char(Text,Index)
+        Assign Index = Index+1
+        Assign Length = Length-1
+    End
+Return String Result
+
+Function Trim (String Text)
+    Declare Boolean Done
+    
+    Assign Done = False
+    Loop
+        If Len(Text)>0
+            If Char(Text,0)=" "
+                Assign Text = Substring(Text,1,Len(Text)-1)
+            False:
+                Assign Done = True
+            End
+        False:
+            Assign Done = True
+        End
+    Do Not Done
+    Assign Done = False
+    Loop
+        If Len(Text)>0
+            If Char(Text,Len(Text)-1)=" "
+                Assign Text = Substring(Text,0,Len(Text)-1)
+            False:
+                Assign Done = True
+            End
+        False:
+            Assign Done = True
+        End
+    Do Not Done
+Return String Text
+
+Function Upper (String Text)
+    Declare Integer Index, Code
+    
+    For Index = 0 to Len(Text)-1
+        Assign Code = ToCode(Char(Text,Index))
+        If Code>=97 && Code<=122
+            Assign Code = Code-32
+            Assign Text = Substring(Text,0,Index)&ToChar(Code)&Substring(Text,Index+1,Len(Text)-Index-1)
+        End
+    End
+Return String Text

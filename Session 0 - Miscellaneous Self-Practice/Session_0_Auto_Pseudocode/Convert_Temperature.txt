@@ -1,0 +1,9 @@
+Function Main
+    Declare Real c, f
+    
+    Output "Please enter the temperature in Fahrenheit!"
+    Input f
+    Assign c = (5*(f-32))/9
+    Output "The temperature in degree celsius is: " &c
+    Output "Hope you enjoyed my program. Thank you very much! :)"
+End

@@ -1,0 +1,31 @@
+Function Main
+    Declare Integer i, j, count, n
+    
+    Output "enter the value of n"
+    Input n
+    Declare Integer Array arr[n]
+    Declare Integer Array freq[n]
+    
+    Output "Enter the elements of the array"
+    For i = 0 to n-1
+        Input arr[i]
+        Assign freq[i] = -1
+    End
+    For i = 0 to n-1
+        Assign count = 1
+        For j = i+1 to n-1
+            If arr[i]==arr[j]
+                Assign count = count+1
+                Assign freq[j] = 0
+            End
+        End
+        If freq[i]!=0
+            Assign freq[i] = count
+        End
+    End
+    For i = 0 to n-1
+        If freq[i]!=0
+            Output "frequency of "&arr[i] &" is "&freq[i]
+        End
+    End
+End

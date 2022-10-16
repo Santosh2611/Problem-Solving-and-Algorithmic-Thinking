@@ -1,0 +1,25 @@
+Function Main
+    Declare Integer i, n
+    
+    Output "Enter the number of elements to be entered in the Array:"
+    Input n
+    Declare Integer Array arr1[n]
+    Declare Integer Array arr2[n]
+    
+    For i = 0 to n-1
+        Output "Element " &i& " : "
+        Input arr1[i]
+    End
+    Output "Elements stored in the First  Array is: "
+    For i = 0 to n-1
+        Output arr1[i]& " "
+    End
+    For i = 0 to n-1
+        Assign arr2[i] = arr1[i]
+    End
+    Output ""
+    Output "Elements stored in the Second  Array is: "
+    For i = 0 to n-1
+        Output arr2[i]& " "
+    End
+End

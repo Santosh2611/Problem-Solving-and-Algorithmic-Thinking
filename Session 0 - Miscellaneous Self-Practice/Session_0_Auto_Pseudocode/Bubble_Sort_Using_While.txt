@@ -1,0 +1,34 @@
+Function Main
+    Declare Integer i, j, n, temp
+    
+    Output "enter the value of n"
+    Input n
+    Declare Integer Array arr[n]
+    
+    Output "Enter the elements of the array"
+    For i = 0 to n-1
+        Input arr[i]
+    End
+    Output "The unsorted array is"
+    For i = 0 to n-1
+        Output arr[i] &" "
+    End
+    Output " "
+    Assign i = 0
+    While i<n-1
+        Assign j = 0
+        While j<n-i-1
+            If arr[j]>arr[j+1]
+                Assign temp = arr[j]
+                Assign arr[j] = arr[j+1]
+                Assign arr[j+1] = temp
+            End
+            Assign j = j+1
+        End
+        Assign i = i+1
+    End
+    Output "The sorted array is"
+    For i = 0 to n-1
+        Output arr[i] &" "
+    End
+End

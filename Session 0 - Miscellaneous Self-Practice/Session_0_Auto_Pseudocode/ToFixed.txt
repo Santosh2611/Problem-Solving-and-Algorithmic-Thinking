@@ -1,0 +1,9 @@
+Function Main
+    Declare String value
+    Declare Real number
+    
+    Output "Enter real number"
+    Input number
+    Assign value = ToFixed(number,2)
+    Output value
+End

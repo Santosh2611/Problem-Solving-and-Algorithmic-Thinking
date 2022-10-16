@@ -1,0 +1,20 @@
+Function Main
+    Declare Integer ino, bno
+    
+    Output "enter the decimal number"
+    Input ino
+    Output "The corresponding binary value is "&convertToBin(ino)
+End
+
+Function convertToBin (Integer ino)
+    Declare Integer bin, rem, temp
+    
+    Assign bin = 0
+    Assign temp = 1
+    While ino!=0
+        Assign rem = ino%2
+        Assign bin = bin+rem*temp
+        Assign temp = temp*10
+        Assign ino = ino/2
+    End
+Return Integer bin

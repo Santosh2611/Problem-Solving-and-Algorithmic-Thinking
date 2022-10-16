@@ -1,0 +1,49 @@
+Function Main
+    Output "Q. Read an array consisting of cost of toys from user. Then, input an integer M depicting the amount of money available to purchase toys. Do Flowgorithm script to find the maximum number of toys one can buy with the amount M. One can buy only 1 quantity of a particular toy.    Input:  N = 10, M = 50               cost = { 2, 12, 5, 111, 200, 1000, 10, 9, 12, 15 }Output: 6    Toys with amount 2, 5, 9, 10, 12, and 12 can be purchased resulting in a total amount of 50. Hence, maximum number of toys is 6."
+    Declare String continue
+    
+    Loop
+        Declare Integer N, i, M, j, sum, count, temp
+        
+        Assign sum = 0
+        Assign count = 0
+        Output "Enter the number of toys to be entered in the list:"
+        Input N
+        Declare Integer Array cost[N]
+        
+        Output "Enter the cost of each toy one-by-one:"
+        For i = 0 to N-1
+            Input cost[i]
+        End
+        Output "The list is as follows: "
+        For i = 0 to N-1
+            Output "" &cost[i]& " "
+        End
+        Output ""
+        Output "Enter the amount with which you want to buy the maximum number of toys:"
+        Input M
+        For i = 0 to N-2
+            For j = 0 to N-i-2
+                If (cost[j]>cost[j+1])
+                    Assign temp = cost[j]
+                    Assign cost[j] = cost[j+1]
+                    Assign cost[j+1] = temp
+                End
+            End
+        End
+        Output "The list has been sorted as follows: "
+        For i = 0 to N-1
+            Output "" &cost[i]& " "
+        End
+        Output ""
+        For i = 0 to N-1
+            If ((sum+cost[i])<=M)
+                Assign sum = (sum+cost[i])
+                Assign count = (count+1)
+            End
+        End
+        Output "The maximum number of toys that can be obtained with Rs. " &M& "/- is " &count& "."
+        Output "To continue with the program, press (y/Y) or any other key to stop termination."
+        Input continue
+    Do ((continue=="Y")||(continue=="y"))
+End

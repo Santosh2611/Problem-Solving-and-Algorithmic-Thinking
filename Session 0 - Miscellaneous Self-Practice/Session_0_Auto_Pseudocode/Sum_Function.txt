@@ -1,0 +1,15 @@
+Function Main
+    Declare Integer n1, n2, sum1
+    
+    Output "enter the two values to be added"
+    Input n1
+    Input n2
+    Assign sum1 = sum(n1,n2)
+    Output "SUM = "&sum1
+End
+
+Function sum (Integer a, Integer b)
+    Declare Integer s
+    
+    Assign s = a+b
+Return Integer s

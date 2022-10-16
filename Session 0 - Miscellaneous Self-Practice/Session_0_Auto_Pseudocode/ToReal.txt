@@ -1,0 +1,15 @@
+Function Main
+    Declare Real subtotal
+    
+    Assign subtotal = captureInput()
+    Output "2 X "&subtotal&" = " & subtotal*2
+End
+
+Function captureInput
+    Declare String data
+    Declare Real numberInput
+    
+    Output "Enter a number"
+    Input data
+    Assign numberInput = ToReal(data)
+Return Real numberInput

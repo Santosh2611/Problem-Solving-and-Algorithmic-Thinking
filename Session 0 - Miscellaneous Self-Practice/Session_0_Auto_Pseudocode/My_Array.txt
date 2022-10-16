@@ -1,0 +1,95 @@
+﻿Function Main
+    Output "Q. Implement a menu driven Flowgorithm to perform the following operations, [Design a sentinel Control Loop]  1. Read unique elements in the input array “MyArray” of size “n” and separate Armstrong and non-Armstrong array elements into separate arrays.  Note: Number of digits in an array element is from 1 to m. Eg. {1,34,567,8902,563423}  2. Read the input array “MyArray” of size “n” and Find the Third largest element in an array.  3. Read the input array “MyArray” of size “n” and Find the minority element of an array. (Hint: A minority element in an array MyArray[] of size n is an element that appears less than n/2 times (and hence there is at most one such element))"
+    Declare String continue
+    
+    Loop
+        Declare Integer choice
+        
+        Output "MENU:  1. Read unique elements in the input array “MyArray” of size “n” and separate Armstrong and non-Armstrong array elements into separate arrays.  Note: Number of digits in an array element is from 1 to m. Eg. {1,34,567,8902,563423}  2. Read the input array “MyArray” of size “n” and Find the Third largest element in an array.  3. Read the input array “MyArray” of size “n” and Find the minority element of an array. (Hint: A minority element in an array MyArray[] of size n is an element that appears less than n/2 times (and hence there is at most one such element)).  Kindly enter the number corresponding to the menu in order to execute a particular functionality of your choice."
+        Input choice
+        If (choice==1)
+            Declare Integer i, j, k, m, n, count, temp, rem, result, power
+            
+            Assign count = 0
+            Assign result = 0
+            Assign power = 0
+            Output "Enter the size of MyArray:"
+            Input n
+            Assign m = n
+            Declare Integer Array MyArray[n]
+            Declare Integer Array Armstrong[m]
+            
+            For i = 0 to m-1
+                Assign Armstrong[i] = -1
+            End
+            Declare Integer Array NonArmstrong[m]
+            
+            For i = 0 to m-1
+                Assign NonArmstrong[i] = -1
+            End
+            Output "Enter the elements of the array one-by-one:"
+            For i = 0 to n-1
+                Input MyArray[i]
+            End
+            Output "MyArray is listed as follows: "
+            For i = 0 to n-1
+                Output "" &MyArray[i]& " "
+            End
+            Output ""
+            Output "Unique Elements in MyArray is/are listed as follows: "
+            For i = 0 to n-1
+                Assign count = 0
+                For j = 0 to n-1
+                    If i!=j
+                        If MyArray[i]==MyArray[j]
+                            Assign count = count+1
+                        End
+                    End
+                End
+                If count==0
+                    Output "" &MyArray[i]& " "
+                End
+            End
+            Output ""
+            For i = 0 to n-1
+                Assign temp = MyArray[i]
+                While (temp!=0)
+                    Assign temp = (temp/10)
+                    Assign power = (power+1)
+                End
+                While (temp!=0)
+                    Assign rem = (temp%10)
+                    Assign temp = (temp/10)
+                    Assign result = (result+(pow(rem,power)))
+                End
+                If (MyArray[i]==result)
+                    Assign k = 0
+                    Assign Armstrong[k] = MyArray[i]
+                    Assign k = (k+1)
+                False:
+                    Assign j = 0
+                    Assign Armstrong[j] = MyArray[i]
+                    Assign j = (j+1)
+                End
+            End
+            Output "The elements in the Armstrong Array is as follows: "
+            For i = 0 to m-1
+                Output "" &Armstrong[i]& " "
+            End
+            Output ""
+            Output "The elements in the non-Armstrong Array is as follows: "
+            For i = 0 to m-1
+                Output "" &NonArmstrong[i]& " "
+            End
+            Output ""
+        False:
+            If (choice==2)
+            False:
+                If (choice==3)
+                End
+            End
+        End
+        Output "To test for another input, enter (y/Y) to continue or another key to terminate the program:"
+        Input continue
+    Do ((continue=="Y")||(continue=="y"))
+End

@@ -1,0 +1,32 @@
+Function Main
+    Declare Integer a, b, ch, ch2
+    
+    Output "enter the value of a"
+    Input a
+    Output "enter the value of b"
+    Input b
+    Loop
+        Output "MENU"
+        Output "1. ADD  2. SUBTRACT  3. MULTIPLY  4. DIVIDE  Enter your choice"
+        Input ch
+        If ch==1
+            Output "sum= "&a+b
+        False:
+            If ch==2
+                Output "difference = "&a-b
+            False:
+                If ch==3
+                    Output "product = "&a*b
+                False:
+                    If b==0
+                        Output "cannot perform division with zero"
+                    False:
+                        Output "quotient = "&a/b
+                    End
+                End
+            End
+        End
+        Output "Do you want to continue? press 1 to continue"
+        Input ch2
+    Do ch2==1
+End

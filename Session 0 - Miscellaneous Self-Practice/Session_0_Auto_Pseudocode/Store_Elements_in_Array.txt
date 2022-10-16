@@ -1,0 +1,16 @@
+Function Main
+    Declare Integer i, n
+    
+    Output "Enter the number of elements to be entered in the Array:"
+    Input n
+    Declare Integer Array arr[n]
+    
+    For i = 0 to n-1
+        Output "Element " &i& " in the Array is: "
+        Input arr[i]
+    End
+    Output "Elements in the Array are: "
+    For i = 0 to n-1
+        Output arr[i]& " "
+    End
+End

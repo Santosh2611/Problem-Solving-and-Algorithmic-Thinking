@@ -1,0 +1,36 @@
+Function Main
+    Declare Integer i, n, temp
+    
+    Output "Enter the value of n"
+    Input n
+    Declare Integer Array arr[n]
+    
+    Output "enter the array elements"
+    For i = 0 to n-1
+        Input arr[i]
+    End
+    Output "original array elements"
+    For i = 0 to n-1
+        Output arr[i]&" "
+    End
+    Output " "
+    Assign temp = arr[n-1]
+    For i = n-1 to 1 decreasing
+        Assign arr[i] = arr[i-1]
+    End
+    Assign arr[0] = temp
+    Output "Array after shifting to right"
+    For i = 0 to n-1
+        Output arr[i]&" "
+    End
+    Output " "
+    Assign temp = arr[0]
+    For i = 0 to n-2
+        Assign arr[i] = arr[i+1]
+    End
+    Assign arr[n-1] = temp
+    Output "Array after shifting to left"
+    For i = 0 to n-1
+        Output arr[i]&" "
+    End
+End

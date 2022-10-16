@@ -1,0 +1,19 @@
+Function Main
+    Declare Integer n, initial, rem, ans, cube
+    
+    Assign ans = 0
+    Output "enter a 3-digit number"
+    Input n
+    Assign initial = n
+    While initial!=0
+        Assign rem = initial%10
+        Assign cube = rem*rem*rem
+        Assign ans = ans+cube
+        Assign initial = initial/10
+    End
+    If ans==n
+        Output n &" is an armstrong number"
+    False:
+        Output n &" is not an armstrong number"
+    End
+End

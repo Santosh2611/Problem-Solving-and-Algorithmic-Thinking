@@ -1,0 +1,17 @@
+Function Main
+    Output "Hearty welcome to the program for reading the age of a candidate and determine elgibility for casting his/her vote.! Let's start."
+    Declare Integer age
+    
+    Output "Please enter your age!"
+    Input age
+    If age>=18
+        Output "You are elgible to vote!"
+    False:
+        If age<=0
+            Output "Please enter a valid age!"
+        False:
+            Output "You are not elgible to vote!"
+        End
+    End
+    Output "Hope you enjoyed the program. Thank you very much! :)"
+End

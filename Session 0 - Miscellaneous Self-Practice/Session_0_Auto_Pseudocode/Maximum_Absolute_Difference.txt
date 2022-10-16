@@ -1,0 +1,52 @@
+Function Main
+    Output "Q. Given an array of distinct unsorted integers write a program that finds the pair of elements that have the maximum absolute difference between them. If there are multiple pairs, find them all.    Given {11, 13, 18, 100} the output should be (11,100).  Given {5, 4, 3, 2} the output should be (4,5) (3,4) (2,3)."
+    Declare String continue
+    
+    Loop
+        Declare Integer n, i, j, diff, mindiff, temp
+        
+        Output "Enter the size of the array (value of n):  Note: The size of the array cannot be 1 as no comparison is possible with a single element."
+        Input n
+        Declare Integer Array arr[n]
+        
+        Output "Enter the elements of the array:"
+        For i = 0 to n-1
+            Input arr[i]
+        End
+        Output "The array is as follows: "
+        For i = 0 to n-1
+            Output "" &arr[i]& " "
+        End
+        Output ""
+        For i = 0 to n-2
+            For j = 0 to n-i-2
+                If (arr[j]>arr[j+1])
+                    Assign temp = arr[j]
+                    Assign arr[j] = arr[j+1]
+                    Assign arr[j+1] = temp
+                End
+            End
+        End
+        Output "The array is sorted as follows: "
+        For i = 0 to n-1
+            Output "" &arr[i]& " "
+        End
+        Output ""
+        Assign mindiff = (arr[1]-arr[0])
+        For i = 2 to n-1
+            Assign diff = (arr[i]-arr[i-1])
+            If (diff>mindiff)
+                Assign mindiff = diff
+            End
+        End
+        Output "The desired output is as follows: "
+        For i = 1 to n-1
+            If (arr[i]-arr[i-1]==mindiff)
+                Output "(" &arr[i-1]& "," &arr[i]& ") "
+            End
+        End
+        Output ""
+        Output "To continue with the program, press (y/Y) and any other key to stop."
+        Input continue
+    Do ((continue=="y")||(continue=="Y"))
+End

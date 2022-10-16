@@ -1,0 +1,13 @@
+Function Main
+    Declare String S
+    Declare Integer I
+    Declare Integer R
+    
+    Output "Enter Integer number"
+    Input I
+    Output "Interger to String " & ToString(I)
+    Output "Enter real number"
+    Input R
+    Output "Real to String " & ToString(R)
+    Output 
+End
