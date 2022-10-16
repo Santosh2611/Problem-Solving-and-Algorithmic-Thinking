@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-13 06:12:46 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswNjowMzo1OCBQTTsyNjY5"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswNjoxMjo0NiBQTTszOzI3NzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Function example - A simple function that print the message stored in a string variable&#13;&#10;Passing an argument"/>
+            <declare name="YourMessage" type="String" array="False" size=""/>
+            <output expression="&quot;Enter a string&quot;" newline="True"/>
+            <input variable="YourMessage"/>
+            <call expression="PrintMessage(YourMessage)"/>
+        </body>
+    </function>
+    <function name="PrintMessage" type="None" variable="">
+        <parameters>
+            <parameter name="Message" type="String" array="False"/>
+        </parameters>
+        <body>
+            <output expression="Message" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-30 02:57:03 PM"/>
+        <attribute name="created" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjk7MDI6NDU6NDcgUE07MjE0OA=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjk7MDI6NDU6NTAgUE07MTtEZUxMO1NBTlRPU0g7MjAyMS0wMS0yOTswMjoyNjo0NCBQTTtEaXNwbGF5IGZpYm9uYWNjaSBzZXJpZXMgdXB0byBuLCBudW1iZXIgaW4gcmV2ZXJzZSBvcmRlciBhbmQgc3VtIG9mIGRpZ2l0cyBvZiBudW1iZXIuZnByZzsxMjg4NQ=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjk7MDI6NTg6NTkgUE07MjtEZUxMO1NBTlRPU0g7MjAyMS0wMS0wODswOTowMzo0MyBQTTtCdWJibGUgU29ydC5mcHJnOzYwNDU="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjk7MDQ6MjU6NDIgUE07MTtEaW5lc2g7REVTS1RPUDsyMDIxLTAxLTA4OzA0OjEwOjU2IFBNO0luc2VydGlvblNvcnQuZnByZzs2NjQw"/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMzA7MDI6NTc6MDMgUE07MjsyMjQ0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Q. Write a menu driven program to do the following:&#13;&#10;1. Linear Search.&#13;&#10;2. Selection Sort.&#13;&#10;3. Bubble Sort.&#13;&#10;4. Insertion Sort.&quot;" newline="True"/>
+            <output expression="&quot;*******************************************************************&quot;" newline="True"/>
+            <declare name="choice" type="Integer" array="False" size=""/>
+            <declare name="continue" type="String" array="False" size=""/>
+            <do expression="((continue==&quot;y&quot;)||(continue==&quot;Y&quot;))">
+                <output expression="&quot;MENU:&#13;&#10;1. Linear Search.&#13;&#10;2. Selection Sort.&#13;&#10;3. Bubble Sort.&#13;&#10;4. Insertion Sort.&#13;&#10;Enter the number corresponding to the choice to execute your program:&quot;" newline="True"/>
+                <input variable="choice"/>
+                <if expression="(choice==1)">
+                    <then>
+                        <declare name="n, i, element" type="Integer" array="False" size=""/>
+                        <output expression="&quot;Enter the size of the array:&quot;" newline="True"/>
+                        <input variable="n"/>
+                        <declare name="arr" type="Integer" array="True" size="n"/>
+                        <output expression="&quot;Enter the elements of the array:&quot;" newline="True"/>
+                        <for variable="i" start="0" end="(n-1)" direction="inc" step="1">
+                            <input variable="arr[i]"/>
+                        </for>
+                        <output expression="&quot;The array is displayed as follows: &quot;" newline="False"/>
+                        <for variable="i" start="0" end="(n-1)" direction="inc" step="1">
+                            <output expression="&quot;&quot; &amp;arr[i]&amp; &quot; &quot;" newline="False"/>
+                        </for>
+                        <output expression="&quot;&quot;" newline="True"/>
+                        <output expression="&quot;Enter the element to be searched:&quot;" newline="True"/>
+                        <input variable="element"/>
+                        <call expression="linearsearch(arr,n,element)"/>
+                    </then>
+                    <else>
+                        <if expression="(choice==2)">
+                            <then>
+                                <declare name="n, i" type="Integer" array="False" size=""/>
+                                <output expression="&quot;Enter the size of the array:&quot;" newline="True"/>
+                                <input variable="n"/>
+                                <declare name="arr" type="Integer" array="True" size="n"/>
+                                <output expression="&quot;Enter the elements of the array:&quot;" newline="True"/>
+                                <for variable="i" start="0" end="(n-1)" direction="inc" step="1">
+                                    <input variable="arr[i]"/>
+                                </for>
+                                <output expression="&quot;The unsorted array is: &quot;" newline="False"/>
+                                <for variable="i" start="0" end="(n-1)" direction="inc" step="1">
+                                    <output expression="&quot;&quot; &amp;arr[i]&amp; &quot; &quot;" newline="False"/>
+                                </for>
+                                <output expression="&quot;&quot;" newline="True"/>
+                                <call expression="selectionsort(arr,n)"/>
+                            </then>
+                            <else>
+                                <if expression="(choice==3)">
+                                    <then>
+                                        <declare name="n, i" type="Integer" array="False" size=""/>
+                                        <output expression="&quot;Enter the size of the array:&quot;" newline="True"/>
+                                        <input variable="n"/>
+                                        <declare name="arr" type="Integer" array="True" size="n"/>
+                                        <output expression="&quot;Enter the elements of the array:&quot;" newline="True"/>
+                                        <for variable="i" start="0" end="(n-1)" direction="inc" step="1">
+                                            <input variable="arr[i]"/>
+                                        </for>
+                                        <output expression="&quot;The unsorted array is: &quot;" newline="False"/>
+                                        <for variable="i" start="0" end="(n-1)" direction="inc" step="1">
+                                            <output expression="&quot;&quot; &amp;arr[i]&amp; &quot; &quot;" newline="False"/>
+                                        </for>
+                                        <output expression="&quot;&quot;" newline="True"/>
+                                        <call expression="bubblesort(arr,n)"/>
+                                    </then>
+                                    <else>
+                                        <if expression="(choice==4)">
+                                            <then>
+                                                <declare name="n, i" type="Integer" array="False" size=""/>
+                                                <output expression="&quot;Enter the size of the array:&quot;" newline="True"/>
+                                                <input variable="n"/>
+                                                <declare name="arr" type="Integer" array="True" size="n"/>
+                                                <output expression="&quot;Enter the elements of the array:&quot;" newline="True"/>
+                                                <for variable="i" start="0" end="(n-1)" direction="inc" step="1">
+                                                    <input variable="arr[i]"/>
+                                                </for>
+                                                <output expression="&quot;The unsorted array is: &quot;" newline="False"/>
+                                                <for variable="i" start="0" end="(n-1)" direction="inc" step="1">
+                                                    <output expression="&quot;&quot; &amp;arr[i]&amp; &quot; &quot;" newline="False"/>
+                                                </for>
+                                                <output expression="&quot;&quot;" newline="True"/>
+                                                <call expression="insertionsort(arr,n)"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Kindly enter a valid input from the menu by continuing the program once again.&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;To continue with another functionality, press (y/Y) to continue or any other key to terminate execution:&quot;" newline="True"/>
+                <input variable="continue"/>
+            </do>
+        </body>
+    </function>
+    <function name="bubblesort" type="None" variable="">
+        <parameters>
+            <parameter name="array" type="Integer" array="True"/>
+            <parameter name="size" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i, j, temp" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="(size-2)" direction="inc" step="1">
+                <for variable="j" start="0" end="(size-i-2)" direction="inc" step="1">
+                    <if expression="(array[j]&gt;array[j+1])">
+                        <then>
+                            <assign variable="temp" expression="array[j]"/>
+                            <assign variable="array[j]" expression="array[j+1]"/>
+                            <assign variable="array[j+1]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;The sorted array is: &quot;" newline="False"/>
+            <for variable="i" start="0" end="(size-1)" direction="inc" step="1">
+                <output expression="&quot;&quot; &amp;array[i]&amp; &quot; &quot;" newline="False"/>
+            </for>
+            <output expression="&quot;&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="insertionsort" type="None" variable="">
+        <parameters>
+            <parameter name="array" type="Integer" array="True"/>
+            <parameter name="size" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i, j, temp, x" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="(size-1)" direction="inc" step="1">
+                <for variable="j" start="0" end="(i-1)" direction="inc" step="1">
+                    <if expression="(array[i-1]&lt;=array[i])">
+                        <then/>
+                        <else>
+                            <assign variable="x" expression="0"/>
+                            <while expression="(array[i]&gt;=array[j])">
+                                <assign variable="x" expression="(x+1)"/>
+                                <assign variable="j" expression="(j+1)"/>
+                            </while>
+                            <assign variable="temp" expression="array[i]"/>
+                            <assign variable="array[i]" expression="array[j]"/>
+                            <assign variable="array[j]" expression="temp"/>
+                        </else>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;The sorted array is: &quot;" newline="False"/>
+            <for variable="i" start="0" end="(size-1)" direction="inc" step="1">
+                <output expression="&quot;&quot; &amp;array[i]&amp; &quot; &quot;" newline="False"/>
+            </for>
+            <output expression="&quot;&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="linearsearch" type="None" variable="">
+        <parameters>
+            <parameter name="array" type="Integer" array="True"/>
+            <parameter name="size" type="Integer" array="False"/>
+            <parameter name="ele" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i, check" type="Integer" array="False" size=""/>
+            <assign variable="check" expression="0"/>
+            <for variable="i" start="0" end="(size-1)" direction="inc" step="1">
+                <if expression="(array[i]=ele)">
+                    <then>
+                        <assign variable="check" expression="1"/>
+                        <output expression="&quot;&quot; &amp;ele&amp; &quot; is found at index position &quot; &amp;i&amp; &quot;.&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="(check=0)">
+                <then>
+                    <output expression="&quot;&quot; &amp;ele&amp; &quot; is not found in the entered array.&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+    <function name="selectionsort" type="None" variable="">
+        <parameters>
+            <parameter name="array" type="Integer" array="True"/>
+            <parameter name="size" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i, j, smallest, temp" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="(size-2)" direction="inc" step="1">
+                <assign variable="smallest" expression="i"/>
+                <for variable="j" start="(i+1)" end="(size-1)" direction="inc" step="1">
+                    <if expression="(array[smallest]&gt;array[j])">
+                        <then>
+                            <assign variable="smallest" expression="j"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="(smallest!=i)">
+                    <then>
+                        <assign variable="temp" expression="array[i]"/>
+                        <assign variable="array[i]" expression="array[smallest]"/>
+                        <assign variable="array[smallest]" expression="temp"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;The sorted array is: &quot;" newline="False"/>
+            <for variable="i" start="0" end="(size-1)" direction="inc" step="1">
+                <output expression="&quot;&quot; &amp;array[i]&amp; &quot; &quot;" newline="False"/>
+            </for>
+            <output expression="&quot;&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-13 06:55:43 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswNjo1MzowNCBQTTsyNjY1"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswNjo1NTo0MyBQTTsyOzI3Nzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, Fact" type="Integer" array="False" size=""/>
+            <output expression="&quot;Read input&quot;" newline="True"/>
+            <do expression="N &lt;= 0">
+                <input variable="N"/>
+            </do>
+            <assign variable="Fact" expression="Factorial(N)"/>
+            <output expression="Fact" newline="True"/>
+        </body>
+    </function>
+    <function name="Factorial" type="Integer" variable="Fact1">
+        <parameters>
+            <parameter name="N1" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Fact1" type="Integer" array="False" size=""/>
+            <if expression="N1 == 1">
+                <then>
+                    <assign variable="Fact1" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="Fact1" expression="Factorial(N1-1)*N1"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

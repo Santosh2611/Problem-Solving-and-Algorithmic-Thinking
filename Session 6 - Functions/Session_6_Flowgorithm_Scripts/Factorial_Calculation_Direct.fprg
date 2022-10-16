@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-13 06:50:32 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswNjo0NzozMSBQTTsyNjY4"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswNjo1MDozMiBQTTsyOzI3NzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, Fact" type="Integer" array="False" size=""/>
+            <output expression="&quot;Read input&quot;" newline="True"/>
+            <do expression="N&lt;=0">
+                <comment text="do-while loop till user gives a positive value. Factorial of negative number doesn't exist."/>
+                <input variable="N"/>
+                <comment text="we can add a comment to enter positive values if negative value is entered"/>
+            </do>
+            <assign variable="Fact" expression="1"/>
+            <while expression="N&gt;0">
+                <assign variable="Fact" expression="Fact * N"/>
+                <assign variable="N" expression="N - 1"/>
+            </while>
+            <output expression="Fact" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

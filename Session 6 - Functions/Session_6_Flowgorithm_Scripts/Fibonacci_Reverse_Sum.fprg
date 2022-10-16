@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DeLL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-29 02:42:58 PM"/>
+        <attribute name="created" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjk7MDI6MjY6NDQgUE07MjE0NA=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjk7MDI6MjY6NDYgUE07MTtEZUxMO1NBTlRPU0g7MjAyMS0wMS0yOTswMTowMjoyNiBQTTtEaXNwbGF5IG5hdHVyYWwgbnVtYmVycyB3aXRoIHRoZWlyIHN1bSwgYXZlcmFnZSwgY3ViZSwgc3F1YXJlIHVwdG8gbiBudW1iZXJzLmZwcmc7MTIxNzc="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjk7MDI6MzE6MjAgUE07MjtEZUxMO0RFU0tUT1AtSkxLQlQ5UDsyMDIwLTEyLTExOzAxOjAxOjQwIFBNO0Rpc3BsYXkgdGhlIGZpcnN0IG4gdGVybXMgb2YgRmlib25hY2NpIHNlcmllcy5mcHJnOzk3NTk="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjk7MDI6MzU6MzUgUE07NDtEZUxMO0RFU0tUT1AtSkxLQlQ5UDsyMDIwLTEyLTExOzAxOjE2OjAzIFBNO0Rpc3BsYXkgdGhlIG51bWJlciBpbiByZXZlcnNlIG9yZGVyLmZwcmc7ODkwNQ=="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjk7MDI6Mzg6MjAgUE07MTtEZUxMO0RFU0tUT1AtSkxLQlQ5UDsyMDIwLTEyLTE4OzAyOjA2OjIzIEFNO0V4ZWN1dGlvbiBiYXNlZCBvbiBJbnB1dC5mcHJnOzc4MjI="/>
+        <attribute name="edited" value="RGVMTDtTQU5UT1NIOzIwMjEtMDEtMjk7MDI6NDI6NTggUE07MTsyMjU1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Q. Write a menu driven program to do the following:&#13;&#10;1. Display Fibonacci series upto n numbers.&#13;&#10;2. Display a number in reverse order.&#13;&#10;3. Find the sum of digits of a number.&quot;" newline="True"/>
+            <output expression="&quot;*******************************************************************&quot;" newline="True"/>
+            <declare name="choice" type="Integer" array="False" size=""/>
+            <declare name="continue" type="String" array="False" size=""/>
+            <do expression="((continue==&quot;y&quot;)||(continue==&quot;Y&quot;))">
+                <output expression="&quot;MENU:&#13;&#10;1. Display Fibonacci series upto n numbers.&#13;&#10;2. Display a number in reverse order.&#13;&#10;3. Find the sum of digits of a number.&#13;&#10;Enter the number corresponding to the choice to execute your program:&quot;" newline="True"/>
+                <input variable="choice"/>
+                <if expression="(choice==1)">
+                    <then>
+                        <declare name="n" type="Integer" array="False" size=""/>
+                        <output expression="&quot;Input number of terms to display :&quot;" newline="True"/>
+                        <input variable="n"/>
+                        <call expression="fibonacci(n)"/>
+                    </then>
+                    <else>
+                        <if expression="(choice==2)">
+                            <then>
+                                <declare name="n" type="Integer" array="False" size=""/>
+                                <output expression="&quot;Input a number:&quot;" newline="True"/>
+                                <input variable="n"/>
+                                <call expression="reverse(n)"/>
+                            </then>
+                            <else>
+                                <if expression="(choice==3)">
+                                    <then>
+                                        <declare name="n" type="Integer" array="False" size=""/>
+                                        <output expression="&quot;Input a number:&quot;" newline="True"/>
+                                        <input variable="n"/>
+                                        <call expression="sumofdigits(n)"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Kindly enter a valid input from the menu by continuing the program once again.&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;To continue with another functionality, press (y/Y) to continue or any other key to terminate execution:&quot;" newline="True"/>
+                <input variable="continue"/>
+            </do>
+        </body>
+    </function>
+    <function name="fibonacci" type="None" variable="">
+        <parameters>
+            <parameter name="num" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="first, second, third, temp" type="Integer" array="False" size=""/>
+            <assign variable="first" expression="0"/>
+            <assign variable="second" expression="1"/>
+            <output expression="&quot;Here is the Fibonacci series upto &quot; &amp;num&amp; &quot; terms: &quot;" newline="False"/>
+            <output expression="&quot;&quot; &amp;first&amp; &quot; &quot; &amp;second" newline="False"/>
+            <for variable="temp" start="2" end="num-1" direction="inc" step="1">
+                <assign variable="third" expression="first+second"/>
+                <output expression="&quot; &quot; &amp;third" newline="False"/>
+                <assign variable="first" expression="second"/>
+                <assign variable="second" expression="third"/>
+            </for>
+            <output expression="&quot;&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="reverse" type="None" variable="">
+        <parameters>
+            <parameter name="num" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="digit, rev" type="Integer" array="False" size=""/>
+            <assign variable="rev" expression="0"/>
+            <output expression="&quot;The number &quot; &amp;num&amp; &quot; in reverse order is: &quot;" newline="False"/>
+            <while expression="num!=0">
+                <assign variable="digit" expression="num%10"/>
+                <assign variable="rev" expression="(rev*10)+digit"/>
+                <assign variable="num" expression="num/10"/>
+            </while>
+            <output expression="rev" newline="True"/>
+        </body>
+    </function>
+    <function name="sumofdigits" type="None" variable="">
+        <parameters>
+            <parameter name="num" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="sum, temp" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <output expression="&quot;The sum of the digits in &quot; &amp;num" newline="False"/>
+            <while expression="num&gt;0">
+                <assign variable="temp" expression="num%10"/>
+                <assign variable="sum" expression="sum+temp"/>
+                <assign variable="num" expression="num/10"/>
+            </while>
+            <output expression="&quot; is: &quot; &amp;sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

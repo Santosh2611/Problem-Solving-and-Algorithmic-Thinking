@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-13 06:47:29 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswNjo0Mzo1NiBQTTsyNjcx"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswNjo0NzoyOSBQTTsyOzI3ODQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter number of elements&quot;" newline="True"/>
+            <input variable="N"/>
+            <declare name="Arr" type="Integer" array="True" size="N"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <input variable="Arr[i]"/>
+            </for>
+            <comment text="Passing the array and its size to the function. Inside the function, all array values are added and sum is printed."/>
+            <output expression="&quot;Sum of array elements : &quot;&amp;ArraySum(Arr,N)" newline="True"/>
+        </body>
+    </function>
+    <function name="ArraySum" type="Integer" variable="S">
+        <parameters>
+            <parameter name="Arr" type="Integer" array="True"/>
+            <parameter name="N" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="S, i" type="Integer" array="False" size=""/>
+            <assign variable="S" expression="0"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <assign variable="S" expression="S+Arr[i]"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-13 06:26:49 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswNjoxNjozOCBQTTsyNjcx"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswNjoyNjo0OSBQTTsyOzI3ODM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Function example - A function that prints the largest of two numbers passed as arguments&#13;&#10;Passing arguments"/>
+            <declare name="N1, N2, L" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter first integer&quot;" newline="True"/>
+            <input variable="N1"/>
+            <output expression="&quot;Enter second integer&quot;" newline="True"/>
+            <input variable="N2"/>
+            <assign variable="L" expression="Largest(N1,N2)"/>
+            <output expression="L" newline="True"/>
+        </body>
+    </function>
+    <function name="Largest" type="Integer" variable="Big">
+        <parameters>
+            <parameter name="Num1" type="Integer" array="False"/>
+            <parameter name="Num2" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Big" type="Integer" array="False" size=""/>
+            <comment text="Try executing the flowgorithm after removing the above declaration. Note down your observations"/>
+            <if expression="Num1&gt;Num2">
+                <then>
+                    <assign variable="Big" expression="Num1"/>
+                </then>
+                <else>
+                    <assign variable="Big" expression="Num2"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

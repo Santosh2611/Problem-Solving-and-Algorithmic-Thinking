@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-13 06:34:54 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswNjozMToyNyBQTTsyNjY2"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLTJNRjdGMzM7MjAyMi0xMC0xMzswNjozNDo1NCBQTTsyOzI3Nzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, AS" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter values for a and b:&quot;" newline="True"/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <output expression="&quot;Before swapping value of a and b are:&quot; &amp; a &amp; &quot; &quot; &amp; b" newline="True"/>
+            <comment text="By returning the swapped numbers, swapping takes place"/>
+            <assign variable="AS" expression="swap(a,b)"/>
+            <output expression="&quot;After swapping values - 'a' value return from function:&quot; &amp; AS" newline="True"/>
+        </body>
+    </function>
+    <function name="swap" type="Integer" variable="a">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="temp" type="Integer" array="False" size=""/>
+            <assign variable="temp" expression="a"/>
+            <assign variable="a" expression="b"/>
+            <assign variable="b" expression="temp"/>
+            <output expression="&quot;After swapping within function:&quot; &amp; a &amp; &quot;&quot; &amp; b" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
