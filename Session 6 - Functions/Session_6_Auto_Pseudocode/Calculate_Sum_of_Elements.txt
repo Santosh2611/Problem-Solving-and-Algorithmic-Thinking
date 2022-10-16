@@ -1,0 +1,23 @@
+Function Main
+    Declare Integer N, i
+    
+    Output "Enter number of elements"
+    Input N
+    Declare Integer Array Arr[N]
+    
+    For i = 0 to N-1
+        Input Arr[i]
+    End
+    
+    ... Passing the array and its size to the function. Inside the function, all array values are added and sum is printed.
+    Output "Sum of array elements : "&ArraySum(Arr,N)
+End
+
+Function ArraySum (Integer Array Arr, Integer N)
+    Declare Integer S, i
+    
+    Assign S = 0
+    For i = 0 to N-1
+        Assign S = S+Arr[i]
+    End
+Return Integer S
