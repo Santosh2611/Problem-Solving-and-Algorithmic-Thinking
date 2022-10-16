@@ -1,0 +1,12 @@
+Function Main
+    Declare String name
+    Declare Integer n
+    
+    Output "Enter Text"
+    Input name
+    For n = 0 to len(name)-1
+        
+        ... output the Nth character in the string 'name'.
+        Output Char(name,n)
+    End
+End

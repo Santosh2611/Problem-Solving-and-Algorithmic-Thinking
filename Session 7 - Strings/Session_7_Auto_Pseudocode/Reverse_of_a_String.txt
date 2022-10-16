@@ -1,0 +1,12 @@
+Function Main
+    Declare String name
+    Declare String rev
+    Declare Integer n
+    
+    Assign rev = ""
+    Input name
+    For n = len(name)-1 to 0 decreasing
+        Assign rev = rev & Char(name,n)
+    End
+    Output rev
+End

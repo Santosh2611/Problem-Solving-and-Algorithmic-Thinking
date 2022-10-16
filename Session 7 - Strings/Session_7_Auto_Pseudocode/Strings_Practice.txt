@@ -1,0 +1,209 @@
+Function Main
+    Declare String continue
+    
+    Loop
+        Output "MENU    1. Compare the length of two strings.  2. Convert lowercase letters to uppercase and vice-versa in a string.  3. Count alphabets, digits and alphanumeric in a string.  4. Count the number of vowels in a string.  5. Display maximum occurring character in a string.  6. Sort the characters in string in ascending order based on their ASCII codes.    Enter the number corresponding to the menu in order to implement the choice."
+        Declare Integer choice
+        
+        Input choice
+        If (choice==1)
+            Declare String string1, string2
+            
+            Output "Enter the first string:"
+            Input string1
+            Output "Enter the second string:"
+            Input string2
+            Call length(string1,string2)
+        False:
+            If (choice==2)
+                Declare String str
+                
+                Output "Enter the string:"
+                Input str
+                Call casechange(str)
+            False:
+                If (choice==3)
+                    Declare String str
+                    
+                    Output "Enter the string:"
+                    Input str
+                    Call count(str)
+                False:
+                    If (choice==4)
+                        Declare String str
+                        
+                        Output "Enter the string:"
+                        Input str
+                        Call countvowel(str)
+                    False:
+                        If (choice==5)
+                            Declare String str
+                            
+                            Output "Enter the string:"
+                            Input str
+                            Call maximum(str)
+                        False:
+                            If (choice==6)
+                                Declare String str
+                                
+                                Output "Enter the string:"
+                                Input str
+                                Call sort(str)
+                            False:
+                                Output "Kindly enter a valid input from the menu by continuing the program once again."
+                            End
+                        End
+                    End
+                End
+            End
+        End
+        Output "To test for another input, enter (y/Y) to continue or another key to terminate the program:"
+        Input continue
+    Do ((continue=="y")||(continue=="Y"))
+End
+
+Function casechange (String s)
+    Declare Integer length, i
+    
+    Assign length = Len(s)
+    Output "The converted form of string is: "
+    For i = 0 to (length-1)
+        If (((char(s,i)>="a")&&(char(s,i)<="z"))||((char(s,i)>="A")&&(char(s,i)<="Z")))
+            If ((char(s,i)>="a")&&(char(s,i)<="z"))
+                Declare String alphabet
+                Declare Integer code
+                
+                Assign alphabet = Char(s,i)
+                Assign code = ToCode(Alphabet)
+                Assign code = (code-32)
+                Output ToChar(code)
+            False:
+                Declare String alphabet
+                Declare Integer code
+                
+                Assign alphabet = Char(s,i)
+                Assign code = ToCode(Alphabet)
+                Assign code = (code+32)
+                Output ToChar(code)
+            End
+        False:
+            Output char(s,i)
+        End
+    End
+    Output ""
+End
+
+Function count (String s)
+    Declare Integer length, i, count1, count2, count3
+    
+    Assign length = Len(s)
+    Assign count1 = 0
+    Assign count2 = 0
+    Assign count3 = 0
+    For i = 0 to (length-1)
+        If (((char(s,i)>="a")&&(char(s,i)<="z"))||((char(s,i)>="A")&&(char(s,i)<="Z")))
+            Assign count1 = (count1+1)
+        False:
+            If ((char(s,i)>="0")&&(char(s,i)<="9"))
+                Assign count2 = (count2+1)
+            End
+        End
+    End
+    Assign count3 = (count1+count2)
+    Output "There are " &count1& " alphabets, " &count2& " digits and " &count3& " number of alphanumeric characters in the given string " &s
+End
+
+Function countvowel (String s)
+    Declare Integer length, i, count
+    
+    Assign length = Len(s)
+    Assign count = 0
+    For i = 0 to (length-1)
+        If ((char(s,i)=="a")||(char(s,i)=="e")||(char(s,i)=="i")||(char(s,i)=="o")||(char(s,i)=="u")||(char(s,i)=="A")||(char(s,i)=="E")||(char(s,i)=="I")||(char(s,i)=="O")||(char(s,i)=="U"))
+            Assign count = (count+1)
+        End
+    End
+    Output "The number of vowels in the given string " &s& " is " &count& "."
+End
+
+Function length (String str1, String str2)
+    Declare Integer len1, len2
+    
+    Assign len1 = Len(str1)
+    Output "The length of the first string " &str1& " is " &len1& "."
+    Assign len2 = Len(str2)
+    Output " The length of the second string " &str2& " is " &len2& "."
+    If (len1>len2)
+        Output " Therefore, the length of the first string is greater than that of the second string."
+    False:
+        If (len1=len2)
+            Output " Therefore, the length of the first string is equal to that of the second string."
+        False:
+            Output " Therefore, the length of the first string is less than that of the second string."
+        End
+    End
+End
+
+Function maximum (String s)
+    Declare Integer i, j, count, n, length, max, ele
+    
+    Assign max = -10
+    Assign length = Len(s)
+    Declare Integer Array str[length]
+    Declare Integer Array freq[length]
+    
+    Output "Enter the elements of the array"
+    For i = 0 to (length-1)
+        Assign str[i] = ToCode(char(s,i))
+        Assign freq[i] = -1
+    End
+    For i = 0 to (length-1)
+        Assign count = 1
+        For j = i+1 to (length-1)
+            If str[i]==str[j]
+                Assign count = count+1
+                Assign freq[j] = 0
+            End
+        End
+        If freq[i]!=0
+            Assign freq[i] = count
+        End
+    End
+    For i = 0 to (length-1)
+        If max<freq[i]
+            Assign max = freq[i]
+            Assign ele = str[i]
+        End
+    End
+    Output "The maximum occurring character in the string "&s&" is "&ToChar(ele)&" which repeats "&max&" times."
+End
+
+Function sort (String s)
+    Declare Integer i, j, length, number, temp
+    Declare String text
+    
+    Assign length = Len(s)
+    Declare Integer Array arr[length]
+    Declare String Array sort[length]
+    
+    For i = 0 to (length-1)
+        Assign text = char(s,i)
+        Assign number = ToCode(text)
+        Assign arr[i] = number
+    End
+    For i = 0 to (length-2)
+        For j = 0 to (length-i-2)
+            If (arr[j]>arr[j+1])
+                Assign temp = arr[j]
+                Assign arr[j] = arr[j+1]
+                Assign arr[j+1] = temp
+            End
+        End
+    End
+    Output "The sorted string based on the ascending order of the ASCII values of the charaters is as follows: "
+    For i = 0 to length-1
+        Assign sort[i] = ToChar(arr[i])
+        Output sort[i]
+    End
+    Output ""
+End

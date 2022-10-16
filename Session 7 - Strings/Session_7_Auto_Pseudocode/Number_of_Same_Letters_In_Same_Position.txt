@@ -1,0 +1,17 @@
+Function Main
+    ... Program to count the number of letters that are same in the same locations in 2 different strings
+    Declare Integer i
+    Declare Integer count
+    Declare String str
+    Declare String str1
+    
+    Assign str = "gorilla"
+    Assign str1 = "giraffe"
+    Assign count = 0
+    For i = 0 to len(str)-1
+        If Char(str,i)=Char(str1,i)
+            Assign count = count+1
+        End
+    End
+    Output count
+End

@@ -1,0 +1,20 @@
+Function Main
+    Declare String str
+    Declare Integer i
+    Declare String modi
+    Declare String c
+    Declare Integer count
+    
+    Assign count = 0
+    Assign modi = ""
+    Output "enter a string"
+    Input str
+    For i = 0 to len(str)-1
+        Assign c = Char(str,i)
+        Assign count = ToCode(c)
+        If count<48 or count>57
+            Assign modi = modi&c
+        End
+    End
+    Output modi
+End

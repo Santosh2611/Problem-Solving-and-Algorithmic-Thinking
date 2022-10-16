@@ -1,0 +1,9 @@
+Function Main
+    ... convert integer (ascii value) to character
+    Declare String s
+    Declare Integer n
+    
+    Input n
+    Assign s = ToChar(n)
+    Output s
+End

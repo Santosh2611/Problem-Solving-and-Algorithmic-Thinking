@@ -1,0 +1,22 @@
+Function Main
+    Declare String str
+    Declare Integer i
+    Declare Integer count
+    Declare String ele
+    Declare String modi
+    Declare String c
+    
+    Assign count = 0
+    Assign modi = ""
+    Output "enter a string"
+    Input str
+    Output "enter the character"
+    Input ele
+    For i = 0 to len(str)-1
+        Assign c = Char(str,i)
+        If c=ele
+            Assign count = count+1
+        End
+    End
+    Output count
+End

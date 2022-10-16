@@ -1,0 +1,14 @@
+Function Main
+    Declare String ss
+    Declare String s
+    Declare Integer l
+    Declare Integer i
+    
+    Input s
+    Assign ss = ""
+    Assign l = len(s)
+    For i = 0 to l-1
+        Assign ss = ss&Char(s,i)
+    End
+    Output ss
+End

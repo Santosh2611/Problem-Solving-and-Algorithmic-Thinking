@@ -1,0 +1,9 @@
+Function Main
+    ... Note that there is no seperate "character". Even character is to be declared as string only
+    Declare String s
+    Declare Integer n
+    
+    Input s
+    Assign n = ToCode(s)
+    Output n
+End

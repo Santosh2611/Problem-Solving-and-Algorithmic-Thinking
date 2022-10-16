@@ -1,0 +1,8 @@
+Function Main
+    Declare String s
+    Declare Integer l
+    
+    Input s
+    Assign l = len(s)
+    Output l
+End

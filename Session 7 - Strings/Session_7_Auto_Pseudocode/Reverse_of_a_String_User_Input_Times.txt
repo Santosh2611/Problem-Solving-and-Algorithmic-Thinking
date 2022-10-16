@@ -1,0 +1,19 @@
+Function Main
+    Declare String name
+    Declare String rev
+    Declare String t
+    Declare Integer n
+    
+    Assign t = "Y"
+    While t=="Y" OR t=="y"
+        Assign rev = ""
+        Output "enter text"
+        Input name
+        For n = len(name)-1 to 0 decreasing
+            Assign rev = rev&Char(name,n)
+        End
+        Output rev
+        Output "Continue:y or n"
+        Input t
+    End
+End

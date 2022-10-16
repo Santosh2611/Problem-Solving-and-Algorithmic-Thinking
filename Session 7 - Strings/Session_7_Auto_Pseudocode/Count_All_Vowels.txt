@@ -1,0 +1,17 @@
+Function Main
+    Declare String str
+    Declare Integer i
+    Declare String c
+    Declare Integer count
+    
+    Assign count = 0
+    Output "enter a string"
+    Input str
+    For i = 0 to len(str)-1
+        Assign c = Char(str,i)
+        If c="a" or c="e" or c="i" or c="o" or c="u"
+            Assign count = count+1
+        End
+    End
+    Output count
+End

@@ -1,0 +1,15 @@
+Function Main
+    Declare String name
+    Declare String ss
+    Declare Integer n
+    
+    Input ss
+    Output "Enter Text"
+    Input name
+    For n = 0 to len(name)-1
+        Assign ss = ss&Char(name,n)
+        
+        ... Retrieve and store each character and create the string back.
+    End
+    Output ss
+End

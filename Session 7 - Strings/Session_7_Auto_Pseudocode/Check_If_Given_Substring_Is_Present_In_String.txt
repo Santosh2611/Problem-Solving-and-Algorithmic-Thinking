@@ -1,0 +1,27 @@
+Function Main
+    Declare String S
+    Declare Integer l
+    Declare String Ss
+    Declare String sss
+    
+    Assign sss = ""
+    Declare Integer i
+    
+    Output "Enter a string"
+    Input S
+    Output "Enter a substring"
+    Input Ss
+    Assign l = len(Ss)
+    Declare Integer j
+    
+    For i = 0 to len(s)-1
+        If Char(S,i)==char(Ss,0)
+            For j = i to i+l-1
+                Assign sss = sss&char(s,j)
+            End
+            If sss=Ss
+                Output "Substring found"
+            End
+        End
+    End
+End

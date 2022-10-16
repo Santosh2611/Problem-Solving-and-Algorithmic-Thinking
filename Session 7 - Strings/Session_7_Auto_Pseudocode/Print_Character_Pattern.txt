@@ -1,0 +1,16 @@
+Function Main
+    Declare Integer i
+    Declare Integer j
+    Declare String s
+    Declare String c
+    
+    Assign s = ""
+    Assign c = ""
+    For i = 1 to 5
+        For j = 1 to i
+            Assign c = c & " " & s
+        End
+        Output c
+        Assign c = ""
+    End
+End
